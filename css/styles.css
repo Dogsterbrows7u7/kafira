@@ -60,15 +60,13 @@ p {
 /* HERO */
 .hero {
   min-height: auto;
-  background:
-    url("../images/navbar-secundario.png") center/cover no-repeat;
+ background: #f3e496;
   color: var(--blanco);
   padding: 1rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .hero-home {
   min-height: 100vh;
   background:

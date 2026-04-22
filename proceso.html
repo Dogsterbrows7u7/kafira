@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Website/proceso.html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,14 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Código Cafetero - Proceso</title>
   <link rel="icon" href="images/icono.png" type="image/png">
-
   <link rel="stylesheet" href="css/styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
-  <!-- ENCABEZADO -->
   <header class="hero">
     <nav class="navbar">
       <ul class="menu">
@@ -30,10 +26,8 @@
     </nav>
   </header>
 
-  <!-- CONTENIDO -->
   <main class="contenedor-principal">
-    <!-- PROCESO DEL CAFÉ -->
-    <section class="seccion-doble invertida historia-cafe-section" id="proceso-cafe">
+    <section class="seccion-doble invertida historia-cafe-section" id="proceso-introduccion">
       <div class="bloque-imagen">
         <img src="images/grano-cafe.jpg" alt="Proceso del café en el Eje Cafetero">
       </div>
@@ -57,7 +51,7 @@
       </div>
     </section>
 
-    <section class="proceso-cafe" id="proceso-cafe">
+    <section class="proceso-cafe" id="proceso-slider">
       <div class="encabezado-seccion">
         <p class="subtitulo">Aprendizaje</p>
         <h2>Proceso del café paso a paso</h2>
@@ -109,8 +103,7 @@
                 <h3>Recolección</h3>
                 <p>
                   Los recolectores seleccionan manualmente los granos maduros. Esta etapa es muy importante porque de
-                  ella
-                  depende gran parte de la calidad final del café.
+                  ella depende gran parte de la calidad final del café.
                 </p>
               </div>
             </article>
@@ -172,237 +165,22 @@
         <span class="dot" onclick="irSlide(5)"></span>
       </div>
     </section>
-  </main>
-<section class="seccion-video">
-  <div class="encabezado-seccion video-encabezado">
-    <p class="subtitulo">Aprendizaje</p>
-    <h2>Proceso del café en video</h2>
-    <p class="descripcion-seccion">
-      Este video muestra de forma sencilla cómo el café pasa del cultivo hasta la taza
-    </p>
-  </div>
 
-  <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/6QgJk1qFIps"
-      title="Proceso del café"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-  <footer>
-    <p>© 2026 - Código Cafetero | Historia, cultura y aprendizaje del café</p>
-  </footer>
-
-  <script>
-    let slideActual = 0;
-    const track = document.getElementById("sliderTrack");
-    const slides = document.querySelectorAll(".slide-proceso");
-    const dots = document.querySelectorAll(".dot");
-
-    function actualizarSlider() {
-      track.style.transform = `translateX(-${slideActual * 100}%)`;
-
-      dots.forEach(dot => dot.classList.remove("activo"));
-      dots[slideActual].classList.add("activo");
-    }
-
-    function moverSlide(direccion) {
-      slideActual += direccion;
-
-      if (slideActual < 0) {
-        slideActual = slides.length - 1;
-      }
-
-      if (slideActual >= slides.length) {
-        slideActual = 0;
-      }
-
-      actualizarSlider();
-    }
-
-    function irSlide(indice) {
-      slideActual = indice;
-      actualizarSlider();
-    }
-
-
-  </script>
-
-</body>
-
-=======
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Código Cafetero - Proceso</title>
-  <link rel="icon" href="images/icono.png" type="image/png">
-
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-
-<body>
-
-  <!-- ENCABEZADO -->
-  <header class="hero">
-    <nav class="navbar">
-      <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="historia.html">Historia</a></li>
-        <li><a href="proceso.html">Proceso</a></li>
-        <li><a href="mapa.html">Mapa</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-        <li><a href="actividades.html">Actividades</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- CONTENIDO -->
-  <main class="contenedor-principal">
-    <!-- PROCESO DEL CAFÉ -->
-    <section class="seccion-doble invertida historia-cafe-section" id="proceso-cafe">
-      <div class="bloque-imagen">
-        <img src="images/grano-cafe.jpg" alt="Proceso del café en el Eje Cafetero">
-      </div>
-
-      <div class="bloque-texto">
-        <p class="subtitulo">Proceso educativo</p>
-        <h1>Del grano a la taza</h1>
-        <p>
-          El café pasa por varias etapas antes de llegar a la bebida que conocemos. Todo comienza con la siembra
-          y el cuidado de la planta, continúa con la recolección de los frutos maduros y sigue con procesos como
-          el despulpado, el lavado, el secado, la trilla y el tostado.
-        </p>
-        <p>
-          Cada una de estas fases requiere tiempo, conocimiento y dedicación. Por eso, detrás de una taza de café
-          hay mucho más que una bebida: hay trabajo campesino, experiencia, tradición y esfuerzo familiar.
-        </p>
-        <p>
-          Comprender este proceso ayuda a valorar más el café y a reconocer su importancia dentro del Eje Cafetero,
-          no solo como producto económico, sino también como parte de una herencia cultural que sigue viva.
-        </p>
-      </div>
-    </section>
-
-    <section class="proceso-cafe" id="proceso-cafe">
-      <div class="encabezado-seccion">
+    <section class="seccion-video">
+      <div class="encabezado-seccion video-encabezado">
         <p class="subtitulo">Aprendizaje</p>
-        <h2>Proceso del café paso a paso</h2>
+        <h2>Proceso del café en video</h2>
         <p class="descripcion-seccion">
-          Desde la siembra hasta la taza, el café pasa por varias etapas que reflejan trabajo, cultura y tradición.
+          Este video muestra de forma sencilla cómo el café pasa del cultivo hasta la taza
         </p>
       </div>
 
-      <div class="slider-proceso">
-        <button class="btn-slider prev" onclick="moverSlide(-1)">&#10094;</button>
-
-        <div class="slider-viewport">
-          <div class="slider-track" id="sliderTrack">
-
-            <article class="slide-proceso">
-              <div class="slide-imagen">
-                <img src="images/siembra.png" alt="Siembra del café">
-                <span class="card-tag">Inicio</span>
-              </div>
-              <div class="slide-texto">
-                <h3>Siembra</h3>
-                <p>
-                  El proceso comienza con la siembra de las semillas en viveros. Allí las plantas crecen con cuidado
-                  hasta estar listas para ser trasladadas al campo.
-                </p>
-              </div>
-            </article>
-
-            <article class="slide-proceso">
-              <div class="slide-imagen">
-                <img src="images/cultivo.png" alt="Cultivo del café">
-                <span class="card-tag">Crecimiento</span>
-              </div>
-              <div class="slide-texto">
-                <h3>Cultivo</h3>
-                <p>
-                  Las plantas de café crecen durante varios meses. Con el tiempo producen frutos, conocidos como cerezas
-                  de café, que deben desarrollarse en buenas condiciones de clima y suelo.
-                </p>
-              </div>
-            </article>
-
-            <article class="slide-proceso">
-              <div class="slide-imagen">
-                <img src="images/recoleccion.png" alt="Recolección de café">
-                <span class="card-tag">Trabajo</span>
-              </div>
-              <div class="slide-texto">
-                <h3>Recolección</h3>
-                <p>
-                  Los recolectores seleccionan manualmente los granos maduros. Esta etapa es muy importante porque de
-                  ella
-                  depende gran parte de la calidad final del café.
-                </p>
-              </div>
-            </article>
-
-            <article class="slide-proceso">
-              <div class="slide-imagen">
-                <img src="images/procesamiento.png" alt="Proceso del café">
-                <span class="card-tag">Transformación</span>
-              </div>
-              <div class="slide-texto">
-                <h3>Procesamiento</h3>
-                <p>
-                  Después de la recolección, los granos pasan por procesos como el despulpado, el lavado y el secado.
-                  Esto permite prepararlos para las siguientes etapas.
-                </p>
-              </div>
-            </article>
-
-            <article class="slide-proceso">
-              <div class="slide-imagen">
-                <img src="images/tostado.png" alt="Tostado del café">
-                <span class="card-tag">Sabor</span>
-              </div>
-              <div class="slide-texto">
-                <h3>Tostado</h3>
-                <p>
-                  El tostado transforma el grano y desarrolla su aroma, color y sabor. En esta etapa el café empieza
-                  a adquirir las características que reconoceremos en la bebida final.
-                </p>
-              </div>
-            </article>
-
-            <article class="slide-proceso">
-              <div class="slide-imagen">
-                <img src="images/consumo.png" alt="Taza de café">
-                <span class="card-tag">Final</span>
-              </div>
-              <div class="slide-texto">
-                <h3>Consumo</h3>
-                <p>
-                  Finalmente, el café llega a la taza. Después de todo el proceso, puede disfrutarse en distintas
-                  preparaciones, conservando detrás una historia de trabajo y tradición.
-                </p>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-        <button class="btn-slider next" onclick="moverSlide(1)">&#10095;</button>
-      </div>
-
-      <div class="indicadores-proceso" id="indicadoresProceso">
-        <span class="dot activo" onclick="irSlide(0)"></span>
-        <span class="dot" onclick="irSlide(1)"></span>
-        <span class="dot" onclick="irSlide(2)"></span>
-        <span class="dot" onclick="irSlide(3)"></span>
-        <span class="dot" onclick="irSlide(4)"></span>
-        <span class="dot" onclick="irSlide(5)"></span>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/6QgJk1qFIps"
+          title="Proceso del café"
+          allowfullscreen>
+        </iframe>
       </div>
     </section>
   </main>
@@ -411,6 +189,7 @@
     <p>© 2026 - Código Cafetero | Historia, cultura y aprendizaje del café</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     let slideActual = 0;
     const track = document.getElementById("sliderTrack");
@@ -419,7 +198,6 @@
 
     function actualizarSlider() {
       track.style.transform = `translateX(-${slideActual * 100}%)`;
-
       dots.forEach(dot => dot.classList.remove("activo"));
       dots[slideActual].classList.add("activo");
     }
@@ -442,11 +220,7 @@
       slideActual = indice;
       actualizarSlider();
     }
-
-
   </script>
 
 </body>
-
->>>>>>> c12c2de9dbfda7c684eeddec0ae6345685e36148:proceso.html
 </html>
