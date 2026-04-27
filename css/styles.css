@@ -5141,3 +5141,38 @@ height: 1650px;
     grid-row: span 1;
   }
 }
+
+
+/* =========================
+   TIPOGRAFÍA GLOBAL
+========================= */
+
+/* Todo el texto normal */
+body,
+p,
+span,
+a,
+li,
+ul,
+ol,
+label,
+button,
+input,
+textarea,
+select,
+small,
+strong,
+em,
+div {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Todos los títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
