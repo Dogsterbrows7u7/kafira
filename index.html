@@ -2,276 +2,122 @@
 <html lang="es">
 
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katurro | Inicio</title>
+  <title>Katurro | Bienvenido</title>
   <link rel="icon" href="assets/images/icono.png" type="image/png">
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600&display=swap"
-    rel="stylesheet">
+  
+  <style>
+    /* Estilos específicos para la landing page */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Evitar scroll en la landing */
+      background-color: #000;
+    }
+    
+    .landing-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .video-fondo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.7; /* Oscurecer un poco para que destaque el texto/logo */
+    }
+
+    .landing-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .landing-logo {
+      max-width: 1200px;
+      width: 100%;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+    }
+
+    .landing-title {
+      color: #fff;
+      font-size: 3.5rem;
+      font-weight: 800;
+      text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.7);
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .btn-empezar {
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      background-color: var(--vino);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      box-shadow: 0 4px 15px rgba(154, 16, 20, 0.6);
+      z-index: 10;
+      animation: fadeInOpacity 2s ease-in-out;
+    }
+
+    .btn-empezar:hover {
+      background-color: transparent;
+      border-color: var(--vino);
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(154, 16, 20, 0.8);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInOpacity {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="hero-video">
-<video id="videoInicio" class="video-fondo" autoplay muted playsinline preload="auto">
-    <source src="assets/videos/inicio.mp4" type="video/mp4">
-    Tu navegador no soporta video en HTML5.
-  </video>
-
-<div class="poster-overlay" id="posterOverlay"></div>
-
-  <nav class="barra-superior">
-    <a href="index.html" class="logo-link">
-      <img src="assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
-    </a>
-    <ul class="menu nav-menu">
-      <li><a href="pages/historia.html">Historia</a></li>
-      <li><a href="pages/proceso.html">Proceso</a></li>
-      <li><a href="pages/mapa.html">Mapa</a></li>
-      <li><a href="pages/galeria.html">Galería</a></li>
-      <li><a href="pages/sobre-nosotros.html">Sobre Nosotros</a></li>
-      <li class="nav-item-dropdown">
-        <a href="#" class="nav-link-dropdown">Actividades</a>
-          <ul class="dropdown-submenu">
-            <li><a href="actividades.html">Lista de Actividades</a></li>
-            <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
-            <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
-            <li><a href="formulario.html">Formulario: Taza Cafetera</a></li>
-          </ul>
-     </li>
-      <li><a href="pages/caracteristicas.html">Características</a></li>
-    </ul>
-  </nav>
-
-</header>
-<section class="previos-cafe">
-  <div class="previos-cafe__contenido">
-    <p class="subtitulo">Conocimientos previos</p>
-    <h2>Antes de comenzar, descubre cuánto sabes sobre el mundo cafetero</h2>
-    <p class="previos-cafe__texto">
-      Antes de recorrer la historia, el proceso y la cultura del café, te invitamos a activar tus
-      conocimientos previos. Esta pequeña actividad te ayudará a ubicar ideas básicas sobre el origen,
-      el cultivo y el recorrido del café de una forma visual, dinámica e interactiva.
-    </p>
-
-    <div class="previos-cafe__acciones">
-      <a href="pages/mapa-tesoro.html" class="btn-previos">Ir al Mapa del Tesoro</a>
-    </div>
-  </div>
-</section>
-<main class="home-main">
-
-  <section class="inicio-editorial">
-    <div class="editorial-layout">
-
-      <div class="editorial-img-grande">
-        <img src="assets/images/cafe (1).png" alt="Pereira y la cultura cafetera">
-        <div class="editorial-overlay">
-          <h2>El café también cuenta la historia de Pereira</h2>
-        </div>
-      </div>
-
-      <div class="editorial-texto-superior">
-        <span class="subtitulo">café que es eso?</span>
-        <p>
-      ¿Sabes qué es el café? Quizás ya lo hayas probado o tal vez solo hayas escuchado hablar de él. El café es una bebida que se obtiene de los granos de una planta llamada cafeto y es conocida en muchas partes del mundo por su aroma, su sabor y su importancia cultural. Dale click al botón para saber más sobre el café.
-        </p>
-
-        
-
-        <a href="pages/historia.html" class="btn-editorial">Ver historia del café</a>
-      </div>
-
-      <div class="editorial-img-pequena">
-        <img src="assets/images/cafe (5).png" alt="Katurro">
-      </div>
-
-    </div>
-  </section>
-<section class="home-proceso">
-  <div class="proceso-head">
-    <span class="mini-tag">Proceso</span>
-    <h2>Del cultivo a la taza</h2>
-    <p>
-      Descubre las etapas que convierten el café en una bebida llena de aroma, trabajo y tradición.
-    </p>
-    <a href="pages/proceso.html" class="btn-home-seccion">Ver proceso</a>
-  </div>
-
-  <div class="proceso-video-box">
-   <video autoplay muted loop playsinline class="proceso-video">
-      <source src="assets/videos/proceso.mp4" type="video/mp4">
-      Tu navegador no soporta video en HTML5.
+  <div class="landing-container">
+    <video class="video-fondo" autoplay muted loop playsinline>
+      <source style="width: 200%; height: 200%; object-fit: cover;" src="assets/videos/inicio.mp4" type="video/mp4">=
     </video>
+    <img src="assets/images/inicio-pagina.png" alt="Katurro Logo" class="landing-logo">
+    <div class="landing-content">
+      
+    </div>
+    <a href="pages/introduccion.html" class="btn-empezar">Comenzar experiencia cafetera</a>
   </div>
-</section>
-
-<section class="home-mapa">
-  <div class="mapa-texto">
-    <span class="mini-tag claro">Mapa</span>
-    <h2>Ubica los lugares que forman la cultura cafetera</h2>
-    <p>
-      Recorre visualmente espacios clave de Pereira para entender la relación
-      entre territorio, identidad y café.
-    </p>
-    <a href="pages/mapa.html" class="btn-home-seccion btn-claro">Ir al mapa</a>
-  </div>
-
-  <div class="mapa-visual">
-   <video autoplay muted loop playsinline class="mapa-visual">
-      <source src="assets/videos/cafe lugar.mp4" type="video/mp4">
-  </div>
-</section>
-
-<section class="home-galeria">
-  <div class="galeria-info-home">
-    <span class="mini-tag">Galería</span>
-    <h2>Una colección visual del mundo cafetero</h2>
-    <p>
-      Imágenes, paisajes y escenas que ayudan a comprender la belleza, la tradición y la vida
-      alrededor del café.
-    </p>
-    <a href="pages/galeria.html" class="btn-home-seccion">Abrir galería</a>
-  </div>
-
-  <div class="galeria-mosaico">
-    <div class="foto foto-1">
-      <img src="assets/images/kakafe (1).png" alt="Paisaje cafetero al amanecer">
-    </div>
-
-    <div class="foto foto-2">
-      <img src="assets/images/kakafe (2).png" alt="Cerezas de café en la planta">
-    </div>
-
-    <div class="foto foto-3">
-      <img src="assets/images/kakafe (3).png" alt="Montañas y cafetales">
-    </div>
-
-    <div class="foto foto-4">
-      <img src="assets/images/kakafe (4).png" alt="Recolección de café">
-    </div>
-  </div>
-</section>
-
-<section class="home-nosotros">
-  <div class="nosotros-caja">
-    <span class="mini-tag">Sobre nosotros</span>
-    <h2>Katurro</h2>
-    <p>
-      Este proyecto busca enseñar de manera visual e interactiva la historia, el proceso y la
-      importancia cultural del café colombiano.
-    </p>
-    <a href="pages/sobre-nosotros.html" class="btn-home-seccion">Conocer más</a>
-  </div>
-
-  <div class="nosotros-logo">
-    <img src="assets/images/mejro banner.jpeg" alt="Logo Katurro">
-  </div>
-</section>
-
-<section class="home-actividades">
-  <div class="actividades-img-home">
-    <img src="assets/images/cafeto.png" alt="Actividades del café">
-  </div>
-
-  <div class="actividades-texto-home">
-    <span class="mini-tag">Actividades</span>
-    <h2>Aprende jugando</h2>
-    <p>
-      Participa en actividades y dinámicas que refuerzan los conocimientos sobre el café de una forma
-      entretenida y didáctica.
-    </p>
-    <a href="pages/actividades.html" class="btn-home-seccion">Ir a actividades</a>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <section class="resumen-grid-section">
-    <div class="encabezado-seccion encabezado-premium">
-      <span class="subtitulo">Saberes cafeteros</span>
-      <h2>Lo esencial del mundo del café</h2>
-      <p class="descripcion-seccion">
-        Una mirada breve a la historia, la cultura y el valor del café en Colombia y en Pereira.
-      </p>
-    </div>
-
-<div class="resumen-grid">
-  <article class="resumen-card">
-    <div class="resumen-card-img">
-      <img src="assets/images/noticia.png" alt="Historia del café">
-    </div>
-    <div class="resumen-card-body">
-      <span class="resumen-tag">Historia</span>
-      <h3>El café en Colombia</h3>
-      <p>
-        Desde el siglo XVIII, el café comenzó a adaptarse al territorio colombiano hasta consolidarse
-        como una actividad económica y cultural de gran importancia.
-      </p>
-      <a href="pages/historia.html" class="btn-resumen">Saber más</a>
-    </div>
-  </article>
-
-
-
-  <article class="resumen-card">
-    <div class="resumen-card-img">
-      <img src="assets/images/Viaducto_Cesar_Gaviria_Truillo._Vista_nocturna.jpg" alt="Pereira y el café">
-    </div>
-    <div class="resumen-card-body">
-      <span class="resumen-tag">Ciudad</span>
-      <h3>Pereira y su vínculo cafetero</h3>
-      <p>
-        Pereira fortaleció su identidad junto al café, integrando comercio, crecimiento urbano
-        y tradición regional en una misma historia.
-      </p>
-      <a href="pages/mapa.html" class="btn-resumen">Saber más</a>
-    </div>
-  </article>
-
-  <article class="resumen-card">
-    <div class="resumen-card-img">
-      <img src="assets/images/cafe (6).png" alt="Familias cafeteras">
-    </div>
-    <div class="resumen-card-body">
-      <span class="resumen-tag">Cultura</span>
-      <h3>Familias y tradición</h3>
-      <p>
-        La vida cafetera se construye en pequeñas fincas, en el trabajo compartido y en saberes
-        que pasan de una generación a otra.
-      </p>
-      <a href="pages/proceso.html" class="btn-resumen">Saber más</a>
-    </div>
-  </article>
-</div>
- 
-  </section>
-
-</main>
-
-  <footer>
-    <p>© 2026 - Katurro | Historia, cultura y aprendizaje del café</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/video-inicio.js"></script>
-  <script src="assets/js/navbar.js"></script>
 
 </body>
-
 </html>

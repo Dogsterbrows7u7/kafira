@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katurro | Contacto</title>
+  <title>Katurro | Mapa</title>
   <link rel="icon" href="../assets/images/icono.png" type="image/png">
 
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
+
 <body>
 
-  <!-- ENCABEZADO -->
+    <!-- ENCABEZADO -->
   <header class="hero">
 
     <nav class="barra-superior">
@@ -56,37 +59,39 @@
       </ul>
     </nav>
   </header>
-
-  <!-- CONTENIDO -->
-  <main class="contenedor-principal">
-    <section id="contacto" class="apoyo-section">
-  <div class="encabezado-seccion">
-    <p class="subtitulo subtitulo-amarillo">Contacto</p>
-    <h2>¿Cómo contactarnos?</h2>
+  
+<div class="ruta-superior-wrap">
+  <a href="caracteristicas.html" class="btn-ruta-superior">Ir a Características</a>
+</div>
+  <main class="contenedor-principal my-5">
+    <article class="tarjeta-unificada">
+  <img src="../assets/images/banner.png" alt="Valle del Cocora" class="tarjeta-unificada__img">
+  <div class="tarjeta-unificada__contenido">
+    
+        <p class="subtitulo subtitulo-verde">Naturaleza</p>
+        <h2>Valle del Cocora</h2>
+        <p>Este paisaje representa el entorno natural donde se desarrolla la cultura cafetera. El café depende del clima, la tierra y la biodiversidad.</p>
+        <p><b>Puntos Importantes:</b> Bosques de Palma de Cera, Senderos ecológicos, Miradores naturales.</p>
+        <p><b>Dónde tomar café:</b> En los paradores tradicionales al inicio del valle, o probar un buen "café con leche" o "chaqueta" al bajar de la caminata en los restaurantes locales.</p>
+      
   </div>
-
-  <div class="apoyo-box">
-    <p>
-      Si deseas conocer más sobre Katurro, puedes comunicarte con el equipo del proyecto
-      para recibir información adicional sobre su propósito educativo y su desarrollo.
-    </p>
-    <ul>
-      <li>Correo: katurro@gmail.com</li>
-      <li>Instagram: @katurro</li>
-      <li>Ubicación: Pereira, Risaralda</li>
-    </ul>
-  </div>
-</section>
-  </main>
+</article>
+        <div class="contenedor-btn-actividad" style="margin-top: 3rem; margin-bottom: 3rem; text-align: center;">
+        <a href="mapa-tesoro.html" class="btn-ir-actividad">Asumir el Reto: Mapa del Tesoro</a>
+    </div>
+</main>
 
   <footer>
     <p>© 2026 - Katurro | Historia, cultura y aprendizaje del café</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="../assets/js/mapa.js"></script>
   <script src="../assets/js/navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="../assets/js/funciones.js"></script>
 <button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
 </body>
+
 </html>

@@ -10,6 +10,7 @@
   <title>katurro | Proceso</title>
   <link rel="icon" href="../assets/images/icono.png" type="image/png">
   <link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -18,25 +19,41 @@
   <header class="hero">
 
     <nav class="barra-superior">
-     <a href="index.html" class="logo-link">
-        <img src="assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
+     <a href="../index.html" class="logo-link">
+        <img src="../assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
       </a>
       <ul class="menu nav-menu">
-        <li><a href="pages/historia.html">Historia</a></li>
-        <li><a href="pages/proceso.html">Proceso</a></li>
-        <li><a href="pages/mapa.html">Mapa</a></li>
-        <li><a href="pages/galeria.html">Galería</a></li>
-        <li><a href="pages/sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="introduccion.html" class="nav-link-icon"><i class="bi bi-house-door"></i><span>Introducción</span></a></li>
         <li class="nav-item-dropdown">
-          <a href="#" class="nav-link-dropdown">Actividades</a>
-            <ul class="dropdown-submenu">
-              <li><a href="actividades.html">Lista de Actividades</a></li>
-              <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
-              <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
-              <li><a href="formulario.html">Formulario: Taza Cafetera</a></li>
-            </ul>
-       </li>
-        <li><a href="pages/caracteristicas.html">Características</a></li>
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-book"></i><span>Historia</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="historia-origenes.html">Orígenes y Expansión</a></li>
+            <li><a href="historia-pereira.html">Llegada a Pereira</a></li>
+            <li><a href="historia-cultura.html">Cultura y Tradición</a></li>
+          </ul>
+        </li>
+        <li><a href="proceso.html" class="nav-link-icon"><i class="bi bi-gear"></i><span>Proceso</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="mapa.html" class="nav-link-dropdown nav-link-icon"><i class="bi bi-map"></i><span>Mapa</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="mapa.html"><strong>Mapa Interactivo</strong></a></li>
+            <li><a href="lugar-salento.html">Salento</a></li>
+            <li><a href="lugar-cocora.html">Valle del Cocora</a></li>
+            <li><a href="lugar-santarosa.html">Santa Rosa de Cabal</a></li>
+            <li><a href="lugar-pereira.html">Pereira</a></li>
+          </ul>
+        </li>
+        <li><a href="caracteristicas.html" class="nav-link-icon"><i class="bi bi-stars"></i><span>Características</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-controller"></i><span>Actividades</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="actividades.html">Lista de Actividades</a></li>
+            <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
+            <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
+            <li><a href="formulario.html">Formulario: Katurro</a></li>
+          </ul>
+        </li>
+        <li><a href="sobre-nosotros.html" class="nav-link-icon"><i class="bi bi-people"></i><span>Sobre Nosotros</span></a></li>
       </ul>
     </nav>
   </header>
@@ -49,7 +66,7 @@
   <!-- HERO -->
   <section class="proceso-hero">
     <div class="proceso-hero__texto">
-      <p class="subtitulo">Proceso del café</p>
+      <p class="subtitulo subtitulo-amarillo">Proceso del café</p>
       <h1>De la semilla a la taza</h1>
       <p class="proceso-hero__intro">
         El café es mucho más que una bebida. Detrás de cada taza hay un proceso largo que puede durar años
@@ -60,87 +77,18 @@
     </div>
 
     <div class="proceso-hero__media">
-      <img src="../assets/images/grano-cafe.jpg" alt="Proceso del café">
+      <img src="../assets/images/banner.png" alt="Proceso del café">
     </div>
   </section>
-    <div class="proceso-video-premium__box">
-      <iframe
-        src="https://www.youtube.com/embed/6QgJk1qFIps"
-        title="Proceso del café"
-        allowfullscreen>
-      </iframe>
+    
+    <div class="contenedor-btn-actividad" style="margin-top: 3rem; margin-bottom: 3rem; text-align: center;">
+        <a href="caracteristicas.html" class="btn-ir-actividad">Descubrir: Características</a>
     </div>
   </section>
   <!-- ETAPAS INICIALES -->
-  <section class="proceso-bloque proceso-bloque--doble">
-    <div class="proceso-card proceso-card--texto">
-      <p class="subtitulo">Etapa 1</p>
-      <h2>El inicio: la semilla y la germinación</h2>
-      <p>
-        Todo comienza con la selección de la semilla, un momento clave porque desde ahí se define gran parte de la calidad del cultivo.
-        En Colombia, entidades como Cenicafé han desarrollado variedades que no solo producen buen café, sino que también resisten enfermedades
-        como la roya. Esto le permite al caficultor tener más seguridad en su cultivo.
-      </p>
-      <p>
-        Una vez elegida, la semilla no se siembra directamente en el campo. Primero pasa por un germinador, donde se controla cuidadosamente
-        la humedad, la temperatura y la sombra. En este ambiente, la semilla comienza a activarse hasta que brota una pequeña planta conocida
-        como chapola. Aunque es un momento pequeño dentro del proceso, es delicado, porque cualquier exceso de agua o falta de cuidado puede
-        afectar el desarrollo desde el inicio.
-      </p>
-    </div>
-
-    <div class="proceso-card proceso-card--imagen">
-      <img src="../assets/images/siembra.png" alt="Semilla y germinación del café">
-    </div>
-  </section>
-
-  <section class="proceso-bloque proceso-bloque--doble invertido">
-    <div class="proceso-card proceso-card--imagen">
-      <img src="../assets/images/cultivo.png" alt="Vivero del café">
-    </div>
-
-    <div class="proceso-card proceso-card--texto">
-      <p class="subtitulo">Etapa 2</p>
-      <h2>El vivero: fortalecer antes de crecer</h2>
-      <p>
-        Después de germinar, la planta se traslada al vivero, que funciona como una etapa de formación. Aquí no se trata solo de dejarla crecer,
-        sino de acompañarla en su desarrollo. Durante varios meses, el caficultor cuida que la planta tenga suficiente agua, sombra adecuada y
-        suelo con nutrientes.
-      </p>
-      <p>
-        En este punto, la planta desarrolla raíces más fuertes y un follaje más estable, lo que le permitirá adaptarse mejor cuando sea sembrada
-        en el campo. También se realiza una selección natural: las plantas débiles se descartan, y solo las más sanas continúan el proceso. Esto
-        asegura que el cultivo final tenga mejores condiciones desde el inicio.
-      </p>
-    </div>
-  </section>
-
-  <!-- PASO AL CAMPO -->
-  <section class="proceso-bloque proceso-bloque--franja">
-    <div class="franja-contenido">
-      <div class="franja-texto">
-        <p class="subtitulo">Etapa 3</p>
-        <h2>El paso al campo: adaptación al entorno real</h2>
-        <p>
-          Cuando la planta está lista, se lleva al terreno definitivo. Este paso marca un cambio importante, porque la planta deja el ambiente
-          controlado del vivero y empieza a enfrentar condiciones reales.
-        </p>
-        <p>
-          El café necesita ciertas características para crecer bien, como buena altitud, clima templado y suelos fértiles. Por eso regiones como
-          Pereira y Risaralda son tan reconocidas. Antes de sembrar, el caficultor prepara la tierra, organiza las distancias entre plantas y
-          muchas veces incluye árboles de sombra que ayudan a regular la temperatura y proteger el cultivo.
-        </p>
-      </div>
-
-      <div class="franja-media">
-        <img src="../assets/images/procesamiento.png" alt="Paso del café al campo">
-      </div>
-    </div>
-  </section>
-
-  <!-- CRECIMIENTO + FLORACIÓN -->
-  <section class="proceso-grid-etapas">
-    <article class="etapa-card">
+  <article class="tarjeta-unificada">
+  <img src="../assets/images/banner.png" alt="" class="tarjeta-unificada__img">
+  <div class="tarjeta-unificada__contenido">
       <span class="etapa-numero">4</span>
       <h3>Crecimiento del cafetal: una etapa de paciencia</h3>
       <p>
@@ -152,10 +100,13 @@
         enfermedades como la roya. En este proceso, el acompañamiento de la Federación Nacional de Cafeteros de Colombia ha sido fundamental para mejorar
         las prácticas agrícolas en el país. Aquí se forma la estructura de la planta, lo que determinará su productividad en el futuro.
       </p>
-    </article>
+  </div>
+  </article>
 
-    <article class="etapa-card">
-      <span class="etapa-numero">5</span>
+  <article class="tarjeta-unificada tarjeta-invertida">
+  <img src="../assets/images/banner.png" alt="" class="tarjeta-unificada__img">
+  <div class="tarjeta-unificada__contenido">
+    <span class="etapa-numero">5</span>
       <h3>La floración: el inicio de la producción</h3>
       <p>
         Después de ese periodo de crecimiento, la planta comienza a florecer. Las flores blancas aparecen generalmente después de las lluvias y llenan
@@ -166,10 +117,14 @@
         se empieza a definir la cantidad de café que se producirá meses después. El comportamiento de la floración depende en gran medida del clima y del
         manejo del cultivo.
       </p>
-    </article>
+  </div>
+</article>
 
-    <article class="etapa-card">
-      <span class="etapa-numero">6</span>
+  <!-- PASO AL CAMPO -->
+  <article class="tarjeta-unificada">
+  <img src="../assets/images/banner.png" alt="" class="tarjeta-unificada__img">
+  <div class="tarjeta-unificada__contenido">
+    <span class="etapa-numero">6</span>
       <h3>Formación y maduración del fruto</h3>
       <p>
         Después de la floración, se inicia la formación del fruto del café. Este proceso es lento y puede tardar varios meses. Durante este tiempo, la
@@ -180,54 +135,14 @@
         que influye directamente en la calidad final. En zonas como Risaralda, la combinación de altitud y clima favorece una maduración más lenta, lo
         que permite obtener cafés más complejos y equilibrados.
       </p>
-    </article>
-  </section>
+  </div>
+</article>
 
   <!-- COSECHA Y PROCESO -->
-  <section class="proceso-bloque proceso-bloque--doble">
-    <div class="proceso-card proceso-card--texto">
-      <p class="subtitulo">Etapa 7</p>
-      <h2>La cosecha: precisión y experiencia</h2>
-      <p>
-        La cosecha en Colombia es un proceso manual, lo que significa que los recolectores seleccionan los frutos uno a uno. Esto permite recoger
-        únicamente los granos maduros, evitando afectar la calidad del café.
-      </p>
-      <p>
-        A diferencia de otros cultivos, el café no madura de forma uniforme, por lo que se deben hacer varias pasadas por el mismo cultivo. Esta característica
-        hace que la cosecha sea más exigente, pero también más precisa. Además, tiene un impacto social importante, ya que genera empleo y actividad económica
-        en las zonas rurales.
-      </p>
-    </div>
-
-    <div class="proceso-card proceso-card--imagen">
-      <img src="../assets/images/recoleccion.png" alt="Cosecha del café">
-    </div>
-  </section>
-
-  <section class="proceso-bloque proceso-bloque--doble invertido">
-    <div class="proceso-card proceso-card--imagen">
-      <img src="../assets/images/procesamiento.png" alt="Despulpado y fermentación">
-    </div>
-
-    <div class="proceso-card proceso-card--texto">
-      <p class="subtitulo">Etapa 8</p>
-      <h2>Despulpado y fermentación: donde empieza el sabor</h2>
-      <p>
-        Una vez recolectado, el café debe procesarse rápidamente. Primero se despulpa, es decir, se le quita la parte externa del fruto, dejando el grano
-        cubierto por mucílago.
-      </p>
-      <p>
-        Luego viene la fermentación, una de las etapas más importantes del proceso. Durante este tiempo, el mucílago se descompone de manera natural,
-        generando cambios químicos que influyen directamente en el sabor del café. Este proceso debe ser controlado cuidadosamente, ya que un exceso
-        o una falta de fermentación puede afectar negativamente la calidad.
-      </p>
-    </div>
-  </section>
-
-  <!-- LAVADO, SECADO, TRILLA -->
-  <section class="proceso-grid-etapas proceso-grid-etapas--dos">
-    <article class="etapa-card">
-      <span class="etapa-numero">9</span>
+  <article class="tarjeta-unificada tarjeta-invertida">
+  <img src="../assets/images/banner.png" alt="" class="tarjeta-unificada__img">
+  <div class="tarjeta-unificada__contenido">
+    <span class="etapa-numero">9</span>
       <h3>Lavado y secado: asegurar la calidad</h3>
       <p>
         Después de la fermentación, el café se lava para eliminar los residuos. Este paso permite obtener un grano limpio, listo para el secado.
@@ -236,10 +151,13 @@
         El secado es fundamental para la conservación del café. Se busca reducir la humedad a niveles adecuados, lo que evita problemas como el moho
         o el deterioro. Este proceso puede hacerse al sol o con maquinaria, pero en ambos casos requiere control y cuidado para mantener la calidad del grano.
       </p>
-    </article>
+  </div>
+</article>
 
-    <article class="etapa-card">
-      <span class="etapa-numero">10</span>
+  <article class="tarjeta-unificada">
+  <img src="../assets/images/banner.png" alt="" class="tarjeta-unificada__img">
+  <div class="tarjeta-unificada__contenido">
+    <span class="etapa-numero">10</span>
       <h3>Trilla y clasificación: preparación para el mercado</h3>
       <p>
         Cuando el café está seco, se realiza la trilla, donde se elimina la capa externa del grano, obteniendo el café verde. Este es el estado en
@@ -249,77 +167,45 @@
         Luego se clasifica según su calidad. En esta etapa se evalúan características físicas y sensoriales, lo que permite diferenciar entre distintos
         tipos de café. Los cafés especiales, por ejemplo, tienen estándares más altos y son más valorados en el mercado.
       </p>
-    </article>
-  </section>
+  </div>
+</article>
+
 
   <!-- VIDEO -->
   <section class="proceso-video-premium">
     <div class="encabezado-seccion">
-      <p class="subtitulo">Apoyo visual</p>
+      <p class="subtitulo subtitulo-amarillo">Apoyo visual</p>
       <h2>El proceso del café en video</h2>
       <p class="descripcion-seccion">
         Mira este video para complementar el recorrido de la semilla a la taza.
       </p>
     </div>
+    <div class="proceso-video-premium__box">
+      <iframe
+        src="https://www.youtube.com/embed/6QgJk1qFIps"
+        title="Proceso del café"
+        allowfullscreen>
+      </iframe>
+    </div>
+    </section>
+    
 
 
 
   <!-- TOSTIÓN Y CIERRE -->
-  <section class="proceso-bloque proceso-bloque--franja">
-    <div class="franja-contenido">
-      <div class="franja-texto">
-        <p class="subtitulo">Etapa 11</p>
-        <h2>Tostión, molienda y preparación: el cierre del proceso</h2>
-        <p>
-          Finalmente, el café pasa por la tostión, donde adquiere su aroma y sabor característico. Este proceso transforma completamente el grano y define
-          gran parte de la experiencia en la taza.
-        </p>
-        <p>
-          Después se muele, adaptando el tamaño según el método de preparación, y finalmente se prepara la bebida. Aunque parece el final, en realidad es
-          el reflejo de todo el proceso anterior.
-        </p>
-      </div>
-
-      <div class="franja-media">
-        <img src="../assets/images/tostado.png" alt="Tostión y molienda del café">
-      </div>
-    </div>
-  </section>
-
-  <!-- CONCLUSIÓN -->
-  <section class="proceso-conclusion">
-    <p class="subtitulo">Conclusión</p>
+  <article class="tarjeta-unificada tarjeta-invertida">
+  <img src="../assets/images/banner.png" alt="" class="tarjeta-unificada__img">
+  <div class="tarjeta-unificada__contenido">
+    <p class="subtitulo subtitulo-amarillo">Conclusión</p>
     <h2>Un proceso largo, técnico y cultural</h2>
     <p>
       El café es el resultado de un proceso largo y complejo que va mucho más allá de la cosecha. Cada etapa, desde la semilla hasta la preparación,
       requiere cuidado, conocimiento y experiencia. En regiones como Pereira y Risaralda, este proceso no solo es productivo, sino también cultural,
       ya que forma parte de la vida de muchas familias.
     </p>
-  </section>
-<section class="proceso-juego-final">
-  <div class="encabezado-seccion proceso-juego-final__head">
-    <p class="subtitulo">Actividad interactiva</p>
-    <h2>Laboratorio cafetero</h2>
-
   </div>
+</article>
 
-  <div class="proceso-juego-final__marco">
-    <div class="proceso-juego-final__top">
-      <div class="proceso-juego-final__info">
-        <span class="proceso-pill">Juego educativo</span>
-        <span class="proceso-pill">Arrastrar y soltar</span>
-        <span class="proceso-pill">Proceso completo</span>
-      </div>
-      <p class="proceso-juego-final__nota">
-     
-      </p>
-    </div>
-
-    <div class="juego-embed juego-embed--proceso">
-      <iframe src="juegos/laboratorio-cafetero/index.html" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
 </main>
 
   <footer>
@@ -330,5 +216,7 @@
   <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/proceso.js"></script>
 
+<script src="../assets/js/funciones.js"></script>
+<button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
 </body>
 </html>

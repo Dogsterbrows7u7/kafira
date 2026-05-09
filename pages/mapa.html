@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -20,36 +21,54 @@
   <header class="hero">
 
     <nav class="barra-superior">
-     <a href="index.html" class="logo-link">
-        <img src="assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
+      <a href="../index.html" class="logo-link">
+        <img src="../assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
       </a>
       <ul class="menu nav-menu">
-        <li><a href="pages/historia.html">Historia</a></li>
-        <li><a href="pages/proceso.html">Proceso</a></li>
-        <li><a href="pages/mapa.html">Mapa</a></li>
-        <li><a href="pages/galeria.html">Galería</a></li>
-        <li><a href="pages/sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="introduccion.html" class="nav-link-icon"><i class="bi bi-house-door"></i><span>Introducción</span></a></li>
         <li class="nav-item-dropdown">
-          <a href="#" class="nav-link-dropdown">Actividades</a>
-            <ul class="dropdown-submenu">
-              <li><a href="actividades.html">Lista de Actividades</a></li>
-              <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
-              <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
-              <li><a href="formulario.html">Formulario: Taza Cafetera</a></li>
-            </ul>
-       </li>
-        <li><a href="pages/caracteristicas.html">Características</a></li>
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-book"></i><span>Historia</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="historia-origenes.html">Orígenes y Expansión</a></li>
+            <li><a href="historia-pereira.html">Llegada a Pereira</a></li>
+            <li><a href="historia-cultura.html">Cultura y Tradición</a></li>
+          </ul>
+        </li>
+        <li><a href="proceso.html" class="nav-link-icon"><i class="bi bi-gear"></i><span>Proceso</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="mapa.html" class="nav-link-dropdown nav-link-icon"><i class="bi bi-map"></i><span>Mapa</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="mapa.html"><strong>Mapa Interactivo</strong></a></li>
+            <li><a href="lugar-salento.html">Salento</a></li>
+            <li><a href="lugar-cocora.html">Valle del Cocora</a></li>
+            <li><a href="lugar-santarosa.html">Santa Rosa de Cabal</a></li>
+            <li><a href="lugar-pereira.html">Pereira</a></li>
+          </ul>
+        </li>
+        <li><a href="caracteristicas.html" class="nav-link-icon"><i class="bi bi-stars"></i><span>Características</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-controller"></i><span>Actividades</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="actividades.html">Lista de Actividades</a></li>
+            <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
+            <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
+            <li><a href="formulario.html">Formulario: Katurro</a></li>
+          </ul>
+        </li>
+        <li><a href="sobre-nosotros.html" class="nav-link-icon"><i class="bi bi-people"></i><span>Sobre Nosotros</span></a></li>
       </ul>
     </nav>
   </header>
   
 <div class="ruta-superior-wrap">
-  <a href="galeria.html" class="btn-ruta-superior">Ir a Galería</a>
+  <a href="caracteristicas.html" class="btn-ruta-superior">Ir a Características</a>
 </div>
   <main class="contenedor-principal">
-    <section class="seccion-mapa" id="mapa-section">
+
+
+    <section class="previos-cafe">
       <div class="encabezado-seccion">
-        <p class="subtitulo">Exploración interactiva</p>
+        <p class="subtitulo subtitulo-amarillo">Exploración interactiva</p>
         <h1>Lugares relacionados con la cultura cafetera</h1>
         <p class="descripcion-seccion">
           Explora el mapa y haz clic en cada lugar para conocer qué relación tiene con la cultura del café en el Eje Cafetero
@@ -66,13 +85,12 @@
         </div>
       </div>
     </section>
-  </main>
+  
 
-  <main class="contenedor-principal">
     <!-- LUGARES DESTACADOS -->
     <section class="lugares-destacados">
       <div class="encabezado-seccion">
-        <p class="subtitulo"></p>
+        <p class="subtitulo subtitulo-verde"></p>
         <h1>Lugares clave del café</h1>
       </div>
 
@@ -80,7 +98,7 @@
 
         <article class="card-lugar">
           <div class="card-imagen">
-            <img src="../assets/images/salento.jpg" alt="Salento">
+            <img src="../assets/images/banner.png" alt="Salento">
             <span class="card-tag">Cultura</span>
           </div>
           <div class="card-contenido">
@@ -91,7 +109,7 @@
 
         <article class="card-lugar">
           <div class="card-imagen">
-            <img src="../assets/images/Valle del Cocora.jpg" alt="Valle del Cocora">
+            <img src="../assets/images/banner.png" alt="Valle del Cocora">
             <span class="card-tag">Naturaleza</span>
           </div>
           <div class="card-contenido">
@@ -102,7 +120,7 @@
 
         <article class="card-lugar">
           <div class="card-imagen">
-            <img src="../assets/images/cascada-santa-helena.jpg" alt="Santa Rosa de Cabal">
+            <img src="../assets/images/banner.png" alt="Santa Rosa de Cabal">
             <span class="card-tag">Tradición</span>
           </div>
           <div class="card-contenido">
@@ -113,7 +131,7 @@
 
         <article class="card-lugar">
           <div class="card-imagen">
-            <img src="../assets/images/Viaducto_Cesar_Gaviria_Truillo._Vista_nocturna.jpg" alt="Pereira">
+            <img src="../assets/images/banner.png" alt="Pereira">
             <span class="card-tag">Ciudad</span>
           </div>
           <div class="card-contenido">
@@ -124,7 +142,12 @@
 
       </div>
     </section>
-  </main>
+  
+        <div class="contenedor-btn-actividad" style="margin-top: 3rem; margin-bottom: 3rem; text-align: center;">
+        <a href="mapa-tesoro.html" class="btn-ir-actividad">Asumir el Reto: Mapa del Tesoro</a>
+    </div>
+    
+</main>
 
   <footer>
     <p>© 2026 - Katurro | Historia, cultura y aprendizaje del café</p>
@@ -135,6 +158,8 @@
   <script src="../assets/js/navbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="../assets/js/funciones.js"></script>
+<button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
 </body>
 
 </html>

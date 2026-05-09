@@ -14,6 +14,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -22,25 +23,41 @@
   <header class="hero">
 
     <nav class="barra-superior">
-     <a href="index.html" class="logo-link">
-        <img src="assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
+     <a href="../index.html" class="logo-link">
+        <img src="../assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
       </a>
       <ul class="menu nav-menu">
-        <li><a href="pages/historia.html">Historia</a></li>
-        <li><a href="pages/proceso.html">Proceso</a></li>
-        <li><a href="pages/mapa.html">Mapa</a></li>
-        <li><a href="pages/galeria.html">Galería</a></li>
-        <li><a href="pages/sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="introduccion.html" class="nav-link-icon"><i class="bi bi-house-door"></i><span>Introducción</span></a></li>
         <li class="nav-item-dropdown">
-          <a href="#" class="nav-link-dropdown">Actividades</a>
-            <ul class="dropdown-submenu">
-              <li><a href="actividades.html">Lista de Actividades</a></li>
-              <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
-              <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
-              <li><a href="formulario.html">Formulario: Taza Cafetera</a></li>
-            </ul>
-       </li>
-        <li><a href="pages/caracteristicas.html">Características</a></li>
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-book"></i><span>Historia</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="historia-origenes.html">Orígenes y Expansión</a></li>
+            <li><a href="historia-pereira.html">Llegada a Pereira</a></li>
+            <li><a href="historia-cultura.html">Cultura y Tradición</a></li>
+          </ul>
+        </li>
+        <li><a href="proceso.html" class="nav-link-icon"><i class="bi bi-gear"></i><span>Proceso</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="mapa.html" class="nav-link-dropdown nav-link-icon"><i class="bi bi-map"></i><span>Mapa</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="mapa.html"><strong>Mapa Interactivo</strong></a></li>
+            <li><a href="lugar-salento.html">Salento</a></li>
+            <li><a href="lugar-cocora.html">Valle del Cocora</a></li>
+            <li><a href="lugar-santarosa.html">Santa Rosa de Cabal</a></li>
+            <li><a href="lugar-pereira.html">Pereira</a></li>
+          </ul>
+        </li>
+        <li><a href="caracteristicas.html" class="nav-link-icon"><i class="bi bi-stars"></i><span>Características</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-controller"></i><span>Actividades</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="actividades.html">Lista de Actividades</a></li>
+            <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
+            <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
+            <li><a href="formulario.html">Formulario: Katurro</a></li>
+          </ul>
+        </li>
+        <li><a href="sobre-nosotros.html" class="nav-link-icon"><i class="bi bi-people"></i><span>Sobre Nosotros</span></a></li>
       </ul>
     </nav>
   </header>
@@ -51,99 +68,111 @@
   <!-- CONTENIDO -->
   <main class="contenedor-principal my-5">
     
-    <div class="container bg-white p-5 rounded-4 shadow-sm mb-5">
+    <div class="container mb-5">
       <div class="row">
         <div class="col-12 text-center mb-5">
-          <span class="subtitulo" style="color: #6F1D1B; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">El Perfil de la Taza</span>
-          <h2 class="display-4" style="color: #4A1513; font-weight: 800; font-family: 'Playfair Display', serif;">Comprendiendo el Café</h2>
+          <span class="subtitulo subtitulo-amarillo" style="color: #6F1D1B; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">El Perfil de la Taza</span>
+          <h2 class="display-4" style="color: var(--vino); font-weight: 800; font-family: 'Playfair Display', serif;">Comprendiendo el Café</h2>
           <p class="lead text-muted mx-auto" style="max-width: 700px;">Para degustar verdaderamente una buena taza, primero debemos entender todos los factores que definen su personalidad.</p>
         </div>
       </div>
 
-      <div class="row align-items-center mb-5">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="../assets/images/noticia.png" alt="Aromas del café" class="img-fluid rounded-4 shadow-sm" style="object-fit: cover; height: 350px; width: 100%;">
-        </div>
-        <div class="col-lg-6 px-lg-5">
-          <h3 class="mb-4" style="color: #6F1D1B; font-weight: 700;">El Origen del Sabor</h3>
-          <p style="color: #555; line-height: 1.8;">
-            El sabor del café nunca es casualidad. Nace primero en la genética de la planta (variedades como Caturra, Castillo, Tabi), se nutre del <strong>terruño</strong> (los suelos volcánicos, la altura y el clima que estresan positivamente al cafeto) y se desarrolla en el cuidado del proceso. Un café cultivado en zonas altas, como muchas en Pereira, desarrollará un sabor más suave, notas frutales o florales y una acidez mucho más refinada.
-          </p>
-        </div>
-      </div>
+      <article class="tarjeta-unificada">
+  <img src="../assets/images/banner.png" alt="Aromas del café" class="tarjeta-unificada__img">
+  <div class="tarjeta-unificada__contenido">
+    <h2>El Origen del Sabor</h2>
+    <p>El sabor del café nunca es casualidad. Nace primero en la genética de la planta (variedades como Caturra, Castillo, Tabi), se nutre del <strong>terruño</strong> (los suelos volcánicos, la altura y el clima que estresan positivamente al cafeto) y se desarrolla en el cuidado del proceso. Un café cultivado en zonas altas, como muchas en Pereira, desarrollará un sabor más suave, notas frutales o florales y una acidez mucho más refinada.</p>
+  </div>
+</article>
 
-      <hr class="my-5" style="border-color: #e0e0e0;">
+      
 
       <div class="row">
         <div class="col-12 mb-4">
-          <h3 class="text-center mb-4" style="color: #4A1513; font-weight: 700;">Atributos Básicos de Cata</h3>
+          <h3 class="text-center mb-4" style="color: var(--vino); font-weight: 700;">Atributos Básicos de Cata</h3>
         </div>
         
-        <div class="col-md-4 mb-4">
-          <div class="p-4 bg-light rounded-4 h-100 text-center" style="border: 1px solid #eee;">
-            <div class="fs-1 mb-3" style="color: #6F1D1B;">✨</div>
-            <h4 class="fw-bold">Acidez</h4>
-            <p class="text-muted small mt-3">No es lo mismo que lo "agrio". En el café, la acidez es ese brillo, esa chispa vibrante y frutal que hace que el sabor sea fresco y vivo en el paladar. Es muy valorada en cafés arábicas lavados.</p>
+                <div class="col-md-4 mb-4">
+          <div class="card h-100 rounded-4 border-0 shadow-sm" style="overflow: hidden;">
+            <img src="../assets/images/banner.png" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold" style="color: var(--vino);">Acidez</h4>
+              <p class="text-muted small mt-3">No es lo mismo que lo "agrio". En el café, la acidez es ese brillo, esa chispa vibrante y frutal que hace que el sabor sea fresco y vivo en el paladar. Es muy valorada en cafés arábicas lavados.</p>
+            </div>
           </div>
         </div>
 
         <div class="col-md-4 mb-4">
-          <div class="p-4 bg-light rounded-4 h-100 text-center" style="border: 1px solid #eee;">
-            <div class="fs-1 mb-3" style="color: #6F1D1B;">☕</div>
-            <h4 class="fw-bold">Cuerpo</h4>
-            <p class="text-muted small mt-3">Es la sensación de peso o textura del café en la boca. Puede ser un cuerpo ligero (como un té), medio, o denso y almibarado. Un tueste más oscuro y ciertos métodos de preparación aumentan la sensación de cuerpo.</p>
+          <div class="card h-100 rounded-4 border-0 shadow-sm" style="overflow: hidden;">
+            <img src="../assets/images/banner.png" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold" style="color: #6F1D1B;">Cuerpo</h4>
+              <p class="text-muted small mt-3">Es la sensación de peso o textura del café en la boca. Puede ser un cuerpo ligero (como un té), medio, o denso y almibarado. Un tueste más oscuro y ciertos métodos de preparación aumentan la sensación de cuerpo.</p>
+            </div>
           </div>
         </div>
 
         <div class="col-md-4 mb-4">
-          <div class="p-4 bg-light rounded-4 h-100 text-center" style="border: 1px solid #eee;">
-            <div class="fs-1 mb-3" style="color: #6F1D1B;">💨</div>
-            <h4 class="fw-bold">Aroma</h4>
-            <p class="text-muted small mt-3">El preludio del sabor. Es responsable del 80% de lo que "saboreamos". En él encontramos notas florales, cítricas, a chocolate, a caramelo, frutos secos o especias desarrolladas tras la tostión.</p>
+          <div class="card h-100 rounded-4 border-0 shadow-sm" style="overflow: hidden;">
+            <img src="../assets/images/banner.png" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold" style="color: #6F1D1B;">Aroma</h4>
+              <p class="text-muted small mt-3">El preludio del sabor. Es responsable del 80% de lo que "saboreamos". En él encontramos notas florales, cítricas, a chocolate, a caramelo, frutos secos o especias desarrolladas tras la tostión.</p>
+            </div>
           </div>
         </div>
       </div>
+      
 
-      <hr class="my-5" style="border-color: #e0e0e0;">
+      <article class="tarjeta-unificada tarjeta-invertida">
+  <img src="../assets/images/banner.png" alt="Niveles de Tueste" class="tarjeta-unificada__img">
+  <div class="tarjeta-unificada__contenido">
+    <h2>La Magia del Tueste</h2>
+    <p>El tueste es donde sucede la alquimia térmica. Dependiendo del tiempo y temperatura, obtenemos distintos resultados:</p>
+    <ul>
+      <li style="margin-bottom: 0.5rem"><strong>Tueste Claro:</strong> Maximiza la acidez y las notas originales más sutiles. Sabor suave y cuerpo ligero.</li>
+      <li style="margin-bottom: 0.5rem"><strong>Tueste Medio:</strong> El punto de equilibrio. Resaltan notas a caramelo, chocolate o nueces.</li>
+      <li style="margin-bottom: 0.5rem"><strong>Tueste Oscuro:</strong> Menos acidez, mayor amargor y cuerpo pesado. Resaltan notas intensas o ahumadas.</li>
+    </ul>
+  </div>
+</article>
 
-      <div class="row align-items-center flex-lg-row-reverse mb-5">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="../assets/images/tostado.png" alt="Niveles de Tueste" class="img-fluid rounded-4 shadow-sm" style="object-fit: cover; height: 350px; width: 100%;">
-        </div>
-        <div class="col-lg-6 px-lg-5">
-          <h3 class="mb-4" style="color: #6F1D1B; font-weight: 700;">La Magia del Tueste</h3>
-          <p style="color: #555; line-height: 1.8;">
-            El tueste es donde sucede la alquimia térmica. Dependiendo del tiempo y temperatura, obtenemos distintos resultados:
-          </p>
-          <ul class="list-unstyled mt-3" style="color: #555;">
-            <li class="mb-3"><strong>Tueste Claro:</strong> Maximiza la acidez y las notas originales más sutiles (florales/frutales). Tiene un sabor más suave, retiene más cafeína y su cuerpo es ligero.</li>
-            <li class="mb-3"><strong>Tueste Medio:</strong> El punto de equilibrio. Armoniza acidez, aroma y cuerpo. Resaltan notas dulces como caramelo, chocolate con leche o nueces.</li>
-            <li class="mb-3"><strong>Tueste Oscuro:</strong> La acidez desaparece para dar paso al amargor y cuerpo pesado. Resaltan notas a chocolate negro intenso, ceniza o caramelo quemado. Oculta más los defectos pero también el sabor original del grano.</li>
-          </ul>
-        </div>
-      </div>
+      
 
-      <hr class="my-5" style="border-color: #e0e0e0;">
-
-      <div class="row align-items-center mb-5">
-        <div class="col-lg-6 mb-4 mb-lg-0 order-lg-2">
-          <img src="../assets/images/Como-nos-gusta-el-cafe-en-las-diferentes-regiones-de-Colombia.png" alt="Preparación del café" class="img-fluid rounded-4 shadow-sm" style="object-fit: cover; height: 350px; width: 100%;">
-        </div>
-        <div class="col-lg-6 px-lg-5 order-lg-1">
-          <h3 class="mb-4" style="color: #6F1D1B; font-weight: 700;">El Entorno y La Magia de la Preparación</h3>
-          <p style="color: #555; line-height: 1.8;">
-            Todo el esfuerzo desde el cultivo (almácigo) hasta el beneficio tiene un momento crítico: <strong>La extracción</strong>.
-          </p>
-          <ul class="list-unstyled mt-3" style="color: #555;">
-            <li class="mb-3"><strong>La Temperatura Ideal:</strong> El agua no debe estar hirviendo ni burbujeando al contacto con el café (100°C), ya que esto quema los granos y destruye las sutiles notas aromáticas, dejando un sabor amargo indeseable. La clave es usar agua bien caliente (aprox 90-96°C).</li>
-            <li class="mb-3"><strong>Agresión Cero:</strong> Extraer suavemente los aceites esenciales nos ayuda a no extraer esa sensación de "cargado" amargo que tantas veces se asocia a un supuesto café oscuro.</li>
-          </ul>
-        </div>
-      </div>
+      <article class="tarjeta-unificada">
+  <img src="../assets/images/banner.png" alt="Preparación del café" class="tarjeta-unificada__img">
+  <div class="tarjeta-unificada__contenido">
+    <h2>El Entorno y La Magia de la Preparación</h2>
+    <p>Todo el esfuerzo desde el cultivo (almácigo) hasta el beneficio tiene un momento crítico: <strong>La extracción</strong>.</p>
+    <ul>
+      <li style="margin-bottom: 0.5rem"><strong>La Temperatura Ideal:</strong> El agua no debe hervir (100°C), ya que esto quema los granos y destruye las sutiles notas aromáticas. La clave es usar agua caliente (aprox 90-96°C).</li>
+      <li style="margin-bottom: 0.5rem"><strong>Agresión Cero:</strong> Extraer suavemente los aceites esenciales evita sabores amargos indeseables.</li>
+    </ul>
+  </div>
+</article>
 
     </div>
 
-  </main>
+        <!-- VIDEO -->
+  <section class="proceso-video-premium">
+    <div class="encabezado-seccion">
+      <p class="subtitulo subtitulo-amarillo">Apoyo visual</p>
+      <h2>Conoce más sobre las características del café</h2>
+    </div>
+    <div class="proceso-video-premium__box">
+      <iframe
+        src="https://www.youtube.com/embed/6QgJk1qFIps"
+        title="Proceso del café"
+        allowfullscreen>
+      </iframe>
+    </div>
+    </section>
+    
+        <div class="contenedor-btn-actividad" style="margin-top: 3rem; margin-bottom: 3rem; text-align: center;">
+        <a href="mapa.html" class="btn-ir-actividad">Aplicar conocimientos: Mapa Interactivo</a>
+    </div>
+    
+</main>
 
   <footer>
     <p>© 2026 - Katurro | Historia, cultura y aprendizaje del café</p>
@@ -152,6 +181,8 @@
   <script src="../assets/js/navbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="../assets/js/funciones.js"></script>
+<button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
 </body>
 
 </html>

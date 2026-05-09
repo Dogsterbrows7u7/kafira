@@ -90,11 +90,11 @@ function mostrarFeedback(acierto, mensaje, accionOnClick) {
     }
     
     fbBtn.onclick = accionOnClick;
-    modalFeedback.classList.add('active');
+    modalFeedback.classList.remove('hidden');
 }
 
 function cerrarModal() {
-    modalFeedback.classList.remove('active');
+    modalFeedback.classList.add('hidden');
 }
 
 // 5. Flujo de Pantallas

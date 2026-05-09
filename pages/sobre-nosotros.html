@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -19,25 +20,41 @@
   <header class="hero">
 
     <nav class="barra-superior">
-     <a href="index.html" class="logo-link">
-        <img src="assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
+     <a href="../index.html" class="logo-link">
+        <img src="../assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
       </a>
       <ul class="menu nav-menu">
-        <li><a href="pages/historia.html">Historia</a></li>
-        <li><a href="pages/proceso.html">Proceso</a></li>
-        <li><a href="pages/mapa.html">Mapa</a></li>
-        <li><a href="pages/galeria.html">Galería</a></li>
-        <li><a href="pages/sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="introduccion.html" class="nav-link-icon"><i class="bi bi-house-door"></i><span>Introducción</span></a></li>
         <li class="nav-item-dropdown">
-          <a href="#" class="nav-link-dropdown">Actividades</a>
-            <ul class="dropdown-submenu">
-              <li><a href="actividades.html">Lista de Actividades</a></li>
-              <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
-              <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
-              <li><a href="formulario.html">Formulario: Taza Cafetera</a></li>
-            </ul>
-       </li>
-        <li><a href="pages/caracteristicas.html">Características</a></li>
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-book"></i><span>Historia</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="historia-origenes.html">Orígenes y Expansión</a></li>
+            <li><a href="historia-pereira.html">Llegada a Pereira</a></li>
+            <li><a href="historia-cultura.html">Cultura y Tradición</a></li>
+          </ul>
+        </li>
+        <li><a href="proceso.html" class="nav-link-icon"><i class="bi bi-gear"></i><span>Proceso</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="mapa.html" class="nav-link-dropdown nav-link-icon"><i class="bi bi-map"></i><span>Mapa</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="mapa.html"><strong>Mapa Interactivo</strong></a></li>
+            <li><a href="lugar-salento.html">Salento</a></li>
+            <li><a href="lugar-cocora.html">Valle del Cocora</a></li>
+            <li><a href="lugar-santarosa.html">Santa Rosa de Cabal</a></li>
+            <li><a href="lugar-pereira.html">Pereira</a></li>
+          </ul>
+        </li>
+        <li><a href="caracteristicas.html" class="nav-link-icon"><i class="bi bi-stars"></i><span>Características</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-controller"></i><span>Actividades</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="actividades.html">Lista de Actividades</a></li>
+            <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
+            <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
+            <li><a href="formulario.html">Formulario: Katurro</a></li>
+          </ul>
+        </li>
+        <li><a href="sobre-nosotros.html" class="nav-link-icon"><i class="bi bi-people"></i><span>Sobre Nosotros</span></a></li>
       </ul>
     </nav>
   </header>
@@ -45,52 +62,111 @@
   <!-- CONTENIDO -->
   <main class="contenedor-principal">
 
-    <!-- PRESENTACIÓN -->
-    <section class="presentacion-cafe">
-      <div class="encabezado-seccion" style="text-align: center;">
-        <p class="subtitulo">Katurro</p>
-        <h1>Conoce Katurro</h1>
-        <p class="descripcion-seccion">
-          Estas imágenes resumen la idea principal del proyecto y su enfoque educativo sobre el café.
+        <!-- PRESENTACIÓN -->
+    <div class="encabezado-seccion" style="text-align: center; margin-bottom: 3rem;">
+      <p class="subtitulo subtitulo-amarillo">El Proyecto</p>
+      <h1>Conoce Katurro</h1>
+      <p class="descripcion-seccion" style="max-width: 800px; margin: 0 auto;">
+        Katurro es un software educativo diseñado para preservar y enseñar la cultura cafetera del Eje Cafetero, conectando a las nuevas generaciones con su historia y su territorio.
+      </p>
+    </div>
+
+    <!-- Misión / Qué es -->
+    <article class="tarjeta-unificada">
+      <div class="tarjeta-unificada__contenido">
+        <span class="subtitulo subtitulo-verde">Nuestro Propósito</span>
+        <h2>¿Qué es Katurro?</h2>
+        <p>
+          Katurro nace como una iniciativa educativa para acercar a los jóvenes a las raíces de la cultura cafetera del Eje Cafetero. A través de un entorno interactivo y lúdico, buscamos que el aprendizaje sobre el café vaya más allá de la historia, convirtiéndose en una experiencia inmersiva.
+        </p>
+        <p>
+          Nuestro objetivo es generar una conexión emocional con el territorio, motivando a los usuarios a explorar, valorar y preservar las tradiciones de las familias cafeteras de Pereira y Risaralda.
         </p>
       </div>
-
-      <div class="imagen-presentacion">
-        <img src="../assets/images/como-se-oye.png" alt="Presentación sobre el café 1">
+      <div class="tarjeta-unificada__img">
+        <img src="../assets/images/banner.png" alt="Qué es Katurro">
       </div>
+    </article>
 
-      <div class="imagen-presentacion">
-        <img src="../assets/images/como-se-ve.png" alt="Presentación sobre el café 2">
+    <!-- Cómo se oye -->
+    <article class="tarjeta-unificada tarjeta-invertida">
+      <div class="tarjeta-unificada__contenido">
+        <span class="subtitulo subtitulo-amarillo">Experiencia Auditiva</span>
+        <h2>¿Cómo se oye el proyecto?</h2>
+        <p>
+          Katurro se identifica con sonidos naturales y relajantes propios del paisaje cafetero: el canto de los pájaros, la suave brisa entre los cafetales y el reconfortante sonido de una cafetera preparando café fresco.
+        </p>
+        <p>
+          Estos sonidos buscan generar una atmósfera tranquila y envolvente que permita al usuario concentrarse mientras aprende. Además, nos acompañan melodías instrumentales suaves que guían la navegación sin distraer.
+        </p>
       </div>
+      <div class="tarjeta-unificada__img">
+        <img src="../assets/images/banner.png" alt="Cómo se oye Katurro">
+      </div>
+    </article>
 
-      <div class="imagen-presentacion">
-        <img src="../assets/images/a-que-huele.png" alt="Presentación sobre el café 3">
+    <!-- Cómo se ve -->
+    <article class="tarjeta-unificada">
+      <div class="tarjeta-unificada__contenido">
+        <span class="subtitulo subtitulo-verde">Identidad Visual</span>
+        <h2>¿Cómo se ve el proyecto?</h2>
+        <p>
+          La paleta de colores de Katurro está directamente inspirada en el paisaje cafetero de Pereira. Utilizamos <strong>verdes</strong> para representar la naturaleza, <strong>beige</strong> para dar equilibrio, <strong>marrón</strong> para el café y su tradición, <strong>rojo vino</strong> para resaltar elementos importantes y <strong>amarillo</strong> para aportar energía.
+        </p>
+        <p>
+          Visualmente, mantenemos una estética amigable y moderna. En cuanto a la tipografía, empleamos <strong>Playfair Display</strong> en los títulos para aportar elegancia clásica, y <strong>Poppins</strong> en los textos para garantizar una lectura cómoda y contemporánea en pantalla, logrando un ambiente cálido, cercano y juvenil.
+        </p>
       </div>
+      <div class="tarjeta-unificada__img">
+        <img src="../assets/images/banner.png" alt="Cómo se ve Katurro">
+      </div>
+    </article>
 
-      <div class="imagen-presentacion">
-        <img src="../assets/images/a-que-sabe.png" alt="Presentación sobre el café 4">
+    <!-- A qué huele -->
+    <article class="tarjeta-unificada tarjeta-invertida">
+      <div class="tarjeta-unificada__contenido">
+        <span class="subtitulo subtitulo-amarillo">Experiencia Olfativa</span>
+        <h2>¿A qué huele el proyecto?</h2>
+        <p>
+          Katurro se asocia inevitablemente con el aroma inconfundible del café recién hecho, lleno de notas dulces y cálidas que evocan el calor del hogar.
+        </p>
+        <p>
+          También evoca el olor fresco de la naturaleza húmeda, como la tierra mojada después de la lluvia en medio de los cafetales. Este olor simbólico busca generar en el usuario una profunda sensación de conexión con el territorio y sus tradiciones más arraigadas.
+        </p>
       </div>
+      <div class="tarjeta-unificada__img">
+        <img src="../assets/images/banner.png" alt="A qué huele Katurro">
+      </div>
+    </article>
 
-      <div class="imagen-presentacion">
-        <img src="../assets/images/como-se-siente.png" alt="Presentación sobre el café 5">
+    <!-- A qué sabe -->
+    <article class="tarjeta-unificada">
+      <div class="tarjeta-unificada__contenido">
+        <span class="subtitulo subtitulo-verde">Experiencia Gustativa</span>
+        <h2>¿A qué sabe el proyecto?</h2>
+        <p>
+          Katurro tiene el sabor de una experiencia auténtica. Puede relacionarse con tus bebidas favoritas, ya sea un espresso intenso, un suave cappuccino, un latte espumoso o un refrescante café frío.
+        </p>
+        <p>
+          Se acompaña en la imaginación con sabores dulces y tradicionales: un pastel de chocolate o zanahoria, galletas con chispas, o preparaciones locales como el clásico "migao". Todo esto refuerza la idea de que aprender sobre nuestra cultura debe ser un proceso de disfrute pleno.
+        </p>
       </div>
-
-      <div class="imagen-presentacion">
-        <img src="../assets/images/mensaje.png" alt="Presentación sobre el café 6">
+      <div class="tarjeta-unificada__img">
+        <img src="../assets/images/banner.png" alt="A qué sabe Katurro">
       </div>
-    </section>
+    </article>
 
     <!-- CONTACTO -->
     <section id="contacto" class="apoyo-section">
       <div class="encabezado-seccion">
-        <p class="subtitulo">Contacto</p>
+        <p class="subtitulo subtitulo-verde">Contacto</p>
         <h1>¿Cómo contactarnos?</h1>
       </div>
 
       <div class="apoyo-box">
         <p>
           Si deseas conocer más sobre Katurro, puedes comunicarte con el equipo del proyecto
-          para recibir información adicional sobre su propósito educativo y su desarrollo.
+          para recibir información adicional sobre nuestro propósito educativo y desarrollo.
         </p>
         <ul>
           <li>Correo: katurro@gmail.com</li>
@@ -99,8 +175,11 @@
         </ul>
       </div>
     </section>
-
-  </main>
+    
+    <div class="contenedor-btn-actividad" style="margin-top: 3rem; margin-bottom: 3rem; text-align: center;">
+        <a href="../index.html" class="btn-ir-actividad">Finalizar y Volver al inicio</a>
+    </div>
+</main>
 
   <footer>
     <p>© 2026 - Katurro | Historia, cultura y aprendizaje del café</p>
@@ -109,6 +188,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/navbar.js"></script>
 
+<script src="../assets/js/funciones.js"></script>
+<button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
 </body>
 
 </html>

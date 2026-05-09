@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -19,25 +20,41 @@
   <header class="hero">
 
     <nav class="barra-superior">
-     <a href="index.html" class="logo-link">
-        <img src="assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
+     <a href="../index.html" class="logo-link">
+        <img src="../assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
       </a>
       <ul class="menu nav-menu">
-        <li><a href="pages/historia.html">Historia</a></li>
-        <li><a href="pages/proceso.html">Proceso</a></li>
-        <li><a href="pages/mapa.html">Mapa</a></li>
-        <li><a href="pages/galeria.html">Galería</a></li>
-        <li><a href="pages/sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="introduccion.html" class="nav-link-icon"><i class="bi bi-house-door"></i><span>Introducción</span></a></li>
         <li class="nav-item-dropdown">
-          <a href="#" class="nav-link-dropdown">Actividades</a>
-            <ul class="dropdown-submenu">
-              <li><a href="actividades.html">Lista de Actividades</a></li>
-              <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
-              <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
-              <li><a href="formulario.html">Formulario: Taza Cafetera</a></li>
-            </ul>
-       </li>
-        <li><a href="pages/caracteristicas.html">Características</a></li>
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-book"></i><span>Historia</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="historia-origenes.html">Orígenes y Expansión</a></li>
+            <li><a href="historia-pereira.html">Llegada a Pereira</a></li>
+            <li><a href="historia-cultura.html">Cultura y Tradición</a></li>
+          </ul>
+        </li>
+        <li><a href="proceso.html" class="nav-link-icon"><i class="bi bi-gear"></i><span>Proceso</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="mapa.html" class="nav-link-dropdown nav-link-icon"><i class="bi bi-map"></i><span>Mapa</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="mapa.html"><strong>Mapa Interactivo</strong></a></li>
+            <li><a href="lugar-salento.html">Salento</a></li>
+            <li><a href="lugar-cocora.html">Valle del Cocora</a></li>
+            <li><a href="lugar-santarosa.html">Santa Rosa de Cabal</a></li>
+            <li><a href="lugar-pereira.html">Pereira</a></li>
+          </ul>
+        </li>
+        <li><a href="caracteristicas.html" class="nav-link-icon"><i class="bi bi-stars"></i><span>Características</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-controller"></i><span>Actividades</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="actividades.html">Lista de Actividades</a></li>
+            <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
+            <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
+            <li><a href="formulario.html">Formulario: Katurro</a></li>
+          </ul>
+        </li>
+        <li><a href="sobre-nosotros.html" class="nav-link-icon"><i class="bi bi-people"></i><span>Sobre Nosotros</span></a></li>
       </ul>
     </nav>
   </header>
@@ -52,7 +69,7 @@
   <!-- PORTADA -->
   <section class="historia-hero-premium">
     <div class="historia-hero-contenido">
-      <p class="subtitulo">Historia del café</p>
+      <p class="subtitulo subtitulo-amarillo">Historia del café</p>
       <h1>La historia del café en Colombia y Pereira</h1>
       <p class="hero-intro">
         Un recorrido visual y narrativo por la introducción del café en Colombia, su expansión histórica,
@@ -64,7 +81,7 @@
   <!-- SIGLO XVIII -->
   <section class="historia-bloque historia-bloque--editorial">
     <div class="historia-bloque__texto">
-      <p class="subtitulo">Siglo XVIII</p>
+      <p class="subtitulo subtitulo-verde">Siglo XVIII</p>
       <h2>Inicio del café en Colombia</h2>
 
       <p>
@@ -101,7 +118,7 @@
 
     <aside class="historia-bloque__apoyo">
       <div class="media-card media-card--grande">
-        <img src="../assets/images/Flag_of_Colombia.svg.png" alt="Primeros cultivos de café en Colombia">
+        <img src="../assets/images/banner.png" alt="Primeros cultivos de café en Colombia">
       </div>
 
       <div class="media-card media-card--video">
@@ -134,28 +151,18 @@
   <!-- BIBLIOGRAFÍA SIGLO XVIII -->
   <section class="historia-info-box">
     <div class="info-col">
-      <h3>Bibliografía</h3>
-      <ul>
-        <li>Palacios, M. (2009). El café en Colombia, 1850-1970: una historia económica, social y política. El Colegio de México.</li>
-        <li>Federación Nacional de Cafeteros de Colombia. (1958). Manual del cafetero colombiano. Bogotá: La Federación.</li>
-        <li>Tirado Mejía, Á., López Díez, J. C., Álvarez Múnera, J. R., Vélez Vallejo, R., Leibovich, J., & González Sanguino, N. (2017). Federación Nacional de Cafeteros de Colombia 1927–2017, 90 años: vivir el café y sembrar el futuro. Editorial EAFIT; Federación Nacional de Cafeteros de Colombia.</li>
-      </ul>
+      
     </div>
 
     <div class="info-col">
-      <h3>Web</h3>
-      <ul>
-        <li><a href="https://www.cervantesvirtual.com/obra/el-cafe-en-colombia-1850-1970-una-historia-economica-social-y-politica--cuarta-edicion-860339/?utm_source=chatgpt.com" target="_blank">Biblioteca Virtual Miguel de Cervantes, edición digital de Palacios.</a></li>
-        <li><a href="https://share.google/uT1H84GroLG9hCFgz" target="_blank">Repositorio de Cenicafé, Manual del cafetero colombiano.</a></li>
-        <li><a href="https://editorial.eafit.edu.co/index.php/editorial/catalog/book/640" target="_blank">Editorial EAFIT, Federación Nacional de Cafeteros de Colombia, 1927-2017, 90 años: vivir el café y sembrar el futuro</a></li>
-      </ul>
+      
     </div>
   </section>
 
   <!-- 1790 -->
   <section class="historia-bloque historia-bloque--invertido">
     <div class="historia-bloque__texto">
-      <p class="subtitulo">1790</p>
+      <p class="subtitulo subtitulo-amarillo">1790</p>
       <h2>Evidencia y adaptación del café en Colombia hasta 1835</h2>
 
       <p>
@@ -205,33 +212,19 @@
 
     <aside class="historia-bloque__apoyo">
       <div class="media-card media-card--grande">
-        <img src="../assets/images/cambio.jpg" alt="Adaptación del café en Colombia">
+        <img src="../assets/images/banner.png" alt="Adaptación del café en Colombia">
       </div>
 
-      <div class="media-card">
-        <h3>Bibliografía</h3>
-        <ul>
-          <li>Federación Nacional de Cafeteros de Colombia. (1958). Manual del cafetero colombiano. Editorial La Federación.</li>
-          <li>Palacios, M. (2009). El café en Colombia (1850–1970): una historia económica, social y política (4.ª ed.). El Colegio de México.</li>
-          <li>Tirado Mejía, Á., López Díez, J. C., Álvarez Múnera, J. R., Vélez Vallejo, R., Leibovich, J., & González Sanguino, N. (2017). Federación Nacional de Cafeteros de Colombia 1927–2017, 90 años. Vivir el café y sembrar el futuro. Editorial EAFIT; FNC.</li>
-        </ul>
-      </div>
+      
 
-      <div class="media-card">
-        <h3>Webgrafía</h3>
-        <ul>
-          <li><a href="https://biblioteca.cenicafe.org/handle/10778/831" target="_blank">Manual del cafetero colombiano (Cenicafé).</a></li>
-          <li><a href="https://www.cervantesvirtual.com/obra/el-cafe-en-colombia-1850-1970-una-historia-economica-social-y-politica--cuarta-edicion-860339/" target="_blank">El café en Colombia (1850–1970)</a></li>
-          <li><a href="https://share.google/L2IWdDUbkODkt8OFB" target="_blank">Federación Nacional de Cafeteros de Colombia 1927–2017, 90 años. Vivir el café y sembrar el futuro</a></li>
-        </ul>
-      </div>
+      
     </aside>
   </section>
 
   <!-- 1835 -->
   <section class="historia-bloque historia-bloque--editorial">
     <div class="historia-bloque__texto">
-      <p class="subtitulo">1835</p>
+      <p class="subtitulo subtitulo-verde">1835</p>
       <h2>Proyección inicial del café colombiano</h2>
 
       <p>
@@ -298,25 +291,9 @@
   </iframe>
 </div>
 
-      <div class="media-card">
-        <h3>Bibliografía</h3>
-        <ul>
-          <li>Gaitán, A. (2018). ¿Una taza de café? Colombia, tierra de café y caficultores. En De la geología al café. Servicio Geológico Colombiano; Cenicafé.</li>
-          <li>Federación Nacional de Cafeteros de Colombia. (1958). Manual del cafetero colombiano.</li>
-          <li>Tirado Mejía, Á., et al. (2017). Federación Nacional de Cafeteros de Colombia 1927–2017, 90 años. Vivir el café y sembrar el futuro.</li>
-          <li>Palacios, M. (2009). El café en Colombia (1850–1970): una historia económica, social y política.</li>
-        </ul>
-      </div>
+      
 
-      <div class="media-card">
-        <h3>Webgrafía</h3>
-        <ul>
-          <li><a href="https://biblioteca.cenicafe.org/handle/10778/4257" target="_blank">¿Una taza de café? Colombia, tierra de café y caficultores</a></li>
-          <li><a href="https://biblioteca.cenicafe.org/handle/10778/831" target="_blank">Manual del cafetero colombiano</a></li>
-          <li><a href="https://biblioteca.cenicafe.org/handle/10778/4277" target="_blank">Federación Nacional de Cafeteros de Colombia 1927–2017</a></li>
-          <li><a href="https://www.cervantesvirtual.com/obra/el-cafe-en-colombia-1850-1970-una-historia-economica-social-y-politica--cuarta-edicion-860339/" target="_blank">Biblioteca Virtual: El café en Colombia (1850–1970)</a></li>
-        </ul>
-      </div>
+      
 
       <div class="media-card media-card--video">
         <a href="https://youtu.be/ADCladqE99w?si=zwPCsF5Ch6eBcUqI" target="_blank" class="media-boton">Ver video adicional</a>
@@ -327,7 +304,7 @@
   <!-- LLEGADA A PEREIRA -->
   <section class="historia-bloque historia-bloque--invertido">
     <div class="historia-bloque__texto">
-      <p class="subtitulo">Pereira</p>
+      <p class="subtitulo subtitulo-amarillo">Pereira</p>
       <h2>Llegada a Pereira</h2>
 
       <p>
@@ -376,35 +353,19 @@
 
     <aside class="historia-bloque__apoyo">
       <div class="media-card media-card--grande">
-        <img src="../assets/images/Skyline_Pereira.jpg" alt="Pereira y el café">
+        <img src="../assets/images/banner.png" alt="Pereira y el café">
       </div>
 
-      <div class="media-card">
-        <h3>Bibliografía</h3>
-        <ul>
-          <li>Zuluaga Gómez, V. (2013). Historia extensa de Pereira. Universidad Tecnológica de Pereira.</li>
-          <li>Martínez Botero, S., & Mejía Cubillos, J. (2020). Café y ciudad: El despegue urbano de Pereira. En Repensando la historia urbana: Reflexiones históricas en torno a la ciudad colombiana.</li>
-          <li>Osorio Velásquez, J. E., & Montoya Ferrer, J. (2021). Café, expansión urbana y transformación arquitectónica. Pereira, 1910–1930. Revista Ciudades, Estados y Política, 8(1), 69–85.</li>
-          <li>Banco de la República / Banrepcultural. (s. f.). La cultura del café.</li>
-        </ul>
-      </div>
+      
 
-      <div class="media-card">
-        <h3>Webgrafía</h3>
-        <ul>
-          <li><a href="https://repositorio.utp.edu.co/entities/publication/ae74e037-69e3-48cf-bae1-649111e1501a" target="_blank">Repositorio UTP: Historia extensa de Pereira.</a></li>
-          <li><a href="https://www.banrepcultural.org/rutas-colonizacion-antioquena/la_cultura_del_cafe.html" target="_blank">Banrepcultural: La cultura del café.</a></li>
-          <li><a href="https://dialnet.unirioja.es/servlet/articulo?codigo=9028630" target="_blank">Dialnet: Café y ciudad: El despegue urbano de Pereira.</a></li>
-          <li><a href="https://www.scielo.org.co/scielo.php?pid=S2462-91032021000100069&script=sci_arttext" target="_blank">SciELO: Café, expansión urbana y transformación arquitectónica. Pereira, 1910–1930.</a></li>
-        </ul>
-      </div>
+      
     </aside>
   </section>
 
   <!-- EL GRANO -->
   <section class="historia-bloque historia-bloque--editorial">
     <div class="historia-bloque__texto">
-      <p class="subtitulo">El grano</p>
+      <p class="subtitulo subtitulo-verde">El grano</p>
       <h2>Cultivo, variedades y cuidado del café</h2>
 
       <p>
@@ -456,7 +417,7 @@
       </div>
 
       <div class="media-card media-card--grande">
-        <img src="../assets/images/grano-cafe.jpg" alt="Variedades del grano de café">
+        <img src="../assets/images/banner.png" alt="Variedades del grano de café">
       </div>
     </aside>
   </section>
@@ -464,7 +425,7 @@
   <!-- COMUNIDADES CAFETERAS -->
   <section class="historia-bloque historia-bloque--invertido">
     <div class="historia-bloque__texto">
-      <p class="subtitulo">Comunidades cafeteras</p>
+      <p class="subtitulo subtitulo-amarillo">Comunidades cafeteras</p>
       <h2>Familias que se asentaron y vivieron del café</h2>
 
       <p>
@@ -531,7 +492,7 @@
 </div>
 
       <div class="media-card media-card--grande">
-        <img src="../assets/images/TPB7LRVLOBBG5KVYLLIRYRBLPI.jpg" alt="Comunidades cafeteras">
+        <img src="../assets/images/banner.png" alt="Comunidades cafeteras">
       </div>
     </aside>
   </section>
@@ -539,7 +500,7 @@
   <!-- IDENTIDAD Y CULTURA CAFETERA -->
   <section class="historia-tabs-cultura">
     <div class="encabezado-seccion">
-      <p class="subtitulo">Identidad y cultura cafetera</p>
+      <p class="subtitulo subtitulo-verde">Identidad y cultura cafetera</p>
       <h2>Cotidianidad, tradición e identidad</h2>
     </div>
 
@@ -673,6 +634,11 @@
     </div>
   </section>
 
+
+        <div class="contenedor-btn-actividad" style="margin-top: 3rem; margin-bottom: 3rem; text-align: center;">
+        <a href="proceso.html" class="btn-ir-actividad">Avanzar: El Proceso</a>
+    </div>
+    
 </main>
 
 
@@ -719,17 +685,23 @@
 
  
 </section>
-  </main>
+  
+        <div class="contenedor-btn-actividad" style="margin-top: 3rem; margin-bottom: 3rem; text-align: center;">
+        <a href="proceso.html" class="btn-ir-actividad">Avanzar: El Proceso</a>
+    </div>
+    
+</main>
 
   <footer>
     <p>© 2026 - Katurro | Historia, cultura y aprendizaje del café</p>
   </footer>
-<button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
+
 
 <script src="../assets/js/funciones.js"></script>
 <script src="../assets/js/navbar.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
 </body>
 
 </html>

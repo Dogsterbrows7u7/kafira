@@ -1,3 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .logo-link {
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* Ensure that all cards scale uniformly to fill the container */
+.tarjeta-unificada {
+  width: 100%;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keep activities cards and features cards consistent */
+.card {
+  border-radius: 20px !important;
+}
+
 :root {
   --vino: #9A1014;
   --blanco: #FFFDFD;
@@ -261,7 +285,7 @@ section {
 
 
 .descripcion-seccion {
-  color: #ffffff;
+  color: var(--negro);
 }
 
 /* DOBLE */
@@ -717,7 +741,7 @@ footer {
 }
 
 .galeria-contenedor {
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -824,7 +848,7 @@ footer {
   margin-top: 18px;
   font-size: 1.05rem;
   text-align: center;
-  max-width: 800px;
+  max-width: 1350px; width: 100%;
   line-height: 1.5;
 }
 
@@ -1405,7 +1429,7 @@ footer {
   padding: 3rem;
   border-radius: var(--radio);
   margin: 2rem auto;
-  max-width: 1200px;
+  max-width: 1350px;
   width: 90%;
 }
 
@@ -3071,13 +3095,13 @@ bottom: 320px;
 
 
 .contenedor-historia-premium {
-  width: min(1450px, 94%);
+  width: min(1450px, 90%);
   margin: 0 auto;
   padding: 3rem 0 5rem;
 }
 
 .historia-hero-premium {
-  background: linear-gradient(135deg, #f8f1e5, #efe3cf);
+  background: linear-gradient(135deg, var(--blanco));
   border-radius: 30px;
   padding: 4rem 3rem;
   margin-bottom: 3rem;
@@ -3244,7 +3268,7 @@ bottom: 320px;
 }
 
 .cultura-card {
-  background: #00000000;
+  background: var(--blanco);
   border-radius: 24px;
   padding: 1.8rem;
   box-shadow: 0 12px 28px rgba(0,0,0,0.07);
@@ -3334,7 +3358,7 @@ bottom: 320px;
 }
 
 .proceso-hero__texto {
-  background: linear-gradient(135deg, #fffaf2, #f3e4cd);
+  background: linear-gradient(135deg, var(--blanco));
   border-radius: 30px;
   padding: 3rem;
   box-shadow: 0 14px 35px rgba(0,0,0,0.08);
@@ -4257,7 +4281,7 @@ height: 1650px;
 }
 
 .formulario-hero {
-  background: linear-gradient(135deg, #fffaf2, #f3e4cb);
+  background: linear-gradient(135deg, var(--blanco));
   border-radius: 30px;
   padding: 3rem;
   margin-bottom: 2rem;
@@ -4288,7 +4312,7 @@ height: 1650px;
 
 .formulario-card {
   width: 100%;
-  background: #fffdf9;
+  background: var(--blanco);
   border-radius: 28px;
   padding: 2.2rem;
   box-shadow: 0 14px 30px rgba(0,0,0,0.08);
@@ -4398,7 +4422,7 @@ height: 1650px;
 ========================= */
 
 .mapa-tesoro-main {
-  width: min(1400px, 94%);
+  width: min(1350px, 90%);
   margin: 0 auto;
   padding: 3rem 0 5rem;
 }
@@ -4429,7 +4453,7 @@ height: 1650px;
 .experiencia-interactiva {
   position: relative;
   min-height: 760px;
-  background: #fffdf9;
+  background: var(--blanco);
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 16px 34px rgba(0,0,0,0.08);
@@ -4448,7 +4472,7 @@ height: 1650px;
 
 .tesoro-panel {
   width: min(700px, 88%);
-  background: rgba(255, 253, 249, 0.96);
+  background: var(--blanco);
   border-radius: 24px;
   padding: 2.4rem;
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
@@ -4642,7 +4666,7 @@ height: 1650px;
 ========================= */
 
 .cata-main {
-  width: min(1400px, 94%);
+  width: min(1350px, 90%);
   margin: 0 auto;
   padding: 3rem 0 5rem;
 }
@@ -5183,9 +5207,9 @@ h6 {
 ========================= */
 
 .previos-cafe {
-  width: min(1400px, 94%);
+  width: min(1400px, 90%);
   margin: 2.5rem auto 2rem;
-  background: linear-gradient(135deg, #fffaf2, #f3e4cb);
+  background: linear-gradient(135deg, var(--blanco));
   border-radius: 28px;
   padding: 2.4rem 2rem;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
@@ -5305,4 +5329,377 @@ h6 {
 .btn-subir-arriba:hover {
   background: #7f0d11;
   transform: translateY(-3px);
+}
+/* ---- NUEVOS ESTILOS KATURRO ---- */
+
+/* Colores de Subtítulos */
+.subtitulo-verde {
+  color: var(--verde) !important;
+}
+.subtitulo-amarillo {
+  color: #F0C05A !important; /* Amarillo cálido */
+}
+
+/* Estilos Dropdown (Igual al Navbar) */
+.nav-item-dropdown {
+  position: relative;
+}
+
+.dropdown-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 253, 253, 0.95);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 253, 253, 0.16);
+  border-radius: 12px;
+  padding: 0.5rem 0;
+  min-width: 220px;
+  list-style: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+.nav-item-dropdown.active .dropdown-submenu {
+  display: block;
+  animation: fadeInDropdown 0.3s ease;
+}
+
+.dropdown-submenu li a {
+  display: block;
+  padding: 0.7rem 1.2rem;
+  color: var(--vino) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.dropdown-submenu li a::after {
+  display: none;
+}
+
+.dropdown-submenu li a:hover {
+  background: rgba(154, 16, 20, 0.08);
+  color: var(--vino) !important;
+  transform: translateX(5px);
+}
+
+@keyframes fadeInDropdown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Intercalado de tarjetas de dos columnas (Ajuste para móviles y layout) */
+.historia-bloque--editorial,
+.historia-bloque--invertido {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.historia-bloque--editorial {
+    grid-template-columns: 1.2fr 1fr;
+}
+.historia-bloque--invertido {
+    grid-template-columns: 1fr 1.2fr;
+}
+
+@media (max-width: 900px) {
+    .historia-bloque--editorial,
+    .historia-bloque--invertido {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para el botón de ir a actividad */
+.btn-ir-actividad {
+  display: inline-block;
+  background-color: var(--vino);
+  color: white !important;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(154, 16, 20, 0.4);
+  text-align: center;
+}
+
+.btn-ir-actividad:hover {
+  background-color: transparent;
+  color: var(--vino) !important;
+  border: 2px solid var(--vino);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(154, 16, 20, 0.6);
+}
+
+.contenedor-btn-actividad {
+  text-align: center;
+  width: 100%;
+}
+
+
+/* --- OVERRIDES PARA REFINAMIENTO DE KATURRO --- */
+
+/* 1. Ajustes en inicio-editorial para evitar superposición y tamaños gigantes */
+.inicio-editorial {
+  padding: 4rem 2rem;
+  background-color: var(--crema);
+}
+
+.editorial-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1350px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.editorial-img-grande {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.editorial-img-grande img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.editorial-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.editorial-overlay h2 {
+  color: white !important;
+  margin: 0;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.editorial-texto-superior {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.editorial-texto-superior p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.editorial-img-pequena {
+  display: none; /* Hide the small image to clean up the layout */
+}
+
+@media (max-width: 900px) {
+  .editorial-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 2. Ajustes en botones de ruta (separarlos de la esquina y más padding) */
+.ruta-superior-wrap {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  background: transparent !important;
+}
+
+.btn-ruta-superior {
+  padding: 1rem 2rem !important;
+  font-size: 1.1rem !important;
+  border-radius: 30px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+  transition: transform 0.3s ease !important;
+  margin-top: 2rem;
+}
+
+.btn-ruta-superior:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15) !important;
+}
+
+/* 3. Ajustes de mapa (quitar fondo negro, ocupar ancho completo) */
+.seccion-mapa {
+  background-color: var(--blanco);
+  padding: 2rem 0 !important;
+}
+
+.mapa-video-grid {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.panel-mapa {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 600px !important;
+}
+
+.panel-video {
+  display: none !important; /* Esconder el video de El Xokas */
+}
+
+/* 4. Mejoras de legibilidad en Proceso */
+.proceso-card--texto {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+
+
+
+/* --- TARJETA UNIFICADA (FILA INTERCALADA) --- */
+.tarjeta-unificada {
+  background: white !important;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 3rem;
+  max-width: 1350px; width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.tarjeta-unificada.tarjeta-invertida {
+  flex-direction: row-reverse;
+}
+
+.tarjeta-unificada__img {
+  width: 50%;
+  object-fit: cover;
+  min-height: 400px;
+}
+
+.tarjeta-unificada__contenido {
+  width: 50%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tarjeta-unificada__contenido h2 {
+  color: var(--vino);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.tarjeta-unificada__contenido p {
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* El apoyo ahora va debajo de todo si hay videos */
+.tarjeta-unificada__apoyo {
+  width: 100%;
+  background: #fdfdfd;
+  padding: 2rem;
+  border-top: 1px solid #eaeaea;
+}
+
+/* Envolver imagen y contenido juntos para que el aside (apoyo) caiga debajo */
+/* Necesitamos un pequeño ajuste: flex-wrap: wrap */
+.tarjeta-unificada {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .tarjeta-unificada, .tarjeta-unificada.tarjeta-invertida {
+    flex-direction: column;
+  }
+  .tarjeta-unificada__img, .tarjeta-unificada__contenido {
+    width: 100%;
+  }
+}
+
+/* --- REFINAMIENTO DEL NAVBAR Y DESPLEGABLE --- */
+.nav-link-icon {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link-icon i {
+  font-size: 1.1rem;
+  color: var(--vino);
+}
+
+.dropdown-submenu {
+  text-align: left !important;
+  padding: 1rem 0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+  border: 1px solid #eee !important;
+}
+
+.dropdown-submenu li a {
+  text-align: left !important;
+  padding: 0.8rem 1.5rem !important;
+  display: block;
+}
+
+.dropdown-submenu li a:hover {
+  background-color: var(--crema) !important;
+  color: var(--vino) !important;
+  padding-left: 1.8rem !important; /* Animación sutil */
+}
+
+/* --- AJUSTES EN INTRODUCCION --- */
+/* Hacer mapa legible */
+.home-mapa {
+  background-color: #d7ccc8 !important; /* Marrón más claro y suave */
+}
+
+.home-mapa .mapa-texto h2, .home-mapa .mapa-texto p {
+  color: #2b1b17 !important; /* Texto oscuro para mejor contraste */
+}
+
+/* Arreglar Saberes Cafeteros grid images */
+.resumen-card-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* En lugar de cover para no deformar Código Cafetero si aún está (o las nuevas) */
+  background: #fff;
+  padding: 1rem;
+}
+
+/* Fix for the interactive map section alignment and text color */
+.seccion-mapa .descripcion-seccion {
+  color: #555 !important;
+}
+
+.mapa-video-grid {
+  align-items: center !important;
+}
+
+.panel-mapa {
+  margin: 0 auto !important;
 }
