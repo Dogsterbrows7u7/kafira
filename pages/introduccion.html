@@ -21,7 +21,7 @@
 <header class="hero" style="min-height: auto;">
 <nav class="barra-superior">
     <a href="../index.html" class="logo-link">
-      <img src="../assets/images/Logo actualizado (1) (1).png" alt="Katurro" class="logo-nav">
+      <img src="../assets/images/Logo.png" alt="Katurro" class="logo-nav">
     </a>
     <ul class="menu nav-menu">
         <li><a href="introduccion.html" class="nav-link-icon"><i class="bi bi-house-door"></i><span>Introducción</span></a></li>
@@ -49,9 +49,11 @@
           <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-controller"></i><span>Actividades</span></a>
           <ul class="dropdown-submenu">
             <li><a href="actividades.html">Lista de Actividades</a></li>
-            <li><a href="mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
-            <li><a href="cata-cafetera.html">Simulador de Cata</a></li>
-            <li><a href="formulario.html">Formulario: Katurro</a></li>
+            <li><a href="../juegos/saberes-previos/saberes-previos.html">Test de Saberes Previos</a></li>
+            <li><a href="../juegos/mapa-tesoro/mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
+            <li><a href="../juegos/laboratorio-cafetero/laboratorio-cafetero.html">Laboratorio Cafetero</a></li>
+            <li><a href="../juegos/cata-cafetera/cata-cafetera.html">Simulador de Cata</a></li>
+            <li><a href="../juegos/evaluacion-final/formulario.html">Evaluación Final</a></li>
           </ul>
         </li>
         <li><a href="sobre-nosotros.html" class="nav-link-icon"><i class="bi bi-people"></i><span>Sobre Nosotros</span></a></li>
@@ -60,22 +62,26 @@
 
 </header>
 <section class="previos-cafe" style="background: var(--blanco); border-radius: 28px; padding: 4rem 2rem; text-align: center; color: var(--cafe-oscuro); position: relative; overflow: hidden; margin: 3rem auto; max-width: 1350px; box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07); border: 1px solid rgba(160, 119, 86, 0.12);">
-  <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
-    <h2 style="color: var(--vino); font-size: clamp(2rem, 4vw, 3rem); font-family: 'Playfair Display', serif; margin-bottom: 2rem;">¿Qué tanto sabes del café?</h2>
+  <div style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 2;">
+    <h2 style="color: var(--vino); font-size: clamp(2rem, 4vw, 3rem); font-family: 'Playfair Display', serif; margin-bottom: 2rem;">¿Qué tanto sabes del café y la tecnología?</h2>
     
-    <div style="background: rgba(160, 119, 86, 0.05); color: var(--cafe-oscuro); padding: 2rem; border-radius: 12px; margin-bottom: 2.5rem; text-align: left; border: 1px solid rgba(160, 119, 86, 0.1);">
-      <p style="font-size: 1.15rem; margin-bottom: 1rem;">
-        Antes de comenzar, queremos saber qué tanto conoces sobre el café.
-      </p>
-      <p style="font-size: 1.15rem; margin-bottom: 0;">
-        No te preocupes, no es una prueba... es una oportunidad para explorar lo que sabes de forma divertida.
-      </p>
+    <div class="row g-4 justify-content-center text-start">
+      <!-- Test de Saberes Previos -->
+      <div class="col-md-8 mx-auto">
+        <div style="background: rgba(160, 119, 86, 0.05); color: var(--cafe-oscuro); padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(160, 119, 86, 0.1); height: 100%; display: flex; flex-direction: column;">
+          <h3 style="color: var(--vino); margin-bottom: 1rem; font-weight: 700;">Test de Saberes Previos</h3>
+          <p style="font-size: 1.05rem; margin-bottom: 1rem;">
+            Antes de comenzar nuestro recorrido histórico, queremos saber qué tanto conoces sobre el mundo del café en Colombia y Pereira.
+          </p>
+          <p style="font-size: 1.05rem; margin-bottom: 2rem; color: #666;">
+            No te preocupes, no es una prueba con calificación... es una oportunidad interactiva para explorar lo que sabes de forma divertida.
+          </p>
+          <a href="../juegos/saberes-previos/saberes-previos.html" class="mt-auto" style="background: var(--vino); color: white; display: inline-flex; justify-content: center; align-items: center; gap: 0.8rem; padding: 1rem 1.5rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.1rem; transition: transform 0.3s ease; box-shadow: 0 8px 20px rgba(0,0,0,0.1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            Ir al Test Cafetero <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
     </div>
-
-    <a href="saberes-previos.html" style="background: var(--vino); color: white; display: inline-flex; align-items: center; gap: 0.8rem; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.1rem; transition: transform 0.3s ease; box-shadow: 0 8px 20px rgba(0,0,0,0.1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      Iniciar actividad
-      <i class="bi bi-arrow-right" style="font-size: 1.5rem; font-weight: bold;"></i>
-    </a>
   </div>
   <img src="../assets/images/icono.png" alt="Taza de café" style="position: absolute; right: 5%; bottom: -10%; width: 200px; opacity: 0.15; transform: rotate(15deg); z-index: 1;">
 </section>
@@ -99,6 +105,7 @@
     </div>
   </article>
 </div>
+
 <article class="tarjeta-unificada tarjeta-invertida">
   <div class="tarjeta-unificada__img" style="overflow:hidden; padding: 0; background: transparent;">
     <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; transform: scale(3);">
@@ -138,8 +145,6 @@
   </div>
 </article>
 
-
-
 <article class="tarjeta-unificada tarjeta-invertida">
   <img src="../assets/images/mejro banner.jpeg" alt="Logo Katurro" class="tarjeta-unificada__img">
   <div class="tarjeta-unificada__contenido">
@@ -169,66 +174,6 @@
     </div>
   </div>
 </article>
-
-  <section class="resumen-grid-section">
-    <div class="encabezado-seccion encabezado-premium">
-      <span class="subtitulo subtitulo-amarillo">Saberes cafeteros</span>
-      <h2>Lo esencial del mundo del café</h2>
-      <p class="descripcion-seccion">
-        Una mirada breve a la historia, la cultura y el valor del café en Colombia y en Pereira.
-      </p>
-    </div>
-
-<div class="resumen-grid">
-  <article class="resumen-card">
-    <div class="resumen-card-img">
-      <img src="../assets/images/banner.png" alt="Historia del café">
-    </div>
-    <div class="resumen-card-body">
-      <span class="resumen-tag">Historia</span>
-      <h3>El café en Colombia</h3>
-      <p>
-        Desde el siglo XVIII, el café comenzó a adaptarse al territorio colombiano hasta consolidarse
-        como una actividad económica y cultural de gran importancia.
-      </p>
-      <a href="historia-origenes.html" class="btn-resumen">Saber más</a>
-    </div>
-  </article>
-
-
-
-  <article class="resumen-card">
-    <div class="resumen-card-img">
-      <img src="../assets/images/banner.png" alt="Pereira y el café">
-    </div>
-    <div class="resumen-card-body">
-      <span class="resumen-tag">Ciudad</span>
-      <h3>Pereira y su vínculo cafetero</h3>
-      <p>
-        Pereira fortaleció su identidad junto al café, integrando comercio, crecimiento urbano
-        y tradición regional en una misma historia.
-      </p>
-      <a href="historia-pereira.html" class="btn-resumen">Saber más</a>
-    </div>
-  </article>
-
-  <article class="resumen-card">
-    <div class="resumen-card-img">
-      <img src="../assets/images/banner.png" alt="Familias cafeteras">
-    </div>
-    <div class="resumen-card-body">
-      <span class="resumen-tag">Cultura</span>
-      <h3>Familias y tradición</h3>
-      <p>
-        La vida cafetera se construye en pequeñas fincas, en el trabajo compartido y en saberes
-        que pasan de una generación a otra.
-      </p>
-      <a href="historia-cultura.html" class="btn-resumen">Saber más</a>
-    </div>
-  </article>
-</div>
- 
-  </section>
 
     <div class="contenedor-btn-actividad" style="margin-top: 3rem; margin-bottom: 3rem; text-align: center;">
         <a href="saberes-previos.html" class="btn-ir-actividad">Avanzar: Saberes Previos</a>

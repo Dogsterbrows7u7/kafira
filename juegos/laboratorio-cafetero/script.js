@@ -318,7 +318,6 @@ function renderHarvestStage() {
         </div>
 
         <div class="coffee-plant custom-plant">
-          <img src="img/palo-cafe.png" alt="Palo de café" class="plant-img">
           ${available.map(ch => `
             <div class="cherry-token draggable-token ${ch.ripeness}" draggable="true" data-cherry-id="${ch.id}" style="left:${ch.x}px; top:${ch.y}px;">
               🍒

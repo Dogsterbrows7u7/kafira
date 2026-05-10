@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katurro | Saberes Previos</title>
+  <link rel="icon" href="../../assets/images/icono.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="hero">
+    <nav class="barra-superior">
+      <a href="../../index.html" class="logo-link">
+        <img src="../../assets/images/Logo.png" alt="Katurro" class="logo-nav">
+      </a>
+      <ul class="menu nav-menu">
+        <li><a href="../../pages/introduccion.html" class="nav-link-icon"><i class="bi bi-house-door"></i><span>Introducción</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-book"></i><span>Historia</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="../../pages/historia-origenes.html">Orígenes y Expansión</a></li>
+            <li><a href="../../pages/historia-pereira.html">Llegada a Pereira</a></li>
+            <li><a href="../../pages/historia-cultura.html">Cultura y Tradición</a></li>
+          </ul>
+        </li>
+        <li><a href="../../pages/proceso.html" class="nav-link-icon"><i class="bi bi-gear"></i><span>Proceso</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="../../pages/mapa.html" class="nav-link-dropdown nav-link-icon"><i class="bi bi-map"></i><span>Mapa</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="../../pages/mapa.html"><strong>Mapa Interactivo</strong></a></li>
+            <li><a href="../../pages/lugar-salento.html">Salento</a></li>
+            <li><a href="../../pages/lugar-cocora.html">Valle del Cocora</a></li>
+            <li><a href="../../pages/lugar-santarosa.html">Santa Rosa de Cabal</a></li>
+            <li><a href="../../pages/lugar-pereira.html">Pereira</a></li>
+          </ul>
+        </li>
+        <li><a href="../../pages/caracteristicas.html" class="nav-link-icon"><i class="bi bi-stars"></i><span>Características</span></a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-controller"></i><span>Actividades</span></a>
+          <ul class="dropdown-submenu">
+            <li><a href="../../pages/actividades.html">Lista de Actividades</a></li>
+            <li><a href="../../juegos/saberes-previos/saberes-previos.html">Test de Saberes Previos</a></li>
+            <li><a href="../../juegos/mapa-tesoro/mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
+            <li><a href="../../juegos/laboratorio-cafetero/laboratorio-cafetero.html">Laboratorio Cafetero</a></li>
+            <li><a href="../../juegos/cata-cafetera/cata-cafetera.html">Simulador de Cata</a></li>
+            <li><a href="../../juegos/evaluacion-final/formulario.html">Evaluación Final</a></li>
+          </ul>
+        </li>
+        <li><a href="../../pages/sobre-nosotros.html" class="nav-link-icon"><i class="bi bi-people"></i><span>Sobre Nosotros</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="formulario-main">
+    <section class="formulario-hero" style="background: var(--blanco); color: white;">
+      <div class="formulario-hero__texto">
+        <span class="subtitulo subtitulo-amarillo">Conocimientos Previos</span>
+        <h1>Mitos y verdades del café</h1>
+        <p class="formulario-hero__intro">
+          Demuestra qué tanto sabes de la cultura cafetera con estas 5 divertidas preguntas. ¡No te preocupes si no sabes la respuesta correcta, la idea es aprender jugando!
+        </p>
+      </div>
+    </section>
+
+    <section class="formulario-wrap">
+      <form id="previosForm" class="formulario-card">
+        
+        <div class="question">
+          <label>1. ¿Cuál es el mito más famoso sobre cómo se descubrió el café?</label>
+          <div class="options">
+            <label><input type="radio" name="q1" value="cabras"> Unas cabras que se pusieron hiperactivas tras comer sus hojas</label>
+            <label><input type="radio" name="q1" value="monje"> Un monje italiano que no podía dormir</label>
+            <label><input type="radio" name="q1" value="emperador"> Un emperador chino hirviendo hojas por accidente</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label>2. ¿Cómo le dicen tradicionalmente las abuelas al café que queda muy aguado?</label>
+          <div class="options">
+            <label><input type="radio" name="q2" value="cielos"> "Café de los cielos"</label>
+            <label><input type="radio" name="q2" value="calcetin"> "Agua de calcetín" o "Guarapo"</label>
+            <label><input type="radio" name="q2" value="tinto"> "Tinto oscuro"</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label>3. ¿El "tinto" colombiano se llama así porque...?</label>
+          <div class="options">
+            <label><input type="radio" name="q3" value="apellido"> Fue inventado por alguien de apellido Tinto</label>
+            <label><input type="radio" name="q3" value="planta"> Se tiñe con una planta especial de color rojo</label>
+            <label><input type="radio" name="q3" value="vino"> Se parece al vino tinto por su color oscuro</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label>4. ¿Qué país es el que produce MÁS café en el mundo entero (aunque nosotros tengamos el más suave)?</label>
+          <div class="options">
+            <label><input type="radio" name="q4" value="colombia"> Colombia</label>
+            <label><input type="radio" name="q4" value="vietnam"> Vietnam</label>
+            <label><input type="radio" name="q4" value="brasil"> Brasil</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label>5. ¿Qué te van a dar en el Eje Cafetero si llegas pidiendo un "pintadito"?</label>
+          <div class="options">
+            <label><input type="radio" name="q5" value="leche"> Un tinto pequeño con un chorrito de leche</label>
+            <label><input type="radio" name="q5" value="aguardiente"> Un café mezclado con aguardiente</label>
+            <label><input type="radio" name="q5" value="colores"> Un café servido en un pocillo de varios colores</label>
+          </div>
+        </div>
+
+        <button type="button" class="btn-formulario-evaluar" onclick="verificarSaberes()">Descubrir mis saberes</button>
+
+        <div id="resultado-previos" class="resultado-formulario" style="display: none; margin-top: 2rem; background: var(--blanco); border: 1px solid var(--cafe-claro); padding: 1.5rem; border-radius: 12px; text-align: center;">
+            <h3 style="color: var(--vino); font-family: 'Playfair Display'; margin-bottom: 1rem;">¡Excelente participación!</h3>
+            <p style="color: var(--cafe-oscuro); font-size: 1.05rem; margin-bottom: 1.5rem;">Sin importar tu resultado, lo importante es la disposición a explorar. ¡Estás a punto de adentrarte en un viaje fascinante por la historia y la cultura del café!</p>
+            <a href="../../pages/historia-origenes.html" class="btn-ir-actividad" style="display: inline-block;">Comenzar la Historia del Café</a>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 - Katurro | Historia, cultura y aprendizaje del café</p>
+  </footer>
+
+  <script src="../../assets/js/saberes-previos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/navbar.js"></script>
+  <script src="../../assets/js/funciones.js"></script>
+</body>
+</html>
