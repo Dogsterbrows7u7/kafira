@@ -38,8 +38,8 @@ button { font: inherit; }
 }
 
 .game-hero {
-  background: linear-gradient(135deg, var(--vino), #be1118);
-  color: #fff;
+  background: linear-gradient(135deg, var(--crema-suave), var(--crema));
+  color: var(--texto);
   padding: 2rem 2.2rem;
   border-radius: var(--radio-xl);
   display: grid;

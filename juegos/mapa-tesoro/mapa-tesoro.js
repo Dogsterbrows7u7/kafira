@@ -5,7 +5,7 @@ const misiones = [
         id: 1,
         titulo: "ETAPA 1: EL ORIGEN (ALMÁCIGO)",
         pregunta: "El viaje del café no empieza en la fábrica. ¿Dónde crees que se siembran las primeras semillas?",
-        imagenFondo: "url(../assets/images/etapa1.jpg)", 
+        imagenFondo: "url('../../assets/images/etapa1.jpg')", 
         hotspots: [
             { x: "25%", y: "60%", texto: "A", esCorrecto: false, feedback: "Esos son cafetos adultos listos para cosechar, el origen es más pequeño." },
             { x: "75%", y: "45%", texto: "B", esCorrecto: true, feedback: "¡EXACTO! El almácigo es el semillero donde las 'chapolas' comienzan su vida." },
@@ -16,7 +16,7 @@ const misiones = [
         id: 2,
         titulo: "ETAPA 2: LA RECOLECCIÓN",
         pregunta: "Para una Taza Cafetera de calidad, ¿qué frutos debemos recolectar?",
-        imagenFondo: "url(../assets/images/etapa2.jpg)", 
+        imagenFondo: "url('../../assets/images/etapa2.jpg')", 
         hotspots: [
             { x: "30%", y: "50%", texto: "A", esCorrecto: true, feedback: "Los granos verdes darán un sabor amargo y astringente. ¡Prueba otra vez!" },
             { x: "80%", y: "55%", texto: "B", esCorrecto: false, feedback: "¡ASÍ ES! Solo los frutos maduros (rojos/cereza) tienen el azúcar ideal." }
@@ -26,7 +26,7 @@ const misiones = [
         id: 3,
         titulo: "ETAPA 3: EL BENEFICIO",
         pregunta: "¿En qué lugar se retira la pulpa y se lava el grano antes de secarlo?",
-        imagenFondo: "url(../assets/images/etapa3.jpg)", 
+        imagenFondo: "url('../../assets/images/etapa3.jpg')", 
         hotspots: [
             { x: "50%", y: "45%", texto: "A", esCorrecto: true, feedback: "¡Correcto! En el beneficiadero se procesa el fruto para extraer la almendra." },
             { x: "85%", y: "70%", texto: "B", esCorrecto: false, feedback: "Este es el patio de secado, aquí llegan después de ser lavados." }
@@ -116,7 +116,7 @@ function siguientePaso() {
         document.getElementById('question-text').innerText = "Ahora eres un experto en el origen de nuestro café.";
         interactiveMap.innerHTML = ""; // Limpia el mapa
         alert("¡Felicidades! Has completado todas las etapas.");
-        window.location.href = "actividades.html";
+        window.location.href = "../../pages/actividades.html";
     }
 }
 
