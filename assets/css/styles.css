@@ -3324,7 +3324,9 @@ bottom: 320px;
 }
 
 .media-youtube {
-  width: 100%;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
