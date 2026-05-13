@@ -1,0 +1,13 @@
+[33mcommit ceb540cd6dac0d7eec043a13aba49785ed1ced85[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Dogsterbrows7u7 <arley.quintero@utp.edu.co>
+Date:   Wed May 13 00:50:39 2026 -0500
+
+    Actualiza páginas de historia, videos y estilos
+
+ assets/css/styles.css        | 379 [32m+++++++++++++++++++++++++++++++++++++++++++[m
+ assets/js/proceso.js         | 138 [32m++++++++++++++++[m
+ pages/historia-cultura.html  | 331 [32m++++++++++++++++++++++++++++++++++++[m[31m-[m
+ pages/historia-origenes.html | 286 [32m+++++++++++++++++++++++++++++++[m[31m-[m
+ pages/historia-pereira.html  | 260 [32m++++++++++++++++++++++++++++[m[31m-[m
+ pages/proceso.html           | 202 [32m+++++++++++++++++++++[m[31m--[m
+ 6 files changed, 1575 insertions(+), 21 deletions(-)

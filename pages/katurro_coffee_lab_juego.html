@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>katurro | Proceso</title>
-  <link rel="icon" href="../assets/images/Logo.png" type="image/png">
-  <link rel="stylesheet" href="../assets/css/styles.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-  <!-- ESTILOS DEL JUEGO KATURRO COFFEE LAB INTEGRADO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katurro Coffee Lab | Juego</title>
   <style>
-
-    .katurro-lab-integrado {
+    :root {
       --verde: #315c2b;
       --verde-oscuro: #173f24;
       --cafe: #5a351f;
@@ -31,13 +21,13 @@
       --radio: 28px;
     }
 
-    .katurro-lab-integrado, .katurro-lab-integrado * {
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    .katurro-lab-integrado {
+    body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
         radial-gradient(circle at top left, rgba(228, 173, 65, 0.25), transparent 35%),
@@ -46,19 +36,19 @@
       min-height: 100vh;
     }
 
-    .katurro-lab-integrado button,
-.katurro-lab-integrado input,
-.katurro-lab-integrado select {
+    button,
+    input,
+    select {
       font-family: inherit;
     }
 
-    .katurro-lab-integrado .game-shell {
+    .game-shell {
       width: min(1240px, calc(100% - 32px));
       margin: 0 auto;
       padding: 36px 0 48px;
     }
 
-    .katurro-lab-integrado .game-hero {
+    .game-hero {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 28px;
@@ -66,15 +56,15 @@
       margin-bottom: 28px;
     }
 
-    .katurro-lab-integrado .hero-card,
-.katurro-lab-integrado .status-card,
-.katurro-lab-integrado .panel,
-.katurro-lab-integrado .result-card {
+    .hero-card,
+    .status-card,
+    .panel,
+    .result-card {
       border-radius: var(--radio);
       box-shadow: var(--sombra);
     }
 
-    .katurro-lab-integrado .hero-card {
+    .hero-card {
       background: linear-gradient(135deg, var(--verde-oscuro), var(--verde));
       color: var(--blanco);
       padding: 38px;
@@ -82,7 +72,7 @@
       overflow: hidden;
     }
 
-    .katurro-lab-integrado .hero-card::after {
+    .hero-card::after {
       content: "";
       position: absolute;
       width: 260px;
@@ -93,7 +83,7 @@
       top: -90px;
     }
 
-    .katurro-lab-integrado .eyebrow {
+    .eyebrow {
       display: inline-flex;
       gap: 8px;
       align-items: center;
@@ -109,7 +99,7 @@
       margin-bottom: 18px;
     }
 
-    .katurro-lab-integrado h1 {
+    h1 {
       font-size: clamp(2.2rem, 5vw, 4.7rem);
       line-height: 0.95;
       max-width: 780px;
@@ -117,7 +107,7 @@
       letter-spacing: -2px;
     }
 
-    .katurro-lab-integrado .hero-card p {
+    .hero-card p {
       font-size: 1.02rem;
       line-height: 1.8;
       max-width: 820px;
@@ -126,7 +116,7 @@
       z-index: 1;
     }
 
-    .katurro-lab-integrado .hero-actions {
+    .hero-actions {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
@@ -135,7 +125,7 @@
       z-index: 1;
     }
 
-    .katurro-lab-integrado .btn {
+    .btn {
       border: 0;
       padding: 13px 19px;
       border-radius: 999px;
@@ -148,33 +138,33 @@
       gap: 8px;
     }
 
-    .katurro-lab-integrado .btn:hover {
+    .btn:hover {
       transform: translateY(-2px);
     }
 
-    .katurro-lab-integrado .btn-primary {
+    .btn-primary {
       background: var(--dorado);
       color: var(--cafe-oscuro);
       box-shadow: 0 12px 28px rgba(228, 173, 65, 0.26);
     }
 
-    .katurro-lab-integrado .btn-secondary {
+    .btn-secondary {
       background: rgba(255, 255, 255, 0.14);
       color: var(--blanco);
       border: 1px solid rgba(255, 255, 255, 0.25);
     }
 
-    .katurro-lab-integrado .btn-dark {
+    .btn-dark {
       background: var(--cafe-oscuro);
       color: var(--blanco);
     }
 
-    .katurro-lab-integrado .btn-light {
+    .btn-light {
       background: var(--crema);
       color: var(--cafe-oscuro);
     }
 
-    .katurro-lab-integrado .status-card {
+    .status-card {
       background: rgba(255, 255, 255, 0.82);
       backdrop-filter: blur(14px);
       padding: 26px;
@@ -184,14 +174,14 @@
       border: 1px solid rgba(90, 53, 31, 0.12);
     }
 
-    .katurro-lab-integrado .cup-stage {
+    .cup-stage {
       min-height: 230px;
       display: grid;
       place-items: center;
       position: relative;
     }
 
-    .katurro-lab-integrado .cup {
+    .cup {
       width: 190px;
       height: 152px;
       border: 10px solid var(--cafe-oscuro);
@@ -203,7 +193,7 @@
       box-shadow: inset 0 -12px 0 rgba(0, 0, 0, 0.05);
     }
 
-    .katurro-lab-integrado .cup::after {
+    .cup::after {
       content: "";
       position: absolute;
       right: -62px;
@@ -216,7 +206,7 @@
       background: transparent;
     }
 
-    .katurro-lab-integrado .saucer {
+    .saucer {
       width: 245px;
       height: 26px;
       border-radius: 999px;
@@ -225,7 +215,7 @@
       opacity: 0.16;
     }
 
-    .katurro-lab-integrado .coffee-layer {
+    .coffee-layer {
       position: absolute;
       left: 0;
       right: 0;
@@ -235,7 +225,7 @@
       transition: height 0.35s ease, background 0.35s ease;
     }
 
-    .katurro-lab-integrado .milk-layer {
+    .milk-layer {
       position: absolute;
       left: 0;
       right: 0;
@@ -245,7 +235,7 @@
       transition: height 0.35s ease, bottom 0.35s ease;
     }
 
-    .katurro-lab-integrado .foam-layer {
+    .foam-layer {
       position: absolute;
       left: 0;
       right: 0;
@@ -255,14 +245,14 @@
       transition: height 0.35s ease, bottom 0.35s ease;
     }
 
-    .katurro-lab-integrado .steam {
+    .steam {
       position: absolute;
       top: 8px;
       display: flex;
       gap: 14px;
     }
 
-    .katurro-lab-integrado .steam span {
+    .steam span {
       width: 8px;
       height: 42px;
       border-radius: 999px;
@@ -270,21 +260,21 @@
       animation: steam 1.6s ease-in-out infinite;
     }
 
-    .katurro-lab-integrado .steam span:nth-child(2) { animation-delay: 0.25s; }
-    .katurro-lab-integrado .steam span:nth-child(3) { animation-delay: 0.5s; }
+    .steam span:nth-child(2) { animation-delay: 0.25s; }
+    .steam span:nth-child(3) { animation-delay: 0.5s; }
 
     @keyframes steam {
       0%, 100% { transform: translateY(8px) scaleY(0.8); opacity: 0.35; }
       50% { transform: translateY(-10px) scaleY(1.15); opacity: 0.85; }
     }
 
-    .katurro-lab-integrado .mini-stats {
+    .mini-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
 
-    .katurro-lab-integrado .mini-stat {
+    .mini-stat {
       background: var(--crema);
       padding: 14px;
       border-radius: 18px;
@@ -292,19 +282,19 @@
       border: 1px solid rgba(90, 53, 31, 0.08);
     }
 
-    .katurro-lab-integrado .mini-stat strong {
+    .mini-stat strong {
       display: block;
       font-size: 1.3rem;
       color: var(--verde);
     }
 
-    .katurro-lab-integrado .mini-stat span {
+    .mini-stat span {
       color: var(--gris);
       font-size: 0.82rem;
       font-weight: 700;
     }
 
-    .katurro-lab-integrado .progress-area {
+    .progress-area {
       background: rgba(255, 255, 255, 0.62);
       border: 1px solid rgba(90, 53, 31, 0.12);
       border-radius: 22px;
@@ -313,7 +303,7 @@
       box-shadow: 0 10px 30px rgba(45, 27, 18, 0.08);
     }
 
-    .katurro-lab-integrado .progress-head {
+    .progress-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -323,14 +313,14 @@
       font-weight: 800;
     }
 
-    .katurro-lab-integrado .progress-track {
+    .progress-track {
       height: 13px;
       border-radius: 999px;
       background: rgba(90, 53, 31, 0.12);
       overflow: hidden;
     }
 
-    .katurro-lab-integrado .progress-fill {
+    .progress-fill {
       width: 0%;
       height: 100%;
       border-radius: 999px;
@@ -338,21 +328,21 @@
       transition: width 0.3s ease;
     }
 
-    .katurro-lab-integrado .game-grid {
+    .game-grid {
       display: grid;
       grid-template-columns: 300px 1fr;
       gap: 24px;
       align-items: start;
     }
 
-    .katurro-lab-integrado .sidebar {
+    .sidebar {
       position: sticky;
       top: 18px;
       display: grid;
       gap: 14px;
     }
 
-    .katurro-lab-integrado .step-nav {
+    .step-nav {
       background: rgba(255, 255, 255, 0.82);
       border: 1px solid rgba(90, 53, 31, 0.12);
       border-radius: 24px;
@@ -360,7 +350,7 @@
       box-shadow: var(--sombra);
     }
 
-    .katurro-lab-integrado .step-btn {
+    .step-btn {
       width: 100%;
       border: 0;
       display: flex;
@@ -376,13 +366,13 @@
       transition: 0.22s ease;
     }
 
-    .katurro-lab-integrado .step-btn:hover,
-.katurro-lab-integrado .step-btn.active {
+    .step-btn:hover,
+    .step-btn.active {
       background: var(--crema);
       color: var(--verde-oscuro);
     }
 
-    .katurro-lab-integrado .step-number {
+    .step-number {
       width: 34px;
       height: 34px;
       border-radius: 12px;
@@ -393,13 +383,13 @@
       flex: 0 0 auto;
     }
 
-    .katurro-lab-integrado .step-btn.active .step-number,
-.katurro-lab-integrado .step-btn.done .step-number {
+    .step-btn.active .step-number,
+    .step-btn.done .step-number {
       background: var(--verde);
       color: white;
     }
 
-    .katurro-lab-integrado .recipe-card {
+    .recipe-card {
       background: var(--cafe-oscuro);
       color: white;
       border-radius: 24px;
@@ -407,24 +397,24 @@
       box-shadow: var(--sombra);
     }
 
-    .katurro-lab-integrado .recipe-card h3 {
+    .recipe-card h3 {
       margin-bottom: 10px;
       color: #ffe6a5;
     }
 
-    .katurro-lab-integrado .recipe-card p {
+    .recipe-card p {
       line-height: 1.65;
       color: rgba(255, 255, 255, 0.78);
       font-size: 0.92rem;
     }
 
-    .katurro-lab-integrado .selected-list {
+    .selected-list {
       margin-top: 14px;
       display: grid;
       gap: 8px;
     }
 
-    .katurro-lab-integrado .selected-pill {
+    .selected-pill {
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.13);
       color: white;
@@ -436,12 +426,12 @@
       gap: 10px;
     }
 
-    .katurro-lab-integrado .content {
+    .content {
       display: grid;
       gap: 24px;
     }
 
-    .katurro-lab-integrado .panel {
+    .panel {
       background: rgba(255, 255, 255, 0.86);
       border: 1px solid rgba(90, 53, 31, 0.12);
       padding: 26px;
@@ -449,7 +439,7 @@
       animation: fadeIn 0.25s ease;
     }
 
-    .katurro-lab-integrado .panel.active {
+    .panel.active {
       display: block;
     }
 
@@ -458,7 +448,7 @@
       to { transform: translateY(0); opacity: 1; }
     }
 
-    .katurro-lab-integrado .panel-head {
+    .panel-head {
       display: flex;
       justify-content: space-between;
       gap: 20px;
@@ -466,28 +456,28 @@
       margin-bottom: 22px;
     }
 
-    .katurro-lab-integrado .panel h2 {
+    .panel h2 {
       font-size: clamp(1.8rem, 3vw, 2.6rem);
       color: var(--verde-oscuro);
       margin-bottom: 8px;
       letter-spacing: -1px;
     }
 
-    .katurro-lab-integrado .panel-desc {
+    .panel-desc {
       color: var(--gris);
       line-height: 1.7;
       max-width: 760px;
     }
 
-    .katurro-lab-integrado .search-row {
+    .search-row {
       display: grid;
       grid-template-columns: 1fr 220px;
       gap: 12px;
       margin-bottom: 18px;
     }
 
-    .katurro-lab-integrado .input,
-.katurro-lab-integrado .select {
+    .input,
+    .select {
       width: 100%;
       border: 1px solid rgba(90, 53, 31, 0.16);
       border-radius: 18px;
@@ -498,7 +488,7 @@
       font-weight: 700;
     }
 
-    .katurro-lab-integrado .coffee-grid {
+    .coffee-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 14px;
@@ -507,17 +497,17 @@
       padding-right: 8px;
     }
 
-    .katurro-lab-integrado .coffee-grid::-webkit-scrollbar {
+    .coffee-grid::-webkit-scrollbar {
       width: 10px;
     }
 
-    .katurro-lab-integrado .coffee-grid::-webkit-scrollbar-thumb {
+    .coffee-grid::-webkit-scrollbar-thumb {
       background: rgba(90, 53, 31, 0.22);
       border-radius: 999px;
     }
 
-    .katurro-lab-integrado .coffee-card,
-.katurro-lab-integrado .option-card {
+    .coffee-card,
+    .option-card {
       background: #fffdf7;
       border: 1px solid rgba(90, 53, 31, 0.12);
       border-radius: 22px;
@@ -528,20 +518,20 @@
       overflow: hidden;
     }
 
-    .katurro-lab-integrado .coffee-card:hover,
-.katurro-lab-integrado .option-card:hover {
+    .coffee-card:hover,
+    .option-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 16px 32px rgba(45, 27, 18, 0.12);
     }
 
-    .katurro-lab-integrado .coffee-card.active,
-.katurro-lab-integrado .option-card.active {
+    .coffee-card.active,
+    .option-card.active {
       border-color: var(--verde);
       background: linear-gradient(135deg, rgba(49, 92, 43, 0.1), rgba(228, 173, 65, 0.12));
       box-shadow: inset 0 0 0 2px rgba(49, 92, 43, 0.12);
     }
 
-    .katurro-lab-integrado .coffee-icon {
+    .coffee-icon {
       width: 48px;
       height: 48px;
       display: grid;
@@ -552,28 +542,28 @@
       font-size: 1.6rem;
     }
 
-    .katurro-lab-integrado .coffee-card h3,
-.katurro-lab-integrado .option-card h3 {
+    .coffee-card h3,
+    .option-card h3 {
       color: var(--cafe-oscuro);
       margin-bottom: 8px;
       font-size: 1.05rem;
     }
 
-    .katurro-lab-integrado .coffee-card p,
-.katurro-lab-integrado .option-card p {
+    .coffee-card p,
+    .option-card p {
       color: var(--gris);
       line-height: 1.5;
       font-size: 0.9rem;
     }
 
-    .katurro-lab-integrado .tag-row {
+    .tag-row {
       display: flex;
       gap: 7px;
       flex-wrap: wrap;
       margin-top: 12px;
     }
 
-    .katurro-lab-integrado .tag {
+    .tag {
       padding: 6px 9px;
       border-radius: 999px;
       background: rgba(49, 92, 43, 0.1);
@@ -582,13 +572,13 @@
       font-weight: 900;
     }
 
-    .katurro-lab-integrado .options-grid {
+    .options-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 14px;
     }
 
-    .katurro-lab-integrado .range-box {
+    .range-box {
       background: #fffdf7;
       border: 1px solid rgba(90, 53, 31, 0.12);
       border-radius: 22px;
@@ -596,7 +586,7 @@
       margin-bottom: 14px;
     }
 
-    .katurro-lab-integrado .range-head {
+    .range-head {
       display: flex;
       justify-content: space-between;
       gap: 12px;
@@ -606,18 +596,18 @@
       color: var(--cafe);
     }
 
-    .katurro-lab-integrado input[type="range"] {
+    input[type="range"] {
       width: 100%;
       accent-color: var(--verde);
     }
 
-    .katurro-lab-integrado .addons-grid {
+    .addons-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 12px;
     }
 
-    .katurro-lab-integrado .addon-chip {
+    .addon-chip {
       background: #fffdf7;
       border: 1px solid rgba(90, 53, 31, 0.14);
       padding: 13px 14px;
@@ -631,14 +621,14 @@
       transition: 0.2s ease;
     }
 
-    .katurro-lab-integrado .addon-chip:hover,
-.katurro-lab-integrado .addon-chip.active {
+    .addon-chip:hover,
+    .addon-chip.active {
       background: var(--crema);
       border-color: var(--verde);
       color: var(--verde-oscuro);
     }
 
-    .katurro-lab-integrado .footer-actions {
+    .footer-actions {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -647,13 +637,13 @@
       flex-wrap: wrap;
     }
 
-    .katurro-lab-integrado .result-card {
+    .result-card {
       background: linear-gradient(135deg, #fffdf7, #fff1d0);
       border: 1px solid rgba(90, 53, 31, 0.12);
       padding: 28px;
     }
 
-    .katurro-lab-integrado .result-top {
+    .result-top {
       display: grid;
       grid-template-columns: 1fr 280px;
       gap: 24px;
@@ -661,7 +651,7 @@
       margin-bottom: 24px;
     }
 
-    .katurro-lab-integrado .result-name {
+    .result-name {
       font-size: clamp(2rem, 4vw, 3.6rem);
       line-height: 1;
       color: var(--verde-oscuro);
@@ -669,7 +659,7 @@
       margin-bottom: 12px;
     }
 
-    .katurro-lab-integrado .badge {
+    .badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -681,13 +671,13 @@
       margin-bottom: 16px;
     }
 
-    .katurro-lab-integrado .result-description {
+    .result-description {
       color: var(--gris);
       line-height: 1.7;
       max-width: 820px;
     }
 
-    .katurro-lab-integrado .score-circle {
+    .score-circle {
       width: 210px;
       height: 210px;
       margin: 0 auto;
@@ -699,7 +689,7 @@
       box-shadow: inset 0 0 0 14px rgba(255, 255, 255, 0.6);
     }
 
-    .katurro-lab-integrado .score-circle::before {
+    .score-circle::before {
       content: "";
       position: absolute;
       inset: 18px;
@@ -707,40 +697,40 @@
       background: #fffdf7;
     }
 
-    .katurro-lab-integrado .score-content {
+    .score-content {
       position: relative;
       z-index: 1;
       text-align: center;
     }
 
-    .katurro-lab-integrado .score-content strong {
+    .score-content strong {
       display: block;
       font-size: 3rem;
       color: var(--verde-oscuro);
       line-height: 1;
     }
 
-    .katurro-lab-integrado .score-content span {
+    .score-content span {
       color: var(--gris);
       font-weight: 900;
       font-size: 0.85rem;
     }
 
-    .katurro-lab-integrado .profile-grid {
+    .profile-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 14px;
       margin-bottom: 24px;
     }
 
-    .katurro-lab-integrado .profile-item {
+    .profile-item {
       background: rgba(255, 255, 255, 0.78);
       border: 1px solid rgba(90, 53, 31, 0.1);
       border-radius: 18px;
       padding: 14px;
     }
 
-    .katurro-lab-integrado .profile-label {
+    .profile-label {
       display: flex;
       justify-content: space-between;
       margin-bottom: 8px;
@@ -749,14 +739,14 @@
       font-size: 0.9rem;
     }
 
-    .katurro-lab-integrado .profile-track {
+    .profile-track {
       height: 10px;
       border-radius: 999px;
       background: rgba(90, 53, 31, 0.12);
       overflow: hidden;
     }
 
-    .katurro-lab-integrado .profile-fill {
+    .profile-fill {
       height: 100%;
       border-radius: 999px;
       background: linear-gradient(90deg, var(--verde), var(--dorado));
@@ -764,21 +754,21 @@
       transition: width 0.5s ease;
     }
 
-    .katurro-lab-integrado .recipe-summary {
+    .recipe-summary {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 12px;
       margin-top: 20px;
     }
 
-    .katurro-lab-integrado .summary-box {
+    .summary-box {
       background: rgba(255, 255, 255, 0.75);
       border: 1px solid rgba(90, 53, 31, 0.1);
       border-radius: 18px;
       padding: 14px;
     }
 
-    .katurro-lab-integrado .summary-box span {
+    .summary-box span {
       display: block;
       color: var(--gris);
       font-size: 0.78rem;
@@ -787,458 +777,63 @@
       margin-bottom: 6px;
     }
 
-    .katurro-lab-integrado .summary-box strong {
+    .summary-box strong {
       color: var(--cafe-oscuro);
     }
 
-    .katurro-lab-integrado .hidden {
+    .hidden {
       display: none !important;
     }
 
     @media (max-width: 980px) {
-
-      .katurro-lab-integrado .game-hero,
-.katurro-lab-integrado .game-grid,
-.katurro-lab-integrado .result-top {
+      .game-hero,
+      .game-grid,
+      .result-top {
         grid-template-columns: 1fr;
       }
 
-      .katurro-lab-integrado .sidebar {
+      .sidebar {
         position: static;
       }
 
-      .katurro-lab-integrado .step-nav {
+      .step-nav {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
-    
-}
+    }
 
     @media (max-width: 620px) {
-
-      .katurro-lab-integrado .game-shell {
+      .game-shell {
         width: min(100% - 20px, 1240px);
         padding-top: 18px;
       }
 
-      .katurro-lab-integrado .hero-card,
-.katurro-lab-integrado .panel,
-.katurro-lab-integrado .status-card,
-.katurro-lab-integrado .result-card {
+      .hero-card,
+      .panel,
+      .status-card,
+      .result-card {
         padding: 20px;
         border-radius: 22px;
       }
 
-      .katurro-lab-integrado .search-row,
-.katurro-lab-integrado .profile-grid,
-.katurro-lab-integrado .step-nav {
+      .search-row,
+      .profile-grid,
+      .step-nav {
         grid-template-columns: 1fr;
       }
 
-      .katurro-lab-integrado .mini-stats {
+      .mini-stats {
         grid-template-columns: 1fr;
       }
 
-      .katurro-lab-integrado .cup {
+      .cup {
         transform: scale(0.86);
       }
-    
-}
-  
-
-/* Ajustes para integrar el juego dentro de proceso.html */
-.katurro-lab-integrado {
-  display: block;
-  max-width: 1280px;
-  margin: 5rem auto 3rem;
-  padding: 1.2rem;
-  border-radius: 36px;
-}
-.katurro-lab-integrado .game-shell {
-  width: min(1240px, 100%);
-}
-@media (max-width: 620px) {
-  .katurro-lab-integrado {
-    margin: 3rem auto 2rem;
-    padding: 0.5rem;
-    border-radius: 24px;
-  }
-}
-
+    }
   </style>
 </head>
-
 <body>
-
-  <!-- ENCABEZADO -->
-  <header class="hero">
-
-    <nav class="barra-superior">
-     <a href="../index.html" class="logo-link">
-        <img src="../assets/images/Logo.png" alt="Katurro" class="logo-nav">
-      </a>
-      <ul class="menu nav-menu">
-        <li><a href="introduccion.html" class="nav-link-icon"><i class="bi bi-house-door"></i><span>Introducción</span></a></li>
-        <li class="nav-item-dropdown">
-          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-book"></i><span>Historia</span></a>
-          <ul class="dropdown-submenu">
-            <li><a href="historia-origenes.html">Orígenes y Expansión</a></li>
-            <li><a href="historia-pereira.html">Llegada a Pereira</a></li>
-            <li><a href="historia-cultura.html">Cultura y Tradición</a></li>
-          </ul>
-        </li>
-        <li><a href="proceso.html" class="nav-link-icon"><i class="bi bi-gear"></i><span>Proceso</span></a></li>
-        <li><a href="caracteristicas.html" class="nav-link-icon"><i class="bi bi-stars"></i><span>Características</span></a></li>
-        <li class="nav-item-dropdown">
-          <a href="mapa.html" class="nav-link-dropdown nav-link-icon"><i class="bi bi-map"></i><span>Mapa</span></a>
-          <ul class="dropdown-submenu">
-            <li><a href="mapa.html"><strong>Mapa Interactivo</strong></a></li>
-            <li><a href="lugar-salento.html">Salento</a></li>
-            <li><a href="lugar-cocora.html">Valle del Cocora</a></li>
-            <li><a href="lugar-santarosa.html">Santa Rosa de Cabal</a></li>
-            <li><a href="lugar-pereira.html">Pereira</a></li>
-          </ul>
-        </li>
-        <li class="nav-item-dropdown">
-          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-controller"></i><span>Actividades</span></a>
-          <ul class="dropdown-submenu">
-            <li><a href="actividades.html">Lista de Actividades</a></li>
-            <li><a href="../juegos/saberes-previos/saberes-previos.html">Test de Saberes Previos</a></li>
-            <li><a href="../juegos/mapa-tesoro/mapa-tesoro.html">Reto: Mapa del Tesoro</a></li>
-            <li><a href="../juegos/laboratorio-cafetero/laboratorio-cafetero.html">Laboratorio Cafetero</a></li>
-            <li><a href="../juegos/cata-cafetera/cata-cafetera.html">Simulador de Cata</a></li>
-            <li><a href="../juegos/evaluacion-final/formulario.html">Evaluación Final</a></li>
-          </ul>
-        </li>
-        <li><a href="sobre-nosotros.html" class="nav-link-icon"><i class="bi bi-people"></i><span>Sobre Nosotros</span></a></li>
-      </ul>
-    </nav>
-  </header>
-  
-
-<main class="proceso-premium-main">
-
-  <!-- HERO -->
-  <section class="proceso-hero">
-    <div class="proceso-hero__texto">
-      <p class="subtitulo subtitulo-amarillo">Proceso del café</p>
-      <h1>De la semilla a la taza</h1>
-      <p class="proceso-hero__intro">
-        El café es mucho más que una bebida. Detrás de cada taza hay un proceso largo que puede durar años
-        y que combina conocimiento técnico, condiciones naturales y el trabajo constante de las familias cafeteras.
-        Entender este proceso permite ver el café no solo como un producto, sino como un sistema completo donde
-        cada etapa influye en la siguiente.
-      </p>
-    </div>
-
-    <div class="proceso-hero__media">
-      <img src="../assets/images/De la semilla a la taza.png" alt="Proceso del café">
-    </div>
-  </section>
-    
-  <article class="tarjeta-unificada">
-  <img src="../assets/images/siembra del cafe.png" alt="Siembra" class="tarjeta-unificada__img">
-  <div class="tarjeta-unificada__contenido">
-      <span class="etapa-numero">1</span>
-      <h3 style="color: var(--verde);">Siembra</h3>
-      <p>
-        El proceso del café comienza mucho antes de ver la planta. Se inicia en viveros donde las semillas, conocidas como "chapolas", son seleccionadas cuidadosamente. Una vez han crecido lo suficiente, se trasplantan a suelos fértiles en el campo, buscando siempre una altitud y un clima óptimos.
-      </p>
-      <p>
-        <strong>Análisis:</strong> Enfatiza la correcta propagación para plantas sanas y fuertes, listas para dar los mejores frutos en el futuro.
-      </p>
-  </div>
-  </article>
-
-  <article class="tarjeta-unificada tarjeta-invertida">
-  <img src="../assets/images/Recoleccion.png" alt="Recolección" class="tarjeta-unificada__img">
-  <div class="tarjeta-unificada__contenido">
-    <span class="etapa-numero">2</span>
-      <h3 style="color: var(--verde);">Recolección</h3>
-      <p>
-        Una vez que los frutos del café, conocidos como cerezas, alcanzan su punto óptimo de maduración (mostrando un color rojo intenso), llega el momento de la recolección. En nuestra región, este proceso se realiza de manera manual y selectiva, garantizando que solo se recojan los frutos perfectamente maduros.
-      </p>
-      <p>
-        <strong>Análisis:</strong> Una recolección cuidadosa es el primer filtro de calidad. Recoger granos verdes o sobremaduros afectará negativamente la uniformidad y el dulzor de la taza final.
-      </p>
-  </div>
-  </article>
-
-  <article class="tarjeta-unificada">
-  <img src="../assets/images/Despulpado.png" alt="Despulpado" class="tarjeta-unificada__img">
-  <div class="tarjeta-unificada__contenido">
-    <span class="etapa-numero">3</span>
-      <h3 style="color: var(--verde);">Despulpado</h3>
-      <p>
-        Tras una meticulosa recolección manual de los frutos maduros, el café debe procesarse. En el despulpado, se retira la pulpa exterior del fruto utilizando maquinaria especializada poco después de la cosecha, dejando expuesto el grano.
-      </p>
-      <p>
-        <strong>Análisis:</strong> Si se retrasa o se hace mal, la fermentación de la pulpa generará sabores defectuosos e indeseados en la taza final.
-      </p>
-  </div>
-  </article>
-
-  <article class="tarjeta-unificada tarjeta-invertida">
-  <img src="../assets/images/lavado y secado.png" alt="Fermentación y lavado" class="tarjeta-unificada__img">
-  <div class="tarjeta-unificada__contenido">
-    <span class="etapa-numero">4</span>
-      <h3 style="color: var(--verde);">Fermentación y lavado</h3>
-      <p>
-        Con el grano despulpado, comienza una etapa crítica: la fermentación controlada. Los granos reposan en tanques para que los microorganismos eliminen los mucílagos pegajosos. Posteriormente, se lavan con abundante agua limpia.
-      </p>
-      <p>
-        <strong>Análisis:</strong> El tiempo influye directamente en el perfil de sabor. Un tiempo adecuado resalta las notas deseadas, mientras que un exceso puede arruinar el lote.
-      </p>
-  </div>
-  </article>
-
-  <article class="tarjeta-unificada">
-  <img src="../assets/images/Secado.png" alt="Secado" class="tarjeta-unificada__img">
-  <div class="tarjeta-unificada__contenido">
-    <span class="etapa-numero">5</span>
-      <h3 style="color: var(--verde);">Secado</h3>
-      <p>
-        Una vez limpios, los granos entran a la fase de secado para garantizar su conservación. El grano se seca al sol en patios o marquesinas, o utilizando máquinas especializadas, hasta alcanzar una humedad adecuada (alrededor del 11%).
-      </p>
-      <p>
-        <strong>Análisis:</strong> Un secado inadecuado o apresurado puede producir la aparición de moho o una drástica pérdida de calidad.
-      </p>
-  </div>
-  </article>
-
-  <article class="tarjeta-unificada tarjeta-invertida">
-  <img src="../assets/images/Tostado.png" alt="Tostado" class="tarjeta-unificada__img">
-  <div class="tarjeta-unificada__contenido">
-    <span class="etapa-numero">6</span>
-      <h3 style="color: var(--verde);">Tostado</h3>
-      <p>
-        El grano verde se somete a altas temperaturas. El calor transforma químicamente el grano, haciendo que pierda humedad, se expanda y desarrolle el aroma, el color y el sabor inconfundibles del café.
-      </p>
-      <p>
-        <strong>Análisis:</strong> El nivel de tostado (claro, medio u oscuro) es una decisión crítica, pues define el perfil final de la bebida: suave, fuerte o ácido.
-      </p>
-  </div>
-  </article>
-
-  <article class="tarjeta-unificada">
-  <img src="../assets/images/Molienda.png" alt="Molienda" class="tarjeta-unificada__img">
-  <div class="tarjeta-unificada__contenido">
-    <span class="etapa-numero">7</span>
-      <h3 style="color: var(--verde);">Molienda</h3>
-      <p>
-        El café tostado debe molerse antes de prepararlo. La regla de oro es que se muele el café según el método de preparación que se vaya a utilizar, ya sea un tamaño grueso, medio o fino.
-      </p>
-      <p>
-        <strong>Análisis:</strong> Una molienda incorrecta afecta toda la extracción. Si es muy fina o muy gruesa para el método elegido, el sabor se verá comprometido.
-      </p>
-  </div>
-  </article>
-
-  <article class="tarjeta-unificada tarjeta-invertida">
-  <img src="../assets/images/preparacion del cafe.png" alt="Preparación" class="tarjeta-unificada__img">
-  <div class="tarjeta-unificada__contenido">
-    <span class="etapa-numero">8</span>
-      <h3 style="color: var(--verde);">Preparación</h3>
-      <p>
-        El último eslabón es el momento de disfrutar. La preparación consiste en que se infusiona el café molido con agua caliente a través de diversos métodos, como filtro, prensa francesa o máquina de espresso.
-      </p>
-      <p>
-        <strong>Análisis:</strong> Factores como la temperatura del agua, el tiempo de contacto y la proporción exacta entre café y agua determinan el resultado en la taza.
-      </p>
-  </div>
-  </article>
-
-<!-- VIDEOS DEL PROCESO DEL CAFÉ -->
-<section class="proceso-video-premium">
-  <div class="encabezado-seccion" style="margin: 0 auto 3rem auto; text-align: center;">
-    <p class="subtitulo subtitulo-amarillo">Apoyo visual</p>
-    <h2>Videos del proceso del café</h2>
-    <p class="descripcion-seccion">
-      Explora cada etapa del proceso cafetero mediante videos cortos y explicativos,
-      desde la germinación hasta la tostación del grano.
-    </p>
-  </div>
-
-  <div class="container">
-    <div class="row g-4">
-
-      <!-- GERMINACIÓN -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/r_W6jNHlJI4"
-              title="Germinación del café"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="card-body">
-            <span class="etapa-numero">1</span>
-            <h3 style="color: var(--verde);">Germinación</h3>
-            <p>
-              En esta etapa inicia la vida de la planta de café, cuando la semilla comienza
-              a desarrollarse hasta convertirse en una chapola.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FLORACIÓN -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/iR7I4iljwDo"
-              title="Floración del café"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="card-body">
-            <span class="etapa-numero">2</span>
-            <h3 style="color: var(--verde);">Floración</h3>
-            <p>
-              La floración anuncia una nueva etapa productiva de la planta. De estas flores
-              nacerán los frutos del café.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- MADURACIÓN -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/y4kNPA7dIZE"
-              title="Maduración del café"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="card-body">
-            <span class="etapa-numero">3</span>
-            <h3 style="color: var(--verde);">Maduración</h3>
-            <p>
-              Las cerezas del café cambian de color y alcanzan su punto ideal para ser
-              recolectadas manualmente.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- COSECHA -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/pKkRHDAV-Es"
-              title="Cosecha del café"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="card-body">
-            <span class="etapa-numero">4</span>
-            <h3 style="color: var(--verde);">Cosecha</h3>
-            <p>
-              En la cosecha se recolectan los frutos maduros, cuidando que solo se seleccionen
-              las cerezas en buen estado.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- DESPULPACIÓN -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/iI2s1nXemUo"
-              title="Despulpación del café"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="card-body">
-            <span class="etapa-numero">5</span>
-            <h3 style="color: var(--verde);">Despulpación</h3>
-            <p>
-              En esta fase se retira la pulpa exterior de la cereza para dejar expuesto
-              el grano de café.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- LAVADO Y SECADO -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/zI7A54mprew"
-              title="Lavado y secado del café"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="card-body">
-            <span class="etapa-numero">6</span>
-            <h3 style="color: var(--verde);">Lavado y secado</h3>
-            <p>
-              Después del despulpado, el grano se lava para retirar impurezas y luego se seca
-              hasta alcanzar la humedad adecuada.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- TRILLA -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/bCPLQaM1VVM"
-              title="Trilla del café"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="card-body">
-            <span class="etapa-numero">7</span>
-            <h3 style="color: var(--verde);">Trilla del café</h3>
-            <p>
-              La trilla retira la cáscara seca que protege el grano, dejándolo listo para
-              su selección y clasificación.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- TOSTACIÓN -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/TZ3Y4F8JUXc"
-              title="Tostación del café"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="card-body">
-            <span class="etapa-numero">8</span>
-            <h3 style="color: var(--verde);">Tostación</h3>
-            <p>
-              En la tostación, el grano cambia de color, aroma y sabor. Esta etapa define
-              gran parte del perfil final del café.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-    
-  
-
-  <!-- JUEGO INTEGRADO: KATURRO COFFEE LAB -->
-  <section class="katurro-lab-integrado" id="katurro-coffee-lab-root">
-    <div class="game-shell">
+  <main class="game-shell">
     <section class="game-hero">
       <div class="hero-card">
         <div class="eyebrow">☕ Juego cafetero interactivo</div>
@@ -1446,30 +1041,10 @@
         </section>
       </div>
     </section>
-  </div>
-  </section>
-<div class="contenedor-btn-actividad" style="margin-top: 3rem; margin-bottom: 3rem; text-align: center; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-    <a href="../juegos/laboratorio-cafetero/laboratorio-cafetero.html" class="btn-ir-actividad" style="background-color: var(--verde);">Actividad: Laboratorio Cafetero</a>
-    <a href="caracteristicas.html" class="btn-ir-actividad">Siguiente Tema: Características</a>
-  </div>
+  </main>
 
-</main>
-
-
-
-  <footer>
-    <p>© 2026 - Katurro | Historia, cultura y aprendizaje del café</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/navbar.js"></script>
-  <script src="../assets/js/proceso.js"></script>
-
-<script src="../assets/js/funciones.js"></script>
-<button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
-<script>
-(() => {
-const coffeeTypes = [
+  <script>
+    const coffeeTypes = [
       { name: "Espresso", cat: "Intenso", icon: "☕", desc: "Pequeño, concentrado y aromático.", intensity: 95, sweet: 5, cream: 15, aroma: 85, body: 80 },
       { name: "Ristretto", cat: "Intenso", icon: "☕", desc: "Más corto que el espresso, fuerte y denso.", intensity: 98, sweet: 8, cream: 18, aroma: 88, body: 86 },
       { name: "Lungo", cat: "Intenso", icon: "☕", desc: "Espresso más largo, con sabor persistente.", intensity: 82, sweet: 8, cream: 12, aroma: 78, body: 68 },
@@ -1612,9 +1187,8 @@ const coffeeTypes = [
       customName: ""
     };
 
-    const labRoot = document.getElementById("katurro-coffee-lab-root");
-    const $ = (selector) => labRoot.querySelector(selector);
-    const $$ = (selector) => Array.from(labRoot.querySelectorAll(selector));
+    const $ = (selector) => document.querySelector(selector);
+    const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 
     const clamp = (value) => Math.max(0, Math.min(100, Math.round(value)));
 
@@ -1758,7 +1332,7 @@ const coffeeTypes = [
       $(`.panel[data-panel="${state.step}"]`).classList.add("active");
       $("#resultCard").classList.add("hidden");
       updateAll();
-      labRoot.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     function calculateProfile() {
@@ -1933,7 +1507,7 @@ const coffeeTypes = [
       $$(".panel").forEach((panel) => panel.classList.remove("active"));
       $("#resultCard").classList.remove("hidden");
       updateSelectedList();
-      $("#resultCard").scrollIntoView({ behavior: "smooth", block: "start" });
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
     }
 
     function randomFrom(list) {
@@ -1997,7 +1571,6 @@ const coffeeTypes = [
     }
 
     init();
-})();
-</script>
+  </script>
 </body>
 </html>
