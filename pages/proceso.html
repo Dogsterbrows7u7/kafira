@@ -617,6 +617,30 @@
       gap: 12px;
     }
 
+    .katurro-lab-integrado .opciones-bloque {
+      background: rgba(255, 253, 247, 0.72);
+      border: 1px solid rgba(90, 53, 31, 0.10);
+      border-radius: 22px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .katurro-lab-integrado .titulo-bloque-opciones {
+      color: var(--cafe);
+      font-size: 1rem;
+      font-weight: 900;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .katurro-lab-integrado .ayuda-bloque {
+      color: var(--gris);
+      line-height: 1.55;
+      font-size: 0.92rem;
+      margin-bottom: 14px;
+    }
+
     .katurro-lab-integrado .addon-chip {
       background: #fffdf7;
       border: 1px solid rgba(90, 53, 31, 0.14);
@@ -1358,12 +1382,31 @@
           <div class="panel-head">
             <div>
               <h2>4. Tostión y molienda</h2>
-              <p class="panel-desc">Aquí decides si tu café será más suave, balanceado o intenso.</p>
+              <p class="panel-desc">
+                En este paso eliges dos cosas distintas: primero el nivel de tostión del grano
+                y luego el tamaño de la molienda. Así tu café tendrá un perfil más claro y fácil de entender.
+              </p>
             </div>
           </div>
-          <div class="options-grid" id="roastGrid"></div>
-          <br />
-          <div class="options-grid" id="grindGrid"></div>
+
+          <div class="opciones-bloque">
+            <h3 class="titulo-bloque-opciones">Tostión del grano</h3>
+            <p class="ayuda-bloque">
+              La tostión cambia el color, el aroma y la intensidad del café. Una tostión clara resalta notas suaves,
+              una media busca equilibrio y una oscura da sabores más fuertes.
+            </p>
+            <div class="options-grid" id="roastGrid"></div>
+          </div>
+
+          <div class="opciones-bloque">
+            <h3 class="titulo-bloque-opciones">Molienda del café</h3>
+            <p class="ayuda-bloque">
+              La molienda define el tamaño del café molido según el método de preparación. Puede ser fina,
+              media o gruesa dependiendo de cómo se va a preparar la bebida.
+            </p>
+            <div class="options-grid" id="grindGrid"></div>
+          </div>
+
           <div class="footer-actions">
             <button class="btn btn-light" data-prev>Volver</button>
             <button class="btn btn-dark" data-next>Continuar</button>
@@ -1566,15 +1609,15 @@ const coffeeTypes = [
     ];
 
     const roasts = [
-      { name: "Clara", desc: "Más acidez, notas florales y aroma brillante.", intensity: -8, sweet: 2, cream: -3, aroma: 12, body: -6 },
-      { name: "Media", desc: "Balance entre dulzor, aroma y cuerpo.", intensity: 4, sweet: 6, cream: 2, aroma: 8, body: 6 },
-      { name: "Oscura", desc: "Más amarga, intensa y con cuerpo pesado.", intensity: 14, sweet: -4, cream: 3, aroma: -2, body: 14 }
+      { name: "Tostión clara", desc: "Más acidez, notas florales y aroma brillante. Ideal para resaltar sabores suaves y delicados.", intensity: -8, sweet: 2, cream: -3, aroma: 12, body: -6 },
+      { name: "Tostión media", desc: "Balance entre dulzor, aroma y cuerpo. Es una opción equilibrada para la mayoría de preparaciones.", intensity: 4, sweet: 6, cream: 2, aroma: 8, body: 6 },
+      { name: "Tostión oscura", desc: "Más amarga, intensa y con cuerpo pesado. Resalta sabores fuertes y tostados.", intensity: 14, sweet: -4, cream: 3, aroma: -2, body: 14 }
     ];
 
     const grinds = [
-      { name: "Fina", desc: "Ideal para espresso y bebidas intensas.", intensity: 8, sweet: 0, cream: 4, aroma: 4, body: 8 },
-      { name: "Media", desc: "Versátil para métodos filtrados comunes.", intensity: 2, sweet: 2, cream: 0, aroma: 5, body: 2 },
-      { name: "Gruesa", desc: "Útil para prensa francesa y extracciones largas.", intensity: -4, sweet: 2, cream: -2, aroma: 3, body: 4 }
+      { name: "Molienda fina", desc: "Ideal para espresso y bebidas intensas, porque permite una extracción rápida y concentrada.", intensity: 8, sweet: 0, cream: 4, aroma: 4, body: 8 },
+      { name: "Molienda media", desc: "Versátil para métodos filtrados comunes. Mantiene buen equilibrio entre sabor y cuerpo.", intensity: 2, sweet: 2, cream: 0, aroma: 5, body: 2 },
+      { name: "Molienda gruesa", desc: "Útil para prensa francesa y extracciones largas, evitando que el café quede demasiado amargo.", intensity: -4, sweet: 2, cream: -2, aroma: 3, body: 4 }
     ];
 
     const milks = [

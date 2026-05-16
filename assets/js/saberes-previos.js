@@ -31,7 +31,7 @@ function verificarSaberes() {
         <p style="color: var(--cafe-oscuro); font-size: 1.05rem; margin-bottom: 1.5rem;">
             Adivinar todo está bien, pero descubrir la verdad es mucho más emocionante. ¡Estás a punto de adentrarte en un viaje fascinante por la historia, los mitos y la cultura del café!
         </p>
-        <a href="historia-origenes.html" class="btn-ir-actividad" style="display: inline-block;">Comenzar la Historia del Café</a>
+        <a href="../../pages/historia-origenes.html" class="btn-ir-actividad" style="display: inline-block;">Comenzar la Historia del Café</a>
     `;
 
     resultDiv.style.display = 'block';

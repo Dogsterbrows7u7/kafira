@@ -9,39 +9,234 @@
   <title>Katurro | Actividades</title>
 
   <link rel="icon" href="../assets/images/Logo.png" type="image/png">
-
   <link rel="stylesheet" href="../assets/css/styles.css">
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet">
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background: #FBEED7;
+    }
+
+    .actividades-contenedor {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .intro-katurro {
+      max-width: 850px;
+      margin: 0 auto 3rem auto;
+      text-align: center;
+    }
+
+    .intro-katurro .etiqueta {
+      color: #D89B2B;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+    }
+
+    .intro-katurro h1 {
+      font-family: 'Playfair Display', serif;
+      color: #4A1513;
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .intro-katurro p {
+      color: #5F4B3F;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    .significado-katurro {
+      background: rgba(255, 248, 234, 0.72);
+      border: 1px solid rgba(111, 29, 27, 0.12);
+      border-radius: 22px;
+      padding: 1.5rem;
+      margin-top: 1.8rem;
+      box-shadow: 0 8px 18px rgba(74, 21, 19, 0.06);
+    }
+
+    .significado-katurro strong {
+      color: #7B1E1E;
+    }
+
+    .separador-actividades {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 3.5rem 0 1.2rem;
+    }
+
+    .separador-actividades::before,
+    .separador-actividades::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background: rgba(111, 29, 27, 0.28);
+    }
+
+    .separador-actividades h2 {
+      font-family: 'Playfair Display', serif;
+      color: #4A1513;
+      font-size: 2rem;
+      font-weight: 800;
+      text-align: center;
+      margin: 0;
+    }
+
+    .texto-seccion {
+      max-width: 780px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      color: #5F4B3F;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .actividades-grid-katurro {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(260px, 1fr));
+      gap: 24px;
+      justify-content: center;
+      align-items: stretch;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .actividad-card-katurro {
+      background: rgba(255, 248, 234, 0.72);
+      border: 1px solid rgba(111, 29, 27, 0.12);
+      border-radius: 22px;
+      padding: 28px 24px 22px;
+      text-align: center;
+      min-height: 265px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 8px 18px rgba(74, 21, 19, 0.06);
+      transition: 0.25s ease;
+    }
+
+    .actividad-card-katurro:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(74, 21, 19, 0.13);
+    }
+
+    .actividad-card-katurro h3 {
+      font-family: 'Playfair Display', serif;
+      color: #5A1716;
+      font-size: 1.55rem;
+      font-weight: 800;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .actividad-card-katurro p {
+      color: #5F4B3F;
+      font-size: 0.98rem;
+      line-height: 1.55;
+      margin-bottom: 22px;
+    }
+
+    .actividad-card-katurro a {
+      display: block;
+      width: 100%;
+      background: #7B1E1E;
+      color: #ffffff;
+      border-radius: 11px;
+      padding: 11px 14px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: 0.25s ease;
+    }
+
+    .actividad-card-katurro a:hover {
+      background: #4A1513;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 992px) {
+      .actividades-grid-katurro {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+      }
+
+      .intro-katurro h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .actividades-grid-katurro {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-katurro h1 {
+        font-size: 2.2rem;
+      }
+
+      .separador-actividades h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
+  <!-- ENCABEZADO -->
   <header class="hero">
 
-        <nav class="barra-superior">
+    <nav class="barra-superior">
       <a href="../index.html" class="logo-link">
         <img src="../assets/images/Logo.png" alt="Katurro" class="logo-nav">
       </a>
+
       <ul class="menu nav-menu">
-        <li><a href="introduccion.html" class="nav-link-icon"><i class="bi bi-house-door"></i><span>Introducción</span></a></li>
+        <li>
+          <a href="introduccion.html" class="nav-link-icon">
+            <i class="bi bi-house-door"></i><span>Introducción</span>
+          </a>
+        </li>
+
         <li class="nav-item-dropdown">
-          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-book"></i><span>Historia</span></a>
+          <a href="#" class="nav-link-dropdown nav-link-icon">
+            <i class="bi bi-book"></i><span>Historia</span>
+          </a>
           <ul class="dropdown-submenu">
             <li><a href="historia-origenes.html">Orígenes y Expansión</a></li>
             <li><a href="historia-pereira.html">Llegada a Pereira</a></li>
             <li><a href="historia-cultura.html">Cultura y Tradición</a></li>
           </ul>
         </li>
-        <li><a href="proceso.html" class="nav-link-icon"><i class="bi bi-gear"></i><span>Proceso</span></a></li>
-        <li><a href="caracteristicas.html" class="nav-link-icon"><i class="bi bi-stars"></i><span>Características</span></a></li>
+
+        <li>
+          <a href="proceso.html" class="nav-link-icon">
+            <i class="bi bi-gear"></i><span>Proceso</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="caracteristicas.html" class="nav-link-icon">
+            <i class="bi bi-stars"></i><span>Características</span>
+          </a>
+        </li>
+
         <li class="nav-item-dropdown">
-          <a href="mapa.html" class="nav-link-dropdown nav-link-icon"><i class="bi bi-map"></i><span>Mapa</span></a>
+          <a href="mapa.html" class="nav-link-dropdown nav-link-icon">
+            <i class="bi bi-map"></i><span>Mapa</span>
+          </a>
           <ul class="dropdown-submenu">
             <li><a href="mapa.html"><strong>Mapa Interactivo</strong></a></li>
             <li><a href="lugar-salento.html">Salento</a></li>
@@ -50,8 +245,11 @@
             <li><a href="lugar-pereira.html">Pereira</a></li>
           </ul>
         </li>
+
         <li class="nav-item-dropdown">
-          <a href="#" class="nav-link-dropdown nav-link-icon"><i class="bi bi-controller"></i><span>Actividades</span></a>
+          <a href="#" class="nav-link-dropdown nav-link-icon">
+            <i class="bi bi-controller"></i><span>Actividades</span>
+          </a>
           <ul class="dropdown-submenu">
             <li><a href="actividades.html">Lista de Actividades</a></li>
             <li><a href="../juegos/saberes-previos/saberes-previos.html">Test de Saberes Previos</a></li>
@@ -61,240 +259,206 @@
             <li><a href="../juegos/evaluacion-final/formulario.html">Evaluación Final</a></li>
           </ul>
         </li>
-        <li><a href="sobre-nosotros.html" class="nav-link-icon"><i class="bi bi-people"></i><span>Sobre Nosotros</span></a></li>
+
+        <li>
+          <a href="sobre-nosotros.html" class="nav-link-icon">
+            <i class="bi bi-people"></i><span>Sobre Nosotros</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
-  
-<!-- CONTENIDO -->
-  <main class="container my-5">
-    <div class="row mb-5 text-center">
-      <div class="col-12">
-        <span class="subtitulo subtitulo-amarillo" style="color: #6F1D1B; font-weight: 700; text-transform: uppercase;">Ponte a prueba</span>
-        <h2 class="display-4" style="color: #4A1513; font-weight: 800; font-family: 'Playfair Display', serif;">Actividades Cafeteras</h2>
-        <p class="lead text-muted mx-auto mt-3" style="max-width: 700px;">
-          Descubre cuánto sabes sobre el mundo del café. Explora nuestros retos interactivos y formularios para poner a prueba todo lo que has aprendido.
+
+  <!-- CONTENIDO -->
+  <main class="actividades-contenedor">
+
+    <section class="intro-katurro">
+      <span class="etiqueta">Ponte a prueba</span>
+
+      <h1>Actividades Cafeteras</h1>
+
+      <p>
+        Descubre cuánto sabes sobre el mundo del café. Explora nuestros retos interactivos,
+        formularios y ejercicios para poner a prueba todo lo que has aprendido.
+      </p>
+
+      <div class="significado-katurro">
+        <p>
+          <strong>¿Qué significa Katurro?</strong> Katurro es una propuesta educativa que une
+          la cultura cafetera con el aprendizaje interactivo. En este espacio podrás conocer
+          el valor del café, su historia, su proceso y también practicar conceptos básicos
+          de HTML mediante juegos y ejercicios.
         </p>
       </div>
-    </div>
+    </section>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-      <!-- Cuestionario / Evaluación -->
-      <div class="col">
-        <div class="card h-100 border-0 shadow-sm" style="background: #FBEED7; border-radius: 20px; overflow: hidden; transition: transform 0.3s;">
-          <div class="card-body p-4 text-center d-flex flex-column justify-content-center">
-            <h3 class="card-title mb-3" style="color: #4A1513; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem;">Formulario:<br>Katurro</h3>
-            <p class="card-text text-muted mb-4" style="font-size: 0.95rem;">
-              Demuestra todo lo que has aprendido sobre la cultura y el proceso del café en el Eje Cafetero y la ciudad de Pereira completando este cuestionario.
-            </p>
-            <a href="../juegos/evaluacion-final/formulario.html" class="btn btn-principal mt-auto align-self-center px-4 py-2" style="background: #6F1D1B; color: #fff; border-radius: 12px; font-weight: 600; text-decoration: none; width: 100%;">Comenzar Evaluación</a>
-          </div>
-        </div>
+    <!-- ACTIVIDADES SOBRE EL CAFÉ -->
+    <section>
+      <div class="separador-actividades">
+        <h2>Actividades sobre el café</h2>
       </div>
 
-      <!-- Mapa del Tesoro -->
-      <div class="col">
-        <div class="card h-100 border-0 shadow-sm" style="background: #FBEED7; border-radius: 20px; overflow: hidden; transition: transform 0.3s;">
-          <div class="card-body p-4 text-center d-flex flex-column justify-content-center">
-            <h3 class="card-title mb-3" style="color: #4A1513; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem;">Reto:<br>Mapa del Tesoro</h3>
-            <p class="card-text text-muted mb-4" style="font-size: 0.95rem;">
-              Acompaña a la semilla de café desde su origen visualmente. Una actividad inmersiva a contrarreloj donde tendrás que identificar puntos clave.
-            </p>
-            <a href="../juegos/mapa-tesoro/mapa-tesoro.html" class="btn btn-principal mt-auto align-self-center px-4 py-2" style="background: #6F1D1B; color: #fff; border-radius: 12px; font-weight: 600; text-decoration: none; width: 100%;">Empezar Misión</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Cata Sensorial -->
-      <div class="col">
-        <div class="card h-100 border-0 shadow-sm" style="background: #FBEED7; border-radius: 20px; overflow: hidden; transition: transform 0.3s;">
-          <div class="card-body p-4 text-center d-flex flex-column justify-content-center">
-            <h3 class="card-title mb-3" style="color: #4A1513; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem;">Simulador:<br>Cata Sensorial</h3>
-            <p class="card-text text-muted mb-4" style="font-size: 0.95rem;">
-              Conviértete en un catador experto educando tu paladar. Juega con el nivel de tueste y descubre los secretos para extraer el mejor aroma y sabor.
-            </p>
-            <a href="../juegos/cata-cafetera/cata-cafetera.html" class="btn btn-principal mt-auto align-self-center px-4 py-2" style="background: #6F1D1B; color: #fff; border-radius: 12px; font-weight: 600; text-decoration: none; width: 100%;">Ingresar al Laboratorio</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Laboratorio Cafetero -->
-      <div class="col">
-        <div class="card h-100 border-0 shadow-sm" style="background: #FBEED7; border-radius: 20px; overflow: hidden; transition: transform 0.3s;">
-          <div class="card-body p-4 text-center d-flex flex-column justify-content-center">
-            <h3 class="card-title mb-3" style="color: #4A1513; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem;">Proceso:<br>Laboratorio Cafetero</h3>
-            <p class="card-text text-muted mb-4" style="font-size: 0.95rem;">
-              Aprende el proceso del café jugando paso a paso: cosecha, despulpa, lava, seca, tuesta y muele hasta completar el recorrido del grano a la taza.
-            </p>
-            <a href="../juegos/laboratorio-cafetero/laboratorio-cafetero.html" class="btn btn-principal mt-auto align-self-center px-4 py-2" style="background: #6F1D1B; color: #fff; border-radius: 12px; font-weight: 600; text-decoration: none; width: 100%;">Jugar Ahora</a>
-          </div>
-        </div>
-      </div>
+      <p class="texto-seccion">
+        En este apartado encontrarás actividades para reforzar lo aprendido sobre la historia,
+        la cultura, el proceso, los sabores y los saberes relacionados con el café.
+      </p>
 
-      <!-- Test Saberes Previos -->
-      <div class="col">
-        <div class="card h-100 border-0 shadow-sm" style="background: #FBEED7; border-radius: 20px; overflow: hidden; transition: transform 0.3s;">
-          <div class="card-body p-4 text-center d-flex flex-column justify-content-center">
-            <h3 class="card-title mb-3" style="color: #4A1513; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem;">Prueba:<br>Saberes Previos</h3>
-            <p class="card-text text-muted mb-4" style="font-size: 0.95rem;">
-              Una oportunidad interactiva para explorar de forma divertida qué tanto conoces sobre el mundo del café en Colombia y Pereira.
-            </p>
-            <a href="../juegos/saberes-previos/saberes-previos.html" class="btn btn-principal mt-auto align-self-center px-4 py-2" style="background: #6F1D1B; color: #fff; border-radius: 12px; font-weight: 600; text-decoration: none; width: 100%;">Ir al Test</a>
-          </div>
-        </div>
-      </div>
+      <div class="actividades-grid-katurro">
 
-    </div>
-
-
-<!-- =========================================================
-MENÚ DE ACTIVIDADES INDIVIDUALES KATURRO
-Pegar este bloque en pages/actividades.html.
-Cada botón abre su propia actividad en pages/actividades-extra/
-========================================================= -->
-
-<style>
-  .menu-actividades-katurro {
-    padding: 30px 0 50px;
-  }
-
-  .actividades-grid-katurro {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(260px, 1fr));
-    gap: 24px;
-    justify-content: center;
-    align-items: stretch;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .actividad-card-katurro {
-    background: rgba(255, 248, 234, 0.62);
-    border: 1px solid rgba(111, 29, 27, 0.08);
-    border-radius: 22px;
-    padding: 28px 24px 22px;
-    text-align: center;
-    min-height: 265px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 8px 18px rgba(74, 21, 19, 0.06);
-    transition: 0.25s ease;
-  }
-
-  .actividad-card-katurro:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 28px rgba(74, 21, 19, 0.13);
-  }
-
-  .actividad-card-katurro h3 {
-    font-family: 'Playfair Display', serif;
-    color: #5A1716;
-    font-size: 1.55rem;
-    font-weight: 800;
-    line-height: 1.08;
-    margin-bottom: 16px;
-  }
-
-  .actividad-card-katurro p {
-    color: #5f4b3f;
-    font-size: 0.98rem;
-    line-height: 1.55;
-    margin-bottom: 22px;
-  }
-
-  .actividad-card-katurro a {
-    display: block;
-    width: 100%;
-    background: #7B1E1E;
-    color: #ffffff;
-    border-radius: 11px;
-    padding: 11px 14px;
-    text-decoration: none;
-    font-weight: 800;
-    transition: 0.25s ease;
-  }
-
-  .actividad-card-katurro a:hover {
-    background: #4A1513;
-    color: #ffffff;
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 992px) {
-    .actividades-grid-katurro {
-      grid-template-columns: repeat(2, minmax(250px, 1fr));
-    }
-  }
-
-  @media (max-width: 620px) {
-    .actividades-grid-katurro {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-
-<section class="menu-actividades-katurro">
-  <div class="actividades-grid-katurro">
         <div class="actividad-card-katurro">
-          <h3>Reto:<br>Corrige el Código</h3>
-          <p>Observa fragmentos HTML con errores, descubre qué falla y elige la corrección adecuada.</p>
-          <a href="actividades-extra/01_reto_del_cafetero.html">Empezar Reto</a>
+          <h3>Formulario:<br>Katurro</h3>
+          <p>
+            Demuestra todo lo que has aprendido sobre la cultura y el proceso del café en el
+            Eje Cafetero y la ciudad de Pereira completando este cuestionario.
+          </p>
+          <a href="../juegos/evaluacion-final/formulario.html">Comenzar Evaluación</a>
         </div>
+
+        <div class="actividad-card-katurro">
+          <h3>Reto:<br>Mapa del Tesoro</h3>
+          <p>
+            Acompaña a la semilla de café desde su origen visualmente. Una actividad inmersiva
+            a contrarreloj donde tendrás que identificar puntos clave.
+          </p>
+          <a href="../juegos/mapa-tesoro/mapa-tesoro.html">Empezar Misión</a>
+        </div>
+
+        <div class="actividad-card-katurro">
+          <h3>Simulador:<br>Cata Sensorial</h3>
+          <p>
+            Conviértete en un catador experto educando tu paladar. Juega con el nivel de tueste
+            y descubre los secretos para extraer el mejor aroma y sabor.
+          </p>
+          <a href="../juegos/cata-cafetera/cata-cafetera.html">Ingresar al Laboratorio</a>
+        </div>
+
+        <div class="actividad-card-katurro">
+          <h3>Proceso:<br>Laboratorio Cafetero</h3>
+          <p>
+            Aprende el proceso del café jugando paso a paso: cosecha, despulpa, lava, seca,
+            tuesta y muele hasta completar el recorrido del grano a la taza.
+          </p>
+          <a href="../juegos/laboratorio-cafetero/laboratorio-cafetero.html">Jugar Ahora</a>
+        </div>
+
+        <div class="actividad-card-katurro">
+          <h3>Prueba:<br>Saberes Previos</h3>
+          <p>
+            Una oportunidad interactiva para explorar de forma divertida qué tanto conoces
+            sobre el mundo del café en Colombia y Pereira.
+          </p>
+          <a href="../juegos/saberes-previos/saberes-previos.html">Ir al Test</a>
+        </div>
+
         <div class="actividad-card-katurro">
           <h3>Proceso:<br>Ordena el Café</h3>
-          <p>Organiza las etapas del café desde la siembra hasta la taza final.</p>
+          <p>
+            Organiza las etapas del café desde la siembra hasta la taza final y demuestra
+            que conoces el recorrido completo del grano.
+          </p>
           <a href="actividades-extra/02_ordena_el_proceso.html">Ordenar Etapas</a>
         </div>
+
+      </div>
+    </section>
+
+    <!-- ACTIVIDADES PARA PRACTICAR HTML -->
+    <section>
+      <div class="separador-actividades">
+        <h2>Actividades para practicar HTML</h2>
+      </div>
+
+      <p class="texto-seccion">
+        En este apartado encontrarás ejercicios para aprender cosas básicas sobre HTML,
+        como etiquetas, rutas, imágenes, botones, estructura de una página y corrección
+        de errores comunes.
+      </p>
+
+      <div class="actividades-grid-katurro">
+
+        <div class="actividad-card-katurro">
+          <h3>Reto:<br>Corrige el Código</h3>
+          <p>
+            Observa fragmentos HTML con errores, descubre qué falla y elige la corrección adecuada.
+          </p>
+          <a href="actividades-extra/01_reto_del_cafetero.html">Empezar Reto</a>
+        </div>
+
         <div class="actividad-card-katurro">
           <h3>Juego:<br>Memoria HTML</h3>
-          <p>Relaciona cada etiqueta HTML con su función dentro de la página.</p>
+          <p>
+            Relaciona cada etiqueta HTML con su función dentro de la página.
+          </p>
           <a href="actividades-extra/03_memoria_html.html">Jugar Memoria</a>
         </div>
+
         <div class="actividad-card-katurro">
           <h3>Reto:<br>Clasifica Elementos</h3>
-          <p>Distingue qué elementos se ven en la página y cuáles pertenecen a la estructura interna.</p>
+          <p>
+            Distingue qué elementos se ven en la página y cuáles pertenecen a la estructura interna.
+          </p>
           <a href="actividades-extra/04_clasifica_elementos.html">Clasificar</a>
         </div>
+
         <div class="actividad-card-katurro">
           <h3>Prueba:<br>Verdadero o Falso</h3>
-          <p>Responde afirmaciones rápidas sobre HTML y el proceso del café.</p>
+          <p>
+            Responde afirmaciones rápidas sobre HTML y el proceso del café.
+          </p>
           <a href="actividades-extra/05_verdadero_falso.html">Iniciar Prueba</a>
         </div>
+
         <div class="actividad-card-katurro">
           <h3>Actividad:<br>Código y Resultado</h3>
-          <p>Une líneas de código HTML con lo que muestran visualmente en la página.</p>
+          <p>
+            Une líneas de código HTML con lo que muestran visualmente en la página.
+          </p>
           <a href="actividades-extra/06_une_codigo_visual.html">Unir Parejas</a>
         </div>
+
         <div class="actividad-card-katurro">
           <h3>Laboratorio:<br>Errores HTML</h3>
-          <p>Escribe la corrección de errores comunes relacionados con imágenes, botones y etiquetas.</p>
+          <p>
+            Escribe la corrección de errores comunes relacionados con imágenes, botones y etiquetas.
+          </p>
           <a href="actividades-extra/07_laboratorio_errores.html">Entrar al Laboratorio</a>
         </div>
 
         <div class="actividad-card-katurro">
           <h3>Detective:<br>Imágenes del Café</h3>
-          <p>Encuentra por qué algunas imágenes cafeteras no aparecen correctamente.</p>
+          <p>
+            Encuentra por qué algunas imágenes cafeteras no aparecen correctamente dentro de una página.
+          </p>
           <a href="actividades-extra/09_detective_imagenes.html">Resolver Casos</a>
         </div>
+
         <div class="actividad-card-katurro">
           <h3>Diseño:<br>Sección Cafetera</h3>
-          <p>Ordena título, texto, imagen y botón para crear una sección clara.</p>
+          <p>
+            Ordena título, texto, imagen y botón para crear una sección clara.
+          </p>
           <a href="actividades-extra/10_seccion_cafetera.html">Organizar</a>
         </div>
+
         <div class="actividad-card-katurro">
           <h3>Evaluación:<br>Mini Katurro</h3>
-          <p>Contesta preguntas mezcladas sobre el café y etiquetas HTML básicas.</p>
+          <p>
+            Contesta preguntas mezcladas sobre el café y etiquetas HTML básicas.
+          </p>
           <a href="actividades-extra/11_mini_evaluacion.html">Responder</a>
         </div>
+
         <div class="actividad-card-katurro">
           <h3>Reto:<br>Rutas y Archivos</h3>
-          <p>Elige rutas correctas para conectar páginas e imágenes dentro del proyecto.</p>
+          <p>
+            Elige rutas correctas para conectar páginas e imágenes dentro del proyecto.
+          </p>
           <a href="actividades-extra/12_rutas_archivos.html">Practicar Rutas</a>
         </div>
-  </div>
-</section>
-    
+
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -303,8 +467,9 @@ Cada botón abre su propia actividad en pages/actividades-extra/
 
   <script src="../assets/js/navbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/js/funciones.js"></script>
-<button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
+  <script src="../assets/js/funciones.js"></script>
+  <button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
+
 </body>
 
 </html>
