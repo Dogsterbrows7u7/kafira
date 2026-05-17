@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,400 @@
 
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    .sobre-nosotros-main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 3.5rem 0 4.5rem;
+    }
+
+    .sobre-hero-editorial {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+
+    .sobre-etiqueta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #D89B2B;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .sobre-hero-editorial h1 {
+      font-family: 'Playfair Display', serif;
+      color: #4A1513;
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      font-weight: 800;
+      line-height: 0.98;
+      letter-spacing: -1px;
+      margin-bottom: 1.3rem;
+    }
+
+    .sobre-hero-editorial p {
+      color: #5F4B3F;
+      font-size: 1.08rem;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .sobre-hero-dato {
+      margin-top: 2rem;
+      padding-left: 1.2rem;
+      border-left: 4px solid #7B1E1E;
+      color: #4A1513;
+      font-weight: 700;
+      line-height: 1.7;
+    }
+
+    .sobre-hero-imagen {
+      position: relative;
+      min-height: 420px;
+      border-radius: 34px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(216, 155, 43, 0.35), transparent 35%),
+        linear-gradient(135deg, #FBEED7, #FFF8EA);
+      box-shadow: 0 18px 40px rgba(74, 21, 19, 0.12);
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+
+    .sobre-hero-imagen::before {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      background: rgba(123, 30, 30, 0.08);
+      left: -60px;
+      bottom: -60px;
+    }
+
+    .sobre-hero-imagen img {
+      width: min(330px, 85%);
+      height: auto;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 18px 20px rgba(74, 21, 19, 0.16));
+    }
+
+    .sobre-seccion-textual {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 3rem;
+      align-items: start;
+      padding: 3.5rem 0;
+      border-top: 1px solid rgba(111, 29, 27, 0.14);
+    }
+
+    .sobre-seccion-titulo h2 {
+      font-family: 'Playfair Display', serif;
+      color: #4A1513;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .sobre-seccion-titulo p {
+      color: #7B1E1E;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .sobre-seccion-cuerpo p {
+      color: #5F4B3F;
+      font-size: 1.03rem;
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+
+    .sobre-imagen-franja {
+      margin: 1rem 0 5rem;
+      border-radius: 34px;
+      overflow: hidden;
+      height: 360px;
+      box-shadow: 0 18px 40px rgba(74, 21, 19, 0.10);
+      position: relative;
+    }
+
+    .sobre-imagen-franja img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sobre-imagen-franja::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(74, 21, 19, 0.45), transparent 65%);
+    }
+
+    .experiencia-katurro {
+      padding: 4rem 0;
+      border-top: 1px solid rgba(111, 29, 27, 0.14);
+      border-bottom: 1px solid rgba(111, 29, 27, 0.14);
+      margin-bottom: 4.5rem;
+    }
+
+    .experiencia-encabezado {
+      max-width: 780px;
+      margin-bottom: 2.5rem;
+    }
+
+    .experiencia-encabezado h2 {
+      font-family: 'Playfair Display', serif;
+      color: #4A1513;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .experiencia-encabezado p {
+      color: #5F4B3F;
+      font-size: 1.03rem;
+      line-height: 1.8;
+    }
+
+    .experiencia-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.3rem;
+    }
+
+    .experiencia-item {
+      background: rgba(255, 248, 234, 0.72);
+      border: 1px solid rgba(111, 29, 27, 0.10);
+      border-radius: 26px;
+      padding: 1.2rem;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1.2rem;
+      align-items: center;
+      box-shadow: 0 10px 24px rgba(74, 21, 19, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .experiencia-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 30px rgba(74, 21, 19, 0.10);
+    }
+
+    .experiencia-item img {
+      width: 120px;
+      height: 120px;
+      border-radius: 22px;
+      object-fit: cover;
+      background: #FBEED7;
+    }
+
+    .experiencia-item h3 {
+      color: #4A1513;
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .experiencia-item p {
+      color: #5F4B3F;
+      line-height: 1.65;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .equipo-katurro-section {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 4.5rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid rgba(111, 29, 27, 0.14);
+    }
+
+    .equipo-katurro-info {
+      position: sticky;
+      top: 100px;
+    }
+
+    .equipo-katurro-info h2 {
+      font-family: 'Playfair Display', serif;
+      color: #4A1513;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .equipo-katurro-info p {
+      color: #5F4B3F;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    .equipo-katurro-lista {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .integrante-katurro {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(111, 29, 27, 0.14);
+    }
+
+    .integrante-numero {
+      color: #D89B2B;
+      font-weight: 800;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+
+    .integrante-katurro h3 {
+      color: #4A1513;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin: 0 0 0.3rem;
+    }
+
+    .integrante-katurro p {
+      color: #6B5A50;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .contacto-katurro {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 2.5rem;
+      align-items: center;
+      background: linear-gradient(135deg, #4A1513, #7B1E1E);
+      border-radius: 34px;
+      padding: 3rem;
+      color: white;
+      box-shadow: 0 18px 40px rgba(74, 21, 19, 0.16);
+    }
+
+    .contacto-katurro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .contacto-katurro p {
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .contacto-lista {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .contacto-item {
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 20px;
+      padding: 1rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: white;
+    }
+
+    .contacto-item i {
+      color: #FFE1A3;
+      font-size: 1.25rem;
+    }
+
+    .contacto-item strong {
+      display: block;
+      font-size: 0.85rem;
+      color: #FFE1A3;
+      margin-bottom: 0.15rem;
+    }
+
+    .contacto-item span {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (max-width: 950px) {
+      .sobre-hero-editorial,
+      .sobre-seccion-textual,
+      .equipo-katurro-section,
+      .contacto-katurro {
+        grid-template-columns: 1fr;
+      }
+
+      .equipo-katurro-info {
+        position: static;
+      }
+
+      .experiencia-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sobre-hero-imagen {
+        min-height: 320px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .sobre-nosotros-main {
+        width: min(100% - 22px, 1180px);
+        padding-top: 2rem;
+      }
+
+      .sobre-hero-editorial {
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .sobre-hero-imagen {
+        min-height: 260px;
+        border-radius: 24px;
+      }
+
+      .sobre-imagen-franja {
+        height: 240px;
+        border-radius: 24px;
+      }
+
+      .experiencia-item {
+        grid-template-columns: 1fr;
+      }
+
+      .experiencia-item img {
+        width: 100%;
+        height: 180px;
+      }
+
+      .contacto-katurro {
+        padding: 2rem;
+        border-radius: 24px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -62,114 +455,232 @@
   </header>
 
   <!-- CONTENIDO -->
-  <main class="contenedor-principal">
+  <main class="sobre-nosotros-main">
 
-        <!-- PRESENTACIÓN -->
-    <div class="encabezado-seccion" style="text-align: center; margin: 0 auto 3rem auto;">
-      <p class="subtitulo subtitulo-amarillo">El Proyecto</p>
-      <h1>Conoce Katurro</h1>
-      <p class="descripcion-seccion" style="max-width: 800px; margin: 0 auto;">
-        Katurro es un software educativo diseñado para preservar y enseñar la cultura cafetera del Eje Cafetero, conectando a las nuevas generaciones con su historia y su territorio.
-      </p>
+    <!-- HERO -->
+    <section class="sobre-hero-editorial">
+      <div>
+        <span class="sobre-etiqueta">
+          <i class="bi bi-cup-hot"></i>
+          Sobre nosotros
+        </span>
+
+        <h1>¿Qué significa Katurro?</h1>
+
+        <p>
+          Katurro es una propuesta educativa que une la cultura cafetera con el aprendizaje
+          interactivo. En este espacio se puede conocer el valor del café, su historia, su
+          proceso y también practicar conceptos básicos de HTML mediante juegos y ejercicios.
+        </p>
+
+        <p>
+          Más que una página informativa, Katurro busca convertirse en una experiencia cercana:
+          una forma de aprender sobre el territorio cafetero usando recursos visuales,
+          actividades dinámicas y navegación sencilla.
+        </p>
+
+        <div class="sobre-hero-dato">
+          El nombre Katurro se inspira en el café y en la idea de aprender de manera curiosa,
+          cálida y conectada con la cultura cafetera.
+        </div>
+      </div>
+
+      <div class="sobre-hero-imagen">
+        <img src="../assets/images/Logo Katurro.png" alt="Logo de Katurro">
+      </div>
+    </section>
+
+    <!-- QUÉ ES -->
+    <section class="sobre-seccion-textual">
+      <div class="sobre-seccion-titulo">
+        <span class="sobre-etiqueta">
+          <i class="bi bi-tree"></i>
+          Nuestro propósito
+        </span>
+        <h2>Una experiencia para aprender desde el café</h2>
+        <p>
+          El proyecto nace para acercar a los jóvenes a la cultura cafetera del Eje Cafetero.
+        </p>
+      </div>
+
+      <div class="sobre-seccion-cuerpo">
+        <p>
+          Katurro nace como una iniciativa educativa para acercar a los jóvenes a las raíces
+          de la cultura cafetera. A través de un entorno interactivo y lúdico, buscamos que
+          el aprendizaje sobre el café vaya más allá de la historia y se convierta en una
+          experiencia de exploración.
+        </p>
+
+        <p>
+          Nuestro objetivo es generar una conexión emocional con el territorio, motivando a
+          los usuarios a valorar las tradiciones de las familias cafeteras de Pereira,
+          Risaralda y el Eje Cafetero.
+        </p>
+      </div>
+    </section>
+
+    <div class="sobre-imagen-franja">
+      <img src="../assets/images/familia-cafetera 4.png" alt="Familia cafetera">
     </div>
 
-    <!-- Misión / Qué es -->
-    <article class="tarjeta-unificada">
-      <div class="tarjeta-unificada__contenido">
-        <span class="subtitulo subtitulo-verde">Nuestro Propósito</span>
-        <h2>¿Qué es Katurro?</h2>
-        <p>
-          Katurro nace como una iniciativa educativa para acercar a los jóvenes a las raíces de la cultura cafetera del Eje Cafetero. A través de un entorno interactivo y lúdico, buscamos que el aprendizaje sobre el café vaya más allá de la historia, convirtiéndose en una experiencia inmersiva.
-        </p>
-        <p>
-          Nuestro objetivo es generar una conexión emocional con el territorio, motivando a los usuarios a explorar, valorar y preservar las tradiciones de las familias cafeteras de Pereira y Risaralda.
-        </p>
-      </div>
-      <img src="../assets/images/Logo Katurro.png" alt="Qué es Katurro" style="object-fit: contain;" class="tarjeta-unificada__img">
-    </article>
+    <!-- EXPERIENCIA -->
+    <section class="experiencia-katurro">
+      <div class="experiencia-encabezado">
+        <span class="sobre-etiqueta">
+          <i class="bi bi-stars"></i>
+          Identidad del proyecto
+        </span>
 
-    <!-- Cómo se oye -->
-    <article class="tarjeta-unificada tarjeta-invertida">
-      <div class="tarjeta-unificada__contenido">
-        <span class="subtitulo subtitulo-amarillo">Experiencia Auditiva</span>
-        <h2>¿Cómo se oye el proyecto?</h2>
-        <p>
-          Katurro se identifica con sonidos naturales y relajantes propios del paisaje cafetero: el canto de los pájaros, la suave brisa entre los cafetales y el reconfortante sonido de una cafetera preparando café fresco.
-        </p>
-        <p>
-          Estos sonidos buscan generar una atmósfera tranquila y envolvente que permita al usuario concentrarse mientras aprende. Además, nos acompañan melodías instrumentales suaves que guían la navegación sin distraer.
-        </p>
-      </div>
-      <img src="../assets/images/sonido.png" alt="Cómo se oye Katurro" class="tarjeta-unificada__img">
-    </article>
+        <h2>Así se vive Katurro</h2>
 
-    <!-- Cómo se ve -->
-    <article class="tarjeta-unificada">
-      <div class="tarjeta-unificada__contenido">
-        <span class="subtitulo subtitulo-verde">Identidad Visual</span>
-        <h2>¿Cómo se ve el proyecto?</h2>
         <p>
-          La paleta de colores de Katurro está directamente inspirada en el paisaje cafetero de Pereira. Utilizamos <strong>verdes</strong> para representar la naturaleza, <strong>beige</strong> para dar equilibrio, <strong>marrón</strong> para el café y su tradición, <strong>rojo vino</strong> para resaltar elementos importantes y <strong>amarillo</strong> para aportar energía.
-        </p>
-        <p>
-          Visualmente, mantenemos una estética amigable y moderna. En cuanto a la tipografía, empleamos <strong>Playfair Display</strong> en los títulos para aportar elegancia clásica, y <strong>Poppins</strong> en los textos para garantizar una lectura cómoda y contemporánea en pantalla, logrando un ambiente cálido, cercano y juvenil.
+          La identidad de Katurro no se limita a lo visual. El proyecto se construye desde
+          sensaciones relacionadas con el paisaje cafetero: sonidos, colores, aromas y sabores
+          que ayudan a crear una experiencia más completa.
         </p>
       </div>
-      <img src="../assets/images/familia-cafetera 4.png" alt="Cómo se ve Katurro" class="tarjeta-unificada__img">
-    </article>
 
-    <!-- A qué huele -->
-    <article class="tarjeta-unificada tarjeta-invertida">
-      <div class="tarjeta-unificada__contenido">
-        <span class="subtitulo subtitulo-amarillo">Experiencia Olfativa</span>
-        <h2>¿A qué huele el proyecto?</h2>
-        <p>
-          Katurro se asocia inevitablemente con el aroma inconfundible del café recién hecho, lleno de notas dulces y cálidas que evocan el calor del hogar.
-        </p>
-        <p>
-          También evoca el olor fresco de la naturaleza húmeda, como la tierra mojada después de la lluvia en medio de los cafetales. Este olor simbólico busca generar en el usuario una profunda sensación de conexión con el territorio y sus tradiciones más arraigadas.
-        </p>
-      </div>
-      <img src="../assets/images/olor.png" alt="A qué huele Katurro" class="tarjeta-unificada__img">
-    </article>
+      <div class="experiencia-grid">
 
-    <!-- A qué sabe -->
-    <article class="tarjeta-unificada">
-      <div class="tarjeta-unificada__contenido">
-        <span class="subtitulo subtitulo-verde">Experiencia Gustativa</span>
-        <h2>¿A qué sabe el proyecto?</h2>
+        <article class="experiencia-item">
+          <img src="../assets/images/sonido.png" alt="Sonidos de Katurro">
+          <div>
+            <h3>¿Cómo se oye?</h3>
+            <p>
+              Se identifica con sonidos naturales del paisaje cafetero: pájaros, brisa entre
+              cafetales y el sonido de una cafetera preparando café fresco.
+            </p>
+          </div>
+        </article>
+
+        <article class="experiencia-item">
+          <img src="../assets/images/olor.png" alt="Aroma de Katurro">
+          <div>
+            <h3>¿A qué huele?</h3>
+            <p>
+              Evoca el aroma del café recién hecho, la tierra húmeda después de la lluvia y
+              la sensación cálida de estar cerca de una tradición familiar.
+            </p>
+          </div>
+        </article>
+
+        <article class="experiencia-item">
+          <img src="../assets/images/sabor.png" alt="Sabor de Katurro">
+          <div>
+            <h3>¿A qué sabe?</h3>
+            <p>
+              Sabe a una experiencia auténtica: café intenso, cappuccino, latte, café frío,
+              postres caseros y sabores tradicionales de la región.
+            </p>
+          </div>
+        </article>
+
+        <article class="experiencia-item">
+          <img src="../assets/images/Logo.png" alt="Identidad visual de Katurro">
+          <div>
+            <h3>¿Cómo se ve?</h3>
+            <p>
+              Usa verdes, beige, marrón, rojo vino y amarillo para representar naturaleza,
+              café, tradición, calidez y energía dentro de una estética juvenil.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="equipo-katurro-section">
+      <div class="equipo-katurro-info">
+        <span class="sobre-etiqueta">
+          <i class="bi bi-people"></i>
+          Nuestro equipo
+        </span>
+
+        <h2>Personas detrás de Katurro</h2>
+
         <p>
-          Katurro tiene el sabor de una experiencia auténtica. Puede relacionarse con tus bebidas favoritas, ya sea un espresso intenso, un suave cappuccino, un latte espumoso o un refrescante café frío.
-        </p>
-        <p>
-          Se acompaña en la imaginación con sabores dulces y tradicionales: un pastel de chocolate o zanahoria, galletas con chispas, o preparaciones locales como el clásico "migao". Todo esto refuerza la idea de que aprender sobre nuestra cultura debe ser un proceso de disfrute pleno.
+          Este proyecto fue desarrollado por un equipo de estudiantes que combinó investigación,
+          diseño, contenido educativo y actividades interactivas para crear una página sobre
+          la cultura cafetera y el aprendizaje básico de HTML.
         </p>
       </div>
-      <img src="../assets/images/sabor.png" alt="A qué sabe Katurro" class="tarjeta-unificada__img">
-    </article>
+
+      <div class="equipo-katurro-lista">
+
+        <article class="integrante-katurro">
+          <div class="integrante-numero">01</div>
+          <div>
+            <h3>Angello Arley Quintero Jaramillo</h3>
+            <p>Integrante del equipo Katurro.</p>
+          </div>
+        </article>
+
+        <article class="integrante-katurro">
+          <div class="integrante-numero">02</div>
+          <div>
+            <h3>Angie Lorena Molina Acevedo</h3>
+            <p>Integrante del equipo Katurro.</p>
+          </div>
+        </article>
+
+        <article class="integrante-katurro">
+          <div class="integrante-numero">03</div>
+          <div>
+            <h3>Camilo Higuita Campo</h3>
+            <p>Integrante del equipo Katurro.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="apoyo-section">
-      <div class="encabezado-seccion">
-        <p class="subtitulo subtitulo-verde">Contacto</p>
-        <h1>¿Cómo contactarnos?</h1>
-      </div>
+    <section id="contacto" class="contacto-katurro">
+      <div>
+        <span class="sobre-etiqueta">
+          <i class="bi bi-envelope"></i>
+          Contacto
+        </span>
 
-      <div class="apoyo-box">
+        <h2>¿Cómo contactarnos?</h2>
+
         <p>
           Si deseas conocer más sobre Katurro, puedes comunicarte con el equipo del proyecto
           para recibir información adicional sobre nuestro propósito educativo y desarrollo.
         </p>
-        <ul>
-          <li>Correo: katurroutp@gmail.com</li>
-          <li>Instagram: @katurro</li>
-          <li>Ubicación: Pereira, Risaralda</li>
-        </ul>
+      </div>
+
+      <div class="contacto-lista">
+
+        <div class="contacto-item">
+          <i class="bi bi-envelope-at"></i>
+          <div>
+            <strong>Correo</strong>
+            <span>katurroutp@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="contacto-item">
+          <i class="bi bi-instagram"></i>
+          <div>
+            <strong>Instagram</strong>
+            <span>@katurro</span>
+          </div>
+        </div>
+
+        <div class="contacto-item">
+          <i class="bi bi-geo-alt"></i>
+          <div>
+            <strong>Ubicación</strong>
+            <span>Pereira, Risaralda</span>
+          </div>
+        </div>
+
       </div>
     </section>
-    
 
-</main>
+  </main>
 
   <footer>
     <p>© 2026 - Katurro | Historia, cultura y aprendizaje del café</p>
@@ -177,9 +688,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/navbar.js"></script>
-
-<script src="../assets/js/funciones.js"></script>
-<button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
+  <script src="../assets/js/funciones.js"></script>
+  <button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
 </body>
 
 </html>

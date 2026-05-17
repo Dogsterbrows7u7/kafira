@@ -192,6 +192,195 @@
         grid-template-columns: 1fr;
       }
     }
+
+
+    /* =====================================================
+       ARREGLO VIDEOS: vista previa + modal grande
+       ===================================================== */
+    .katurro-video-box,
+    .proceso-video-premium__box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #2d1b12;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+    }
+
+    .katurro-video-preview {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: inherit;
+      background: #2d1b12;
+    }
+
+    .katurro-video-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: brightness(0.82);
+    }
+
+    .katurro-video-preview:hover img {
+      transform: scale(1.04);
+      filter: brightness(0.65);
+    }
+
+    .katurro-play-clean {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      color: #7B1E1E;
+      display: grid;
+      place-items: center;
+      font-size: 2.4rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transition: transform 0.25s ease, background 0.25s ease;
+      pointer-events: none;
+    }
+
+    .katurro-video-preview:hover .katurro-play-clean {
+      transform: translate(-50%, -50%) scale(1.08);
+      background: #fff;
+    }
+
+    .katurro-preview-text {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(45, 27, 18, 0.82);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      pointer-events: none;
+    }
+
+    .katurro-video-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
+      background: rgba(25, 15, 10, 0.82);
+      backdrop-filter: blur(8px);
+    }
+
+    .katurro-video-modal.active {
+      display: flex;
+    }
+
+    .katurro-video-modal__dialog {
+      width: min(1100px, 96vw);
+      background: #fff8ed;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .katurro-video-modal__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+      background: #4A1513;
+      color: #fff;
+    }
+
+    .katurro-video-modal__title {
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .katurro-video-modal__actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .katurro-video-modal__btn,
+    .katurro-video-modal__close {
+      border: 0;
+      border-radius: 999px;
+      padding: 0.55rem 0.85rem;
+      background: rgba(255,255,255,0.14);
+      color: #fff;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .katurro-video-modal__btn:hover,
+    .katurro-video-modal__close:hover {
+      background: rgba(255,255,255,0.24);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .katurro-video-modal__frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .katurro-video-modal__frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .katurro-video-modal__note {
+      padding: 0.85rem 1.2rem 1rem;
+      color: #5f4a3c;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      background: #fffaf1;
+    }
+
+    @media (max-width: 620px) {
+      .katurro-play-clean {
+        width: 58px;
+        height: 58px;
+        font-size: 2rem;
+      }
+
+      .katurro-video-modal__top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .katurro-video-modal__actions {
+        justify-content: flex-start;
+      }
+    }
+
   </style>
 
 </head>
@@ -329,7 +518,11 @@
       <article class="katurro-apoyo-card">
         <span class="katurro-chip"><i class="bi bi-play-circle-fill"></i> Video</span>
         <div class="katurro-video-box">
-          <iframe src="https://www.youtube.com/embed/Gw61Hh4oX3o" title="Café, territorio e identidad regional" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <button type="button" class="katurro-video-preview" data-video-src="https://www.youtube-nocookie.com/embed/Gw61Hh4oX3o?autoplay=1&amp;rel=0&amp;modestbranding=1" data-video-title="Café, territorio e identidad regional" data-youtube-url="https://www.youtube.com/watch?v=Gw61Hh4oX3o" aria-label="Abrir video: Café, territorio e identidad regional">
+            <img src="https://img.youtube.com/vi/Gw61Hh4oX3o/hqdefault.jpg" alt="Café, territorio e identidad regional" loading="lazy">
+            <span class="katurro-play-clean"><i class="bi bi-play-fill"></i></span>
+            <span class="katurro-preview-text">Ver video</span>
+          </button>
         </div>
         <h3>Café, territorio e identidad regional</h3>
         <p>Apoyo visual para conectar la historia del café con la formación de comunidades y territorios cafeteros.</p>
@@ -337,7 +530,11 @@
       <article class="katurro-apoyo-card">
         <span class="katurro-chip"><i class="bi bi-play-circle-fill"></i> Video</span>
         <div class="katurro-video-box">
-          <iframe src="https://www.youtube.com/embed/4tYr_3qZiHk" title="Contexto cafetero colombiano y regional" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <button type="button" class="katurro-video-preview" data-video-src="https://www.youtube-nocookie.com/embed/4tYr_3qZiHk?autoplay=1&amp;rel=0&amp;modestbranding=1" data-video-title="Contexto cafetero colombiano y regional" data-youtube-url="https://www.youtube.com/watch?v=4tYr_3qZiHk" aria-label="Abrir video: Contexto cafetero colombiano y regional">
+            <img src="https://img.youtube.com/vi/4tYr_3qZiHk/hqdefault.jpg" alt="Contexto cafetero colombiano y regional" loading="lazy">
+            <span class="katurro-play-clean"><i class="bi bi-play-fill"></i></span>
+            <span class="katurro-preview-text">Ver video</span>
+          </button>
         </div>
         <h3>Contexto cafetero colombiano y regional</h3>
         <p>Complementa la lectura sobre la expansión del café y su relación con ciudades del Eje Cafetero.</p>
@@ -404,5 +601,98 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <button id="btnSubirArriba" class="btn-subir-arriba" title="Volver arriba">↑</button>
+
+
+  <!-- MODAL PARA VER VIDEOS EN GRANDE -->
+  <div class="katurro-video-modal" id="katurroVideoModal" aria-hidden="true">
+    <div class="katurro-video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="katurroVideoTitle">
+      <div class="katurro-video-modal__top">
+        <div class="katurro-video-modal__title" id="katurroVideoTitle">Video de apoyo</div>
+        <div class="katurro-video-modal__actions">
+          <button type="button" class="katurro-video-modal__btn" id="katurroFullscreenBtn">
+            <i class="bi bi-arrows-fullscreen"></i> Pantalla completa
+          </button>
+          <a href="#" target="_blank" rel="noopener" class="katurro-video-modal__btn" id="katurroOpenYoutube">
+            <i class="bi bi-youtube"></i> Ver en YouTube
+          </a>
+          <button type="button" class="katurro-video-modal__close" id="katurroCloseVideo">
+            <i class="bi bi-x-lg"></i> Cerrar
+          </button>
+        </div>
+      </div>
+      <div class="katurro-video-modal__frame" id="katurroVideoFrame"></div>
+      <div class="katurro-video-modal__note">
+        Si un video aparece como no disponible dentro de la página, usa el botón <strong>Ver en YouTube</strong>.
+        Eso depende de la configuración del dueño del video, no del código de Katurro.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("katurroVideoModal");
+      const frame = document.getElementById("katurroVideoFrame");
+      const title = document.getElementById("katurroVideoTitle");
+      const closeBtn = document.getElementById("katurroCloseVideo");
+      const youtubeBtn = document.getElementById("katurroOpenYoutube");
+      const fullscreenBtn = document.getElementById("katurroFullscreenBtn");
+
+      function abrirVideo(boton) {
+        const src = boton.dataset.videoSrc;
+        const videoTitle = boton.dataset.videoTitle || "Video de apoyo";
+        const youtubeUrl = boton.dataset.youtubeUrl || "#";
+
+        title.textContent = videoTitle;
+        youtubeBtn.href = youtubeUrl;
+
+        frame.innerHTML = `
+          <iframe
+            src="${src}"
+            title="${videoTitle}"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        `;
+
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function cerrarVideo() {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        frame.innerHTML = "";
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".katurro-video-preview").forEach((boton) => {
+        boton.addEventListener("click", () => abrirVideo(boton));
+      });
+
+      closeBtn.addEventListener("click", cerrarVideo);
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) cerrarVideo();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("active")) cerrarVideo();
+      });
+
+      fullscreenBtn.addEventListener("click", async () => {
+        try {
+          if (frame.requestFullscreen) {
+            await frame.requestFullscreen();
+          } else if (frame.webkitRequestFullscreen) {
+            frame.webkitRequestFullscreen();
+          }
+        } catch (error) {
+          console.warn("No se pudo activar pantalla completa", error);
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
