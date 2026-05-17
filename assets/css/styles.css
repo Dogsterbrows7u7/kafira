@@ -6086,3 +6086,44 @@ h6 {
 }
 
 
+/* =========================
+   CENTRAR PORTADA HISTORIA
+========================= */
+
+.historia-hero-premium {
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4.5rem 2rem;
+}
+
+.historia-hero-contenido {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.historia-hero-premium .subtitulo {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.historia-hero-premium h1 {
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.historia-hero-premium .hero-intro {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
